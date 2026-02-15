@@ -1,0 +1,34 @@
+﻿[
+    {
+        "id":  "ec7e389d-5971-4a0b-a5b6-a6186ad645e1",
+        "name_en":  "Copenhagen HQ",
+        "name_da":  "København HQ",
+        "type":  "hq",
+        "address":  "Nørrebrogade 45, 2200",
+        "city":  "Copenhagen",
+        "country":  "Denmark",
+        "flag":  "🇩🇰",
+        "lat":  55.6867,
+        "lng":  12.5561,
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "899678cd-828d-4e10-89e4-8b09ed9d8286",
+        "name_en":  "Bangladesh Office",
+        "name_da":  "Bangladesh Kontor",
+        "type":  "office",
+        "address":  "Gulshan Avenue, Dhaka 1212",
+        "city":  "Dhaka",
+        "country":  "Bangladesh",
+        "flag":  "🇧🇩",
+        "lat":  23.7806,
+        "lng":  90.4193,
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    }
+]

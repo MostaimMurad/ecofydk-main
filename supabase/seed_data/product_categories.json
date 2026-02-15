@@ -1,0 +1,26 @@
+﻿[
+    {
+        "id":  "bags",
+        "name_en":  "Bags",
+        "name_da":  "Tasker",
+        "created_at":  "2026-01-26T11:32:02.901763+00:00"
+    },
+    {
+        "id":  "sacks",
+        "name_en":  "Sacks",
+        "name_da":  "Sække",
+        "created_at":  "2026-01-26T11:32:02.901763+00:00"
+    },
+    {
+        "id":  "decor",
+        "name_en":  "Home Décor",
+        "name_da":  "Boligindretning",
+        "created_at":  "2026-01-26T11:32:02.901763+00:00"
+    },
+    {
+        "id":  "rope",
+        "name_en":  "Rope \u0026 Twine",
+        "name_da":  "Reb \u0026 Snor",
+        "created_at":  "2026-01-26T11:32:02.901763+00:00"
+    }
+]

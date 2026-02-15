@@ -1,0 +1,352 @@
+[
+    {
+        "id": "a0000004-0001-4000-a000-000000000001",
+        "section": "impact_stats",
+        "block_key": "families",
+        "title_en": "Families Supported",
+        "title_da": "Familier Understøttet",
+        "description_en": null,
+        "description_da": null,
+        "value": "500",
+        "icon": "Users",
+        "color": "text-blue-500",
+        "image_url": null,
+        "metadata": {
+            "suffix": "+"
+        },
+        "sort_order": 1,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000004-0001-4000-a000-000000000002",
+        "section": "impact_stats",
+        "block_key": "co2",
+        "title_en": "Tonnes CO₂ Saved",
+        "title_da": "Tons CO₂ Besparet",
+        "description_en": null,
+        "description_da": null,
+        "value": "120",
+        "icon": "Wind",
+        "color": "text-green-500",
+        "image_url": null,
+        "metadata": {
+            "suffix": "t"
+        },
+        "sort_order": 2,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000004-0001-4000-a000-000000000003",
+        "section": "impact_stats",
+        "block_key": "plastic",
+        "title_en": "Plastic Bags Replaced",
+        "title_da": "Plastikposer Erstattet",
+        "description_en": null,
+        "description_da": null,
+        "value": "50000",
+        "icon": "Recycle",
+        "color": "text-teal-500",
+        "image_url": null,
+        "metadata": {
+            "suffix": "+"
+        },
+        "sort_order": 3,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000004-0001-4000-a000-000000000004",
+        "section": "impact_stats",
+        "block_key": "countries",
+        "title_en": "EU Countries Served",
+        "title_da": "EU-Lande Betjent",
+        "description_en": null,
+        "description_da": null,
+        "value": "15",
+        "icon": "Globe",
+        "color": "text-purple-500",
+        "image_url": null,
+        "metadata": {
+            "suffix": "+"
+        },
+        "sort_order": 4,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000004-0002-4000-a000-000000000001",
+        "section": "impact_milestones",
+        "block_key": "m1",
+        "title_en": "Company Founded",
+        "title_da": "Virksomheden Grundlagt",
+        "description_en": "Ecofy was founded in Copenhagen with a mission to bring sustainable jute products to Europe",
+        "description_da": "Ecofy blev grundlagt i København med en mission om at bringe bæredygtige juteprodukter til Europa",
+        "value": "2020",
+        "icon": null,
+        "color": "from-blue-500 to-cyan-600",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 1,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000004-0002-4000-a000-000000000002",
+        "section": "impact_milestones",
+        "block_key": "m2",
+        "title_en": "First B2B Partnership",
+        "title_da": "Første B2B-Partnerskab",
+        "description_en": "Signed our first major retail partnership with Nordic Retail Group for 10,000 tote bags",
+        "description_da": "Underskrev vores første store detailpartnerskab med Nordic Retail Group for 10.000 indkøbstasker",
+        "value": "2021",
+        "icon": null,
+        "color": "from-green-500 to-emerald-600",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 2,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000004-0002-4000-a000-000000000003",
+        "section": "impact_milestones",
+        "block_key": "m3",
+        "title_en": "ISO 14001 Certification",
+        "title_da": "ISO 14001 Certificering",
+        "description_en": "Achieved ISO 14001 environmental management certification for our supply chain",
+        "description_da": "Opnåede ISO 14001 miljøledelsescertificering for vores forsyningskæde",
+        "value": "2023",
+        "icon": null,
+        "color": "from-amber-500 to-orange-600",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 3,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000004-0002-4000-a000-000000000004",
+        "section": "impact_milestones",
+        "block_key": "m4",
+        "title_en": "500+ Artisans Supported",
+        "title_da": "500+ Håndværkere Støttet",
+        "description_en": "Reached milestone of supporting over 500 artisan families in Bangladesh",
+        "description_da": "Nåede milepælen med at støtte over 500 håndværkerfamilier i Bangladesh",
+        "value": "2024",
+        "icon": null,
+        "color": "from-purple-500 to-violet-600",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 4,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000005-0001-4000-a000-000000000001",
+        "section": "casestudies_list",
+        "block_key": "cs1",
+        "title_en": "Nordic Retail Group",
+        "title_da": "Nordic Retail Group",
+        "description_en": "Custom-branded reusable jute tote bags with screen-printed logos, delivered in 4 batches throughout the year.",
+        "description_da": "Skræddersyede genanvendelige jutetasker med serigrafi-trykte logoer, leveret i 4 partier.",
+        "value": null,
+        "icon": null,
+        "color": "from-blue-500 to-cyan-600",
+        "image_url": null,
+        "metadata": {
+            "industry": "Retail",
+            "logo": "NR",
+            "challenge": "Needed to replace 50,000 single-use plastic bags annually to meet EU sustainability targets.",
+            "results": [
+                {
+                    "metric": "95%",
+                    "label": "Plastic bag reduction"
+                },
+                {
+                    "metric": "12t",
+                    "label": "CO₂ saved per year"
+                },
+                {
+                    "metric": "40%",
+                    "label": "Customer satisfaction increase"
+                },
+                {
+                    "metric": "€15K",
+                    "label": "Annual savings vs plastic"
+                }
+            ],
+            "quote": "Switching to Ecofy jute bags was the easiest sustainability decision we ever made.",
+            "quotePerson": "Anna Sørensen, Sustainability Director"
+        },
+        "sort_order": 1,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000005-0001-4000-a000-000000000002",
+        "section": "casestudies_list",
+        "block_key": "cs2",
+        "title_en": "GreenPack EU",
+        "title_da": "GreenPack EU",
+        "description_en": "Custom jute packaging solutions for premium organic food products across 5 European markets.",
+        "description_da": "Tilpassede juteemballageløsninger til premium økologiske fødevarer på 5 europæiske markeder.",
+        "value": null,
+        "icon": null,
+        "color": "from-green-500 to-emerald-600",
+        "image_url": null,
+        "metadata": {
+            "industry": "Food & Beverage",
+            "logo": "GP",
+            "challenge": "Required premium sustainable packaging for organic food products that met EU food safety standards.",
+            "results": [
+                {
+                    "metric": "100%",
+                    "label": "EU food safety compliant"
+                },
+                {
+                    "metric": "30%",
+                    "label": "Packaging cost reduction"
+                },
+                {
+                    "metric": "5",
+                    "label": "Markets served"
+                },
+                {
+                    "metric": "Zero",
+                    "label": "Plastic in supply chain"
+                }
+            ],
+            "quote": "Ecofy's food-safe jute packaging elevated our brand image while cutting costs.",
+            "quotePerson": "Lars Henriksen, CEO"
+        },
+        "sort_order": 2,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000005-0001-4000-a000-000000000003",
+        "section": "casestudies_list",
+        "block_key": "cs3",
+        "title_en": "BioPack Nordic",
+        "title_da": "BioPack Nordic",
+        "description_en": "Complete shift from plastic to jute-based agricultural packaging across Danish farming cooperatives.",
+        "description_da": "Komplet skift fra plastik til jutebaseret landbrugsemballage på tværs af danske landbrugskooperativer.",
+        "value": null,
+        "icon": null,
+        "color": "from-amber-500 to-orange-600",
+        "image_url": null,
+        "metadata": {
+            "industry": "Agriculture",
+            "logo": "BP",
+            "challenge": "Danish farming cooperatives needed biodegradable packaging to comply with upcoming EU Packaging Waste Regulation.",
+            "results": [
+                {
+                    "metric": "200t",
+                    "label": "Plastic eliminated yearly"
+                },
+                {
+                    "metric": "85%",
+                    "label": "Farmer satisfaction rate"
+                },
+                {
+                    "metric": "€50K",
+                    "label": "Regulatory penalty avoided"
+                },
+                {
+                    "metric": "18mo",
+                    "label": "Ahead of regulation"
+                }
+            ],
+            "quote": "Ecofy helped us become regulatory-ready 18 months before the deadline.",
+            "quotePerson": "Mette Andersen, Operations Manager"
+        },
+        "sort_order": 3,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000005-0002-4000-a000-000000000001",
+        "section": "casestudies_industries",
+        "block_key": "ind1",
+        "title_en": "Retail & Fashion",
+        "title_da": "Detail & Mode",
+        "description_en": null,
+        "description_da": null,
+        "value": "45%",
+        "icon": "ShoppingBag",
+        "color": "text-blue-500",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 1,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000005-0002-4000-a000-000000000002",
+        "section": "casestudies_industries",
+        "block_key": "ind2",
+        "title_en": "Food & Beverage",
+        "title_da": "Mad & Drikke",
+        "description_en": null,
+        "description_da": null,
+        "value": "25%",
+        "icon": "Leaf",
+        "color": "text-green-500",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 2,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000005-0002-4000-a000-000000000003",
+        "section": "casestudies_industries",
+        "block_key": "ind3",
+        "title_en": "Agriculture",
+        "title_da": "Landbrug",
+        "description_en": null,
+        "description_da": null,
+        "value": "20%",
+        "icon": "Sun",
+        "color": "text-amber-500",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 3,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    },
+    {
+        "id": "a0000005-0002-4000-a000-000000000004",
+        "section": "casestudies_industries",
+        "block_key": "ind4",
+        "title_en": "Corporate & Events",
+        "title_da": "Virksomheder & Events",
+        "description_en": null,
+        "description_da": null,
+        "value": "10%",
+        "icon": "Building",
+        "color": "text-purple-500",
+        "image_url": null,
+        "metadata": {},
+        "sort_order": 4,
+        "is_active": true,
+        "created_at": "2026-02-13T18:00:00+00:00",
+        "updated_at": "2026-02-13T18:00:00+00:00"
+    }
+]

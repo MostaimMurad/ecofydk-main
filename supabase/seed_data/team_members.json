@@ -1,0 +1,44 @@
+﻿[
+    {
+        "id":  "09ff5492-ecc7-4c1e-9248-24e39e2b9529",
+        "name":  "Fatima Begum",
+        "role_en":  "Master Weaver",
+        "role_da":  "Mestervæver",
+        "bio_en":  null,
+        "bio_da":  null,
+        "image_url":  "/src/assets/artisan-fatima.jpg",
+        "years_experience":  15,
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "e7d36d65-dd5f-4973-a8a1-633f80ca44ec",
+        "name":  "Karim Mia",
+        "role_en":  "Senior Craftsman",
+        "role_da":  "Senior Håndværker",
+        "bio_en":  null,
+        "bio_da":  null,
+        "image_url":  "/src/assets/artisan-karim.jpg",
+        "years_experience":  20,
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "99c716d6-396e-4d48-a680-adf7f54c927c",
+        "name":  "Rashida Khatun",
+        "role_en":  "Pattern Designer",
+        "role_da":  "Mønsterdesigner",
+        "bio_en":  null,
+        "bio_da":  null,
+        "image_url":  "/src/assets/artisan-rashida.jpg",
+        "years_experience":  8,
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    }
+]

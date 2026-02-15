@@ -1,0 +1,67 @@
+﻿[
+    {
+        "id":  "f711ead3-6068-4e31-a340-15b8880feaa7",
+        "year":  "2018",
+        "title_en":  "Founded in Copenhagen with a vision to bring sustainable jute products to the Nordic market.",
+        "title_da":  "Grundlagt i København med en vision om at bringe bæredygtige juteprodukter til det nordiske marked.",
+        "description_en":  null,
+        "description_da":  null,
+        "color":  "from-emerald-500 to-green-600",
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "0cfbd48b-0281-419c-aa1a-933f2b54a22f",
+        "year":  "2019",
+        "title_en":  "Established direct partnerships with artisan cooperatives in Bangladesh.",
+        "title_da":  "Etablerede direkte partnerskaber med håndværkerkooperativer i Bangladesh.",
+        "description_en":  null,
+        "description_da":  null,
+        "color":  "from-blue-500 to-cyan-600",
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "31c621ff-9f6b-429a-bc77-eaccdcd53b6d",
+        "year":  "2021",
+        "title_en":  "Expanded product line to over 50 products, serving businesses across Europe.",
+        "title_da":  "Udvidede produktlinjen til over 50 produkter og betjener virksomheder i hele Europa.",
+        "description_en":  null,
+        "description_da":  null,
+        "color":  "from-amber-500 to-orange-600",
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "f7f305c7-e3a2-45cf-bb91-208074b792a4",
+        "year":  "2023",
+        "title_en":  "Reached 500+ artisan partnerships and launched our zero-waste initiative.",
+        "title_da":  "Nåede 500+ håndværkerpartnerskaber og lancerede vores nul-affald initiativ.",
+        "description_en":  null,
+        "description_da":  null,
+        "color":  "from-purple-500 to-violet-600",
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "809cde21-4130-40d3-bd67-009ccd3aa63c",
+        "year":  "2024",
+        "title_en":  "Continuing our mission to make sustainable jute products accessible worldwide.",
+        "title_da":  "Fortsætter vores mission med at gøre bæredygtige juteprodukter tilgængelige på verdensplan.",
+        "description_en":  null,
+        "description_da":  null,
+        "color":  "from-primary to-emerald-600",
+        "sort_order":  5,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    }
+]

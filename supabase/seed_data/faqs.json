@@ -1,0 +1,74 @@
+﻿[
+    {
+        "id":  "371a10d4-d8c7-43e6-97c5-919bc4c14bef",
+        "question_en":  "What makes jute a sustainable material?",
+        "question_da":  "Hvad gør jute til et bæredygtigt materiale?",
+        "answer_en":  "Jute is 100% biodegradable and compostable. It grows quickly without pesticides, absorbs CO2 during growth, and requires minimal water compared to other natural fibers. Each hectare of jute plants absorbs about 15 tonnes of CO2 from the atmosphere.",
+        "answer_da":  "Jute er 100% bionedbrydeligt og komposterbart. Det vokser hurtigt uden pesticider, absorberer CO2 under væksten og kræver minimal vand sammenlignet med andre naturlige fibre. Hver hektar juteplanter absorberer omkring 15 tons CO2 fra atmosfæren.",
+        "icon":  "🌱",
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "2fa8cff7-f84e-40ac-bfab-1b23bb92ad48",
+        "question_en":  "What are the minimum order quantities?",
+        "question_da":  "Hvad er minimum ordremængderne?",
+        "answer_en":  "Our minimum order quantity varies by product type. For standard jute bags, the MOQ is typically 500 units. For customized products with branding, we recommend 1,000+ units for the best pricing. Contact us for specific product MOQs.",
+        "answer_da":  "Vores minimum ordremængde varierer efter produkttype. For standard jutetasker er MOQ typisk 500 enheder. For tilpassede produkter med branding anbefaler vi 1.000+ enheder for den bedste pris. Kontakt os for specifikke produkt-MOQ\u0027er.",
+        "icon":  "📦",
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "38fe594f-ff6d-48b4-821e-08d2334177f0",
+        "question_en":  "Do you ship internationally?",
+        "question_da":  "Sender I internationalt?",
+        "answer_en":  "Yes! We ship to all EU countries and beyond. Our main logistics hub is in Copenhagen, Denmark, ensuring fast delivery within Europe. For international orders outside EU, we offer competitive shipping rates through our global logistics partners.",
+        "answer_da":  "Ja! Vi sender til alle EU-lande og videre. Vores vigtigste logistikhub er i København, Danmark, hvilket sikrer hurtig levering inden for Europa. For internationale ordrer uden for EU tilbyder vi konkurrencedygtige fragtpriser gennem vores globale logistikpartnere.",
+        "icon":  "🌍",
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "73dc17ee-bf54-4a87-89f8-60ac88a340b1",
+        "question_en":  "Can you do custom branding on products?",
+        "question_da":  "Kan I lave brugerdefineret branding på produkter?",
+        "answer_en":  "Absolutely! We offer full custom branding services including screen printing, embroidery, and custom labels. Our design team works closely with you to create products that perfectly represent your brand while maintaining our eco-friendly standards.",
+        "answer_da":  "Absolut! Vi tilbyder fulde brugerdefinerede branding-tjenester inklusiv serigrafi, broderi og brugerdefinerede etiketter. Vores designteam arbejder tæt sammen med dig for at skabe produkter, der perfekt repræsenterer dit brand, mens vi opretholder vores miljøvenlige standarder.",
+        "icon":  "✨",
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "95ee83b2-75fc-4b3b-8e89-c89a600a3875",
+        "question_en":  "How do you ensure fair trade practices?",
+        "question_da":  "Hvordan sikrer I fair trade praksis?",
+        "answer_en":  "We work directly with artisan cooperatives in Bangladesh, ensuring fair wages, safe working conditions, and community development. Our supply chain is transparent and audited regularly. We provide health benefits, education support, and skill development programs.",
+        "answer_da":  "Vi arbejder direkte med håndværkerkooperativer i Bangladesh og sikrer retfærdige lønninger, sikre arbejdsforhold og samfundsudvikling. Vores forsyningskæde er gennemsigtig og revideres regelmæssigt. Vi tilbyder sundhedsydelser, uddannelsesstøtte og kompetenceudviklingsprogrammer.",
+        "icon":  "🤝",
+        "sort_order":  5,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "e319b1f1-15fc-430f-8d7a-0e187e34d395",
+        "question_en":  "What is the lifespan of jute products?",
+        "question_da":  "Hvad er levetiden for juteprodukter?",
+        "answer_en":  "Our jute products are designed for durability. With proper care, jute bags and accessories can last 3-5 years of regular use. When they do reach end of life, they naturally decompose within 1-2 years, returning nutrients to the soil.",
+        "answer_da":  "Vores juteprodukter er designet til holdbarhed. Med ordentlig pleje kan jutetasker og tilbehør holde 3-5 år ved regelmæssig brug. Når de når slutningen af deres levetid, nedbrydes de naturligt inden for 1-2 år og returnerer næringsstoffer til jorden.",
+        "icon":  "💚",
+        "sort_order":  6,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    }
+]

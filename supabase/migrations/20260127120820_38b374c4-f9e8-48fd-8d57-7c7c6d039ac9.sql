@@ -1,0 +1,33 @@
+INSERT INTO products (
+  slug, 
+  category_id, 
+  name_en, 
+  name_da, 
+  description_en, 
+  description_da, 
+  image_url, 
+  gallery,
+  spec_material, 
+  spec_size,
+  use_cases_en, 
+  use_cases_da, 
+  featured, 
+  sort_order, 
+  is_active
+) VALUES (
+  'eco-friendly-jute-shopping-bag',
+  'bags',
+  'Premium Eco-Friendly Jute Shopping Bag',
+  'Premium Miljøvenlig Jute Indkøbstaske',
+  'A premium eco-friendly jute shopping bag made from natural Bangladeshi jute fiber. Features modern minimalist design with strong stitched handles.',
+  'En premium miljøvenlig jute indkøbstaske lavet af naturlig bangladeshisk jutefiber. Har et moderne minimalistisk design med stærke syede håndtag.',
+  '/products/eco-jute-bag-1.jpg',
+  '["/products/eco-jute-bag-2.jpg", "/products/eco-jute-bag-3.jpg"]'::jsonb,
+  '100% Natural Jute',
+  '40 x 35 x 15 cm',
+  '["Grocery shopping", "Beach outings", "Everyday carry", "Gift packaging"]'::jsonb,
+  '["Dagligvareindkøb", "Strandture", "Daglig brug", "Gaveindpakning"]'::jsonb,
+  true,
+  0,
+  true
+);

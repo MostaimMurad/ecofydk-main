@@ -1,0 +1,1222 @@
+﻿[
+    {
+        "id":  "fb327dee-eb39-4df7-acf3-383bef137099",
+        "section":  "about_stats",
+        "block_key":  "years",
+        "title_en":  "Years of Excellence",
+        "title_da":  "År med Excellence",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "5+",
+        "icon":  "Award",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "4ae46967-8537-474b-b1d3-d9192cead361",
+        "section":  "about_stats",
+        "block_key":  "artisans",
+        "title_en":  "Artisans Supported",
+        "title_da":  "Understøttede Håndværkere",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "500+",
+        "icon":  "Users",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "491e31d4-a54e-4926-ac58-ce5ff7023b11",
+        "section":  "about_stats",
+        "block_key":  "countries",
+        "title_en":  "Countries Reached",
+        "title_da":  "Lande Nået",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "15+",
+        "icon":  "Globe",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "9b6f86c7-624b-4cda-8a58-71445808d685",
+        "section":  "about_features",
+        "block_key":  "feature_1",
+        "title_en":  "Bridging Bangladeshi craftsmanship with European markets",
+        "title_da":  "Forbinder bangladeshisk håndværk med europæiske markeder",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "1ff6718f-8940-423c-bd9b-f01aae1c605a",
+        "section":  "about_features",
+        "block_key":  "feature_2",
+        "title_en":  "Supporting local artisans with fair trade practices",
+        "title_da":  "Støtter lokale håndværkere med fair trade praksis",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "38ee809b-ed74-4e5d-9dff-0e2d01babc96",
+        "section":  "about_features",
+        "block_key":  "feature_3",
+        "title_en":  "Preserving traditional techniques for future generations",
+        "title_da":  "Bevarer traditionelle teknikker for fremtidige generationer",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "f1b0eceb-36fb-4ac2-8e46-ae9eecb5da55",
+        "section":  "about",
+        "block_key":  "main_image",
+        "title_en":  null,
+        "title_da":  null,
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800\u0026h=1000\u0026fit=crop",
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "13278900-6e40-4efc-8837-8bf993727fd1",
+        "section":  "hero_stats",
+        "block_key":  "products",
+        "title_en":  "Products",
+        "title_da":  "Produkter",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "50+",
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "69dcfc63-4102-47c7-89a2-ddc03c9c1a81",
+        "section":  "hero_stats",
+        "block_key":  "sustainable",
+        "title_en":  "Sustainable",
+        "title_da":  "Bæredygtig",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "100%",
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "cdf59dfd-316a-4e20-a94f-2edafedb5e4c",
+        "section":  "hero_stats",
+        "block_key":  "clients",
+        "title_en":  "Happy Clients",
+        "title_da":  "Glade Kunder",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "500+",
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "217b732e-e4d5-47bb-943b-aa006d03d799",
+        "section":  "hero",
+        "block_key":  "badge",
+        "title_en":  "Premium Sustainable Jute",
+        "title_da":  "Premium Bæredygtig Jute",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "0abd315b-3729-47ec-babf-bf5e95c02a18",
+        "section":  "hero",
+        "block_key":  "since",
+        "title_en":  "Since 2020",
+        "title_da":  "Siden 2020",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "2020",
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "83d19e1a-df72-4d1d-a31b-042bf347926e",
+        "section":  "sustainability_highlights",
+        "block_key":  "eco",
+        "title_en":  "Eco-Friendly Materials",
+        "title_da":  "Miljøvenlige Materialer",
+        "description_en":  "All our products are made from 100% natural jute fiber, completely biodegradable and compostable.",
+        "description_da":  "Alle vores produkter er lavet af 100% naturlig jutefiber, fuldstændigt bionedbrydeligt og komposterbart.",
+        "value":  null,
+        "icon":  "Leaf",
+        "color":  "from-green-500/20 to-emerald-500/20",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "9caabf9e-d5a4-4889-9a9e-4cb2e9ffa155",
+        "section":  "sustainability_highlights",
+        "block_key":  "artisan",
+        "title_en":  "Artisan Empowerment",
+        "title_da":  "Håndværker Empowerment",
+        "description_en":  "We work directly with artisan communities in Bangladesh, ensuring fair wages and sustainable livelihoods.",
+        "description_da":  "Vi arbejder direkte med håndværkersamfund i Bangladesh og sikrer retfærdige lønninger og bæredygtige levebrød.",
+        "value":  null,
+        "icon":  "Users",
+        "color":  "from-amber-500/20 to-orange-500/20",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "f1c6fee6-e715-4281-b8ac-3bed0b78870e",
+        "section":  "sustainability_highlights",
+        "block_key":  "zero",
+        "title_en":  "Zero Waste Production",
+        "title_da":  "Nul Affald Produktion",
+        "description_en":  "Our production process is designed to minimize waste. Any jute remnants are recycled or composted.",
+        "description_da":  "Vores produktionsproces er designet til at minimere affald. Alle juterester genanvendes eller komposteres.",
+        "value":  null,
+        "icon":  "Recycle",
+        "color":  "from-blue-500/20 to-cyan-500/20",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "0c6b13e2-23d1-4f87-b743-348c0735e9a5",
+        "section":  "sustainability_stats",
+        "block_key":  "biodegradable",
+        "title_en":  "Biodegradable",
+        "title_da":  "Bionedbrydelig",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "100%",
+        "icon":  "Heart",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "769c7dd2-170e-40a1-bc9a-7c1bfdea7ca6",
+        "section":  "sustainability_stats",
+        "block_key":  "artisan_partners",
+        "title_en":  "Artisan Partners",
+        "title_da":  "Håndværker Partnere",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "50+",
+        "icon":  "Globe",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "75d66d56-56a6-4524-bb41-c919a33c2924",
+        "section":  "sustainability_stats",
+        "block_key":  "carbon",
+        "title_en":  "Carbon Footprint",
+        "title_da":  "CO2-aftryk",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "0",
+        "icon":  "Award",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "a3b5e3cd-2bc7-441c-a9ed-4d05e9985c8f",
+        "section":  "story_stats",
+        "block_key":  "artisans",
+        "title_en":  "Artisans Empowered",
+        "title_da":  "Håndværkere Styrket",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "500+",
+        "icon":  "Users",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "31563af4-e84b-4408-9d0b-a6cbdba44616",
+        "section":  "story_stats",
+        "block_key":  "products",
+        "title_en":  "Products Crafted",
+        "title_da":  "Produkter Skabt",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "50+",
+        "icon":  "Leaf",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "c88d79d1-2367-415f-aded-a95a7783bdd4",
+        "section":  "story_stats",
+        "block_key":  "countries",
+        "title_en":  "Countries Served",
+        "title_da":  "Lande Betjent",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "15+",
+        "icon":  "Globe",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "c5a65bd4-4c70-44b6-8cd2-22e102747edc",
+        "section":  "story_stats",
+        "block_key":  "sustainable",
+        "title_en":  "Sustainable Materials",
+        "title_da":  "Bæredygtige Materialer",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "100%",
+        "icon":  "Heart",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "00e42c4e-672b-4e5b-9b25-abeca5774ad5",
+        "section":  "footer_certifications",
+        "block_key":  "iso",
+        "title_en":  "ISO 14001",
+        "title_da":  "ISO 14001",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  "bg-emerald-500/20 text-emerald-300",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "7c053a42-af34-4154-9e9a-b80bc1d3dceb",
+        "section":  "footer_certifications",
+        "block_key":  "fairtrade",
+        "title_en":  "Fair Trade",
+        "title_da":  "Fair Trade",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  "bg-amber-500/20 text-amber-300",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "906a629d-01b0-49c2-9908-57ba45db6e29",
+        "section":  "footer_certifications",
+        "block_key":  "gots",
+        "title_en":  "GOTS",
+        "title_da":  "GOTS",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  "bg-sky-500/20 text-sky-300",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "246c39e1-de55-488b-b173-8c3fe32443e4",
+        "section":  "footer_certifications",
+        "block_key":  "oekotex",
+        "title_en":  "OEKO-TEX",
+        "title_da":  "OEKO-TEX",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  "bg-purple-500/20 text-purple-300",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "149233e6-a71e-4f13-ada2-1c80fae5e9e1",
+        "section":  "carbon_stats",
+        "block_key":  "reduction",
+        "title_en":  "CO2 Reduction",
+        "title_da":  "CO2 Reduktion",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "85%",
+        "icon":  "Wind",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "ca6dc0f2-c30d-4127-9ed7-76c85f0aad63",
+        "section":  "carbon_stats",
+        "block_key":  "plastic",
+        "title_en":  "Plastic Used",
+        "title_da":  "Plastik Brugt",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "0",
+        "icon":  "Recycle",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "c460ae3d-ca0b-4e61-8e56-437dd26f1b9e",
+        "section":  "carbon_stats",
+        "block_key":  "renewable",
+        "title_en":  "Renewable Energy",
+        "title_da":  "Vedvarende Energi",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "100%",
+        "icon":  "Leaf",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "e7e69f6b-6961-49bf-bc92-a39658cfb906",
+        "section":  "carbon_stats",
+        "block_key":  "trees",
+        "title_en":  "Trees Planted",
+        "title_da":  "Træer Plantet",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "50+",
+        "icon":  "TreePine",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "c6db1f26-5d31-47c0-9df1-ff6351ea4429",
+        "section":  "certifications",
+        "block_key":  "oekotex",
+        "title_en":  "OEKO-TEX Standard 100",
+        "title_da":  "OEKO-TEX Standard 100",
+        "description_en":  "Tested for harmful substances - safe for human use",
+        "description_da":  "Testet for skadelige stoffer - sikkert til menneskelig brug",
+        "value":  null,
+        "icon":  "Shield",
+        "color":  "from-blue-500 to-cyan-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "04e0fe35-9371-4901-b7b6-7080c48ae5f1",
+        "section":  "certifications",
+        "block_key":  "fairtrade",
+        "title_en":  "Fair Trade Certified",
+        "title_da":  "Fair Trade Certificeret",
+        "description_en":  "Ensuring fair wages and ethical working conditions",
+        "description_da":  "Sikrer retfærdige lønninger og etiske arbejdsforhold",
+        "value":  null,
+        "icon":  "Award",
+        "color":  "from-amber-500 to-orange-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "1cf3d640-a286-46b3-b01d-1335d9bd210a",
+        "section":  "certifications",
+        "block_key":  "iso",
+        "title_en":  "ISO 14001",
+        "title_da":  "ISO 14001",
+        "description_en":  "Environmental management system certified",
+        "description_da":  "Miljøledelsessystem certificeret",
+        "value":  null,
+        "icon":  "CheckCircle",
+        "color":  "from-purple-500 to-violet-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "d5fe2efb-d1fb-4c09-8fff-a33ddb226a8d",
+        "section":  "certifications",
+        "block_key":  "gots",
+        "title_en":  "GOTS Certified",
+        "title_da":  "GOTS Certificeret",
+        "description_en":  "Global Organic Textile Standard compliant",
+        "description_da":  "Overholder Global Organic Textile Standard",
+        "value":  null,
+        "icon":  "Leaf",
+        "color":  "from-emerald-500 to-green-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "bfaf625a-1a0a-4dfb-a549-a7036060639a",
+        "section":  "sdg_goals",
+        "block_key":  "sdg8",
+        "title_en":  "Decent Work \u0026 Economic Growth",
+        "title_da":  "Anstændigt Arbejde \u0026 Økonomisk Vækst",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "8",
+        "icon":  null,
+        "color":  "bg-red-500",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "bebe330e-5f42-43c2-9805-bf9b312bdf34",
+        "section":  "sdg_goals",
+        "block_key":  "sdg12",
+        "title_en":  "Responsible Consumption \u0026 Production",
+        "title_da":  "Ansvarligt Forbrug \u0026 Produktion",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "12",
+        "icon":  null,
+        "color":  "bg-amber-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "1fef87b1-3f5b-4337-b595-61d08ed264b7",
+        "section":  "sdg_goals",
+        "block_key":  "sdg13",
+        "title_en":  "Climate Action",
+        "title_da":  "Klimaindsats",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "13",
+        "icon":  null,
+        "color":  "bg-green-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "3ea71f31-99b4-473f-bf5e-8207e35bdea2",
+        "section":  "sdg_goals",
+        "block_key":  "sdg15",
+        "title_en":  "Life on Land",
+        "title_da":  "Livet på Land",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "15",
+        "icon":  null,
+        "color":  "bg-emerald-500",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "66e5a876-f463-4be5-8534-ea62df1aa081",
+        "section":  "sustainability_practices",
+        "block_key":  "biodegradable",
+        "title_en":  "Biodegradable Products",
+        "title_da":  "Bionedbrydelige Produkter",
+        "description_en":  "Every product we create returns to nature within 1-2 years.",
+        "description_da":  "Hvert produkt vi skaber vender tilbage til naturen inden for 1-2 år.",
+        "value":  null,
+        "icon":  "Leaf",
+        "color":  "from-emerald-500 to-green-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "7d0eeca0-d76b-447f-b7be-2ee35e46c153",
+        "section":  "sustainability_practices",
+        "block_key":  "water",
+        "title_en":  "Water Conservation",
+        "title_da":  "Vandbeskyttelse",
+        "description_en":  "Jute requires 80% less water than cotton production.",
+        "description_da":  "Jute kræver 80% mindre vand end bomuldsproduktion.",
+        "value":  null,
+        "icon":  "Droplets",
+        "color":  "from-blue-500 to-cyan-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "118a0e89-25e5-4b0c-99ed-b37fb439fd6d",
+        "section":  "sustainability_practices",
+        "block_key":  "carbon",
+        "title_en":  "Carbon Negative",
+        "title_da":  "Kulstof Negativ",
+        "description_en":  "Jute absorbs more CO2 than it emits during production.",
+        "description_da":  "Jute absorberer mere CO2 end det udleder under produktion.",
+        "value":  null,
+        "icon":  "Wind",
+        "color":  "from-sky-500 to-blue-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "138eb572-0e6b-4a30-949b-bbf9edc72f47",
+        "section":  "sustainability_practices",
+        "block_key":  "waste",
+        "title_en":  "Zero Waste",
+        "title_da":  "Nul Affald",
+        "description_en":  "All production waste is recycled or composted.",
+        "description_da":  "Alt produktionsaffald genanvendes eller komposteres.",
+        "value":  null,
+        "icon":  "Recycle",
+        "color":  "from-amber-500 to-orange-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "25e9ec0a-e393-4674-81da-1cabb1281fa5",
+        "section":  "sustainability_practices",
+        "block_key":  "reforestation",
+        "title_en":  "Reforestation Support",
+        "title_da":  "Skovrejsningsstøtte",
+        "description_en":  "We plant trees for every 100 products sold.",
+        "description_da":  "Vi planter træer for hver 100 solgte produkter.",
+        "value":  null,
+        "icon":  "TreePine",
+        "color":  "from-green-500 to-emerald-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  5,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "a034131f-2a85-4d84-b2e7-afe790a76cfc",
+        "section":  "sustainability_practices",
+        "block_key":  "energy",
+        "title_en":  "Clean Energy",
+        "title_da":  "Ren Energi",
+        "description_en":  "Our facilities run on renewable energy sources.",
+        "description_da":  "Vores faciliteter kører på vedvarende energikilder.",
+        "value":  null,
+        "icon":  "Factory",
+        "color":  "from-purple-500 to-violet-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  6,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "6384875a-13b0-4f5e-9577-e1b641a1c819",
+        "section":  "newsletter_trust",
+        "block_key":  "no_spam",
+        "title_en":  "No spam, ever",
+        "title_da":  "Aldrig spam",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  "CheckCircle",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "57246828-ff7d-408f-93b9-a8ee42f60b6b",
+        "section":  "newsletter_trust",
+        "block_key":  "unsubscribe",
+        "title_en":  "Unsubscribe anytime",
+        "title_da":  "Afmeld når som helst",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  "CheckCircle",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "cf052d62-f7c7-493f-b39d-c34f96f107cd",
+        "section":  "newsletter_trust",
+        "block_key":  "weekly",
+        "title_en":  "Weekly updates",
+        "title_da":  "Ugentlige opdateringer",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  "CheckCircle",
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "80183ae1-242b-483f-ae63-1cc62623dfa8",
+        "section":  "contact",
+        "block_key":  "whatsapp_number",
+        "title_en":  null,
+        "title_da":  null,
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "+4520123456",
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "0f270129-0adb-443c-a80c-d701cd92f12c",
+        "section":  "contact",
+        "block_key":  "business_hours_en",
+        "title_en":  null,
+        "title_da":  null,
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "Mon - Fri: 9:00 AM - 5:00 PM (CET)",
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "cff8d2d9-1bc9-409d-b3e2-c0304b301d6f",
+        "section":  "contact",
+        "block_key":  "business_hours_da",
+        "title_en":  null,
+        "title_da":  null,
+        "description_en":  null,
+        "description_da":  null,
+        "value":  "Man - Fre: 9:00 - 17:00 (CET)",
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "c86d9ada-f6b4-4ad5-af48-dbd60f704416",
+        "section":  "story_values",
+        "block_key":  "sustainability",
+        "title_en":  "Sustainability",
+        "title_da":  "Bæredygtighed",
+        "description_en":  "Every product we create is designed with the planet in mind, from raw materials to delivery.",
+        "description_da":  "Hvert produkt vi skaber er designet med planeten i tankerne, fra råmaterialer til levering.",
+        "value":  null,
+        "icon":  "Leaf",
+        "color":  "from-emerald-500 to-green-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "a54cbee6-bbad-415f-8ab6-758ee9d37966",
+        "section":  "story_values",
+        "block_key":  "quality",
+        "title_en":  "Quality",
+        "title_da":  "Kvalitet",
+        "description_en":  "We never compromise on craftsmanship. Each piece is made to last and made with love.",
+        "description_da":  "Vi går aldrig på kompromis med håndværk. Hvert stykke er lavet til at holde og lavet med kærlighed.",
+        "value":  null,
+        "icon":  "Heart",
+        "color":  "from-rose-500 to-pink-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "cd70a9d7-11af-4541-9b89-5f027e2940cf",
+        "section":  "story_values",
+        "block_key":  "community",
+        "title_en":  "Community",
+        "title_da":  "Fællesskab",
+        "description_en":  "We believe in empowering communities through fair wages, education, and sustainable practices.",
+        "description_da":  "Vi tror på at styrke fællesskaber gennem fair løn, uddannelse og bæredygtige praksisser.",
+        "value":  null,
+        "icon":  "Users",
+        "color":  "from-blue-500 to-cyan-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "eaeb47ac-b2c8-435a-a222-62fecaf967f2",
+        "section":  "story_values",
+        "block_key":  "transparency",
+        "title_en":  "Transparency",
+        "title_da":  "Gennemsigtighed",
+        "description_en":  "From farm to shelf, we maintain complete transparency in our supply chain and business practices.",
+        "description_da":  "Fra mark til hylde opretholder vi fuldstændig gennemsigtighed i vores forsyningskæde og forretningspraksis.",
+        "value":  null,
+        "icon":  "Globe",
+        "color":  "from-amber-500 to-orange-600",
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "b8eeaf94-1b21-42eb-bf64-36bcba8bcd68",
+        "section":  "supply_chain",
+        "block_key":  "step1",
+        "title_en":  "Ethically sourced raw jute from Bangladesh farms",
+        "title_da":  "Etisk indkøbt rå jute fra Bangladesh gårde",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "f24ea9f2-17ac-481a-8a25-3e5a480744b0",
+        "section":  "supply_chain",
+        "block_key":  "step2",
+        "title_en":  "Handcrafted by skilled artisans in local cooperatives",
+        "title_da":  "Håndlavet af dygtige håndværkere i lokale kooperativer",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "b628a451-39b3-4b6b-b821-aca86b1a0b84",
+        "section":  "supply_chain",
+        "block_key":  "step3",
+        "title_en":  "Quality checked and certified to international standards",
+        "title_da":  "Kvalitetskontrolleret og certificeret efter internationale standarder",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "d347e9e8-483c-4706-ad69-8ff2749d9ed7",
+        "section":  "supply_chain",
+        "block_key":  "step4",
+        "title_en":  "Carbon-neutral shipping to customers worldwide",
+        "title_da":  "CO2-neutral forsendelse til kunder over hele verden",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "90149860-e915-49b0-9bbe-b6b4401285f8",
+        "section":  "story_certifications",
+        "block_key":  "gots",
+        "title_en":  "GOTS",
+        "title_da":  "GOTS",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "7d9685f0-e8db-48d1-83f8-57b5cc81c1a5",
+        "section":  "story_certifications",
+        "block_key":  "oekotex",
+        "title_en":  "OEKO-TEX",
+        "title_da":  "OEKO-TEX",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    },
+    {
+        "id":  "de9e7d90-7865-4204-a28b-98814d50b40a",
+        "section":  "story_certifications",
+        "block_key":  "fairtrade",
+        "title_en":  "Fair Trade",
+        "title_da":  "Fair Trade",
+        "description_en":  null,
+        "description_da":  null,
+        "value":  null,
+        "icon":  null,
+        "color":  null,
+        "image_url":  null,
+        "metadata":  {
+
+                     },
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:54:47.468824+00:00",
+        "updated_at":  "2026-02-08T15:54:47.468824+00:00"
+    }
+]

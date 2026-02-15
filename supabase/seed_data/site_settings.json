@@ -1,0 +1,20 @@
+﻿{
+    "id":  "global",
+    "hero_variant":  "video",
+    "updated_at":  "2026-02-10T14:57:20.888+00:00",
+    "updated_by":  "cb66c4b1-63e8-4663-a97b-2a4cdac7ddbf",
+    "site_title_en":  "Ecofy ApS",
+    "site_title_da":  "Ecofy ApS",
+    "site_tagline_en":  "Sustainable Jute Products from Bangladesh",
+    "site_tagline_da":  "Bæredygtige juteprodukter fra Bangladesh",
+    "logo_url":  "https://erurvhorlwtemrexefzv.supabase.co/storage/v1/object/public/site-settings/logo-1770653985532.png",
+    "footer_text_en":  "Crafting sustainable stories since 2019",
+    "footer_text_da":  "Skaber bæredygtige historier siden 2019",
+    "contact_email":  "info@ecofy.dk",
+    "contact_phone":  "+45 91 69 01 30",
+    "contact_address":  "Kolding 6000, Denmark",
+    "social_facebook":  null,
+    "social_instagram":  null,
+    "social_linkedin":  null,
+    "social_twitter":  null
+}

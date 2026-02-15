@@ -1,0 +1,1822 @@
+﻿[
+    {
+        "id":  "3006bb57-ad4c-4b0a-ac6e-b130dab802c7",
+        "key":  "nav.home",
+        "value_en":  "Home",
+        "value_da":  "Hjem",
+        "category":  "navigation",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "fb5e8a76-6352-46c2-bae7-2d77d46ed663",
+        "key":  "nav.products",
+        "value_en":  "Products",
+        "value_da":  "Produkter",
+        "category":  "navigation",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d72eaaad-1add-48ab-909f-3f888d121615",
+        "key":  "nav.our-story",
+        "value_en":  "Our Story",
+        "value_da":  "Vores Historie",
+        "category":  "navigation",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "1a988177-60c9-4582-8290-52986ecf9b23",
+        "key":  "nav.sustainability",
+        "value_en":  "Sustainability",
+        "value_da":  "Bæredygtighed",
+        "category":  "navigation",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "937000e3-a5f2-4794-9fbf-e342a4b4622b",
+        "key":  "nav.journal",
+        "value_en":  "Journal",
+        "value_da":  "Journal",
+        "category":  "navigation",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "f1d5e825-25c9-4270-9892-95bae6b2077c",
+        "key":  "nav.contact",
+        "value_en":  "Contact",
+        "value_da":  "Kontakt",
+        "category":  "navigation",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "82c61ba9-3b38-4475-adbe-7cf9482b670c",
+        "key":  "nav.admin",
+        "value_en":  "Admin",
+        "value_da":  "Admin",
+        "category":  "navigation",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "a2f7636e-47ca-40a2-b4bb-3826b0c05b67",
+        "key":  "hero.tagline",
+        "value_en":  "Crafting Sustainable Stories",
+        "value_da":  "Skaber Bæredygtige Historier",
+        "category":  "hero",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "478127e2-dc82-4490-956b-075c8b04df02",
+        "key":  "hero.subtitle",
+        "value_en":  "Premium eco-friendly jute products from Bangladesh to Europe",
+        "value_da":  "Premium miljøvenlige juteprodukter fra Bangladesh til Europa",
+        "category":  "hero",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "efe3ce09-b519-4980-a5eb-bb3ce16576cf",
+        "key":  "hero.cta",
+        "value_en":  "Explore Collection",
+        "value_da":  "Udforsk Kollektionen",
+        "category":  "hero",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "e25aec9a-b29d-4d8e-97b9-b906b0135a5a",
+        "key":  "about.title",
+        "value_en":  "Our Story",
+        "value_da":  "Vores Historie",
+        "category":  "about",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "be41f875-e487-4c59-94b6-9cef8f0b3e75",
+        "key":  "about.subtitle",
+        "value_en":  "From the fertile lands of Bangladesh to your home",
+        "value_da":  "Fra de frugtbare lande i Bangladesh til dit hjem",
+        "category":  "about",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "e7c3ce30-09bc-47ae-8797-7042924f9b72",
+        "key":  "about.cta",
+        "value_en":  "Learn More",
+        "value_da":  "Læs Mere",
+        "category":  "about",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "37f7cfe7-a39b-430e-bccd-11fd1852851a",
+        "key":  "sustainability.title",
+        "value_en":  "Our Commitment",
+        "value_da":  "Vores Forpligtelse",
+        "category":  "sustainability",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "6efff939-1e13-4be6-bce7-89dcc73baa33",
+        "key":  "sustainability.eco.title",
+        "value_en":  "Eco-Friendly",
+        "value_da":  "Miljøvenlig",
+        "category":  "sustainability",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "cb2ce02f-5ee0-4606-bf19-e557ddce4997",
+        "key":  "sustainability.eco.desc",
+        "value_en":  "100% biodegradable and sustainable materials",
+        "value_da":  "100% bionedbrydelige og bæredygtige materialer",
+        "category":  "sustainability",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "7263eb06-9b6c-4121-9f1d-1746fb2d4a92",
+        "key":  "sustainability.artisan.title",
+        "value_en":  "Artisan Support",
+        "value_da":  "Håndværkerstøtte",
+        "category":  "sustainability",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "f14dcc02-cbd4-49cd-94e8-a3a7883d9743",
+        "key":  "sustainability.artisan.desc",
+        "value_en":  "Empowering local craftspeople with fair wages",
+        "value_da":  "Styrker lokale håndværkere med fair løn",
+        "category":  "sustainability",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9c485cbd-6c09-48e0-88c5-0cfbfbe85804",
+        "key":  "sustainability.zero.title",
+        "value_en":  "Zero Waste",
+        "value_da":  "Nul Affald",
+        "category":  "sustainability",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "531a1317-786b-4154-9600-878ad065f13b",
+        "key":  "sustainability.zero.desc",
+        "value_en":  "Minimal environmental footprint in production",
+        "value_da":  "Minimal miljøpåvirkning i produktionen",
+        "category":  "sustainability",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "177f5222-ba36-4d65-ab8e-8b2a86fbe1a8",
+        "key":  "products.title",
+        "value_en":  "Our Collection",
+        "value_da":  "Vores Kollektion",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "7240cc30-0699-467c-bcea-26b74f381ee3",
+        "key":  "products.filter.all",
+        "value_en":  "All Products",
+        "value_da":  "Alle Produkter",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "7a4c810b-71b3-4a98-8280-70d72a29120f",
+        "key":  "products.filter.bags",
+        "value_en":  "Bags",
+        "value_da":  "Tasker",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "1470c688-0438-4212-9182-8a45697c93f1",
+        "key":  "products.filter.sacks",
+        "value_en":  "Sacks",
+        "value_da":  "Sække",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "736f338a-b02d-4dfe-8779-79c50b0fcd39",
+        "key":  "products.filter.decor",
+        "value_en":  "Home Décor",
+        "value_da":  "Boligindretning",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "8056089b-2d2b-4551-9bc5-0e07bbfae0af",
+        "key":  "products.filter.rope",
+        "value_en":  "Rope \u0026 Twine",
+        "value_da":  "Reb \u0026 Snor",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "6206a6d6-6050-4826-a056-b867419b4385",
+        "key":  "products.request-quote",
+        "value_en":  "Request Quote",
+        "value_da":  "Anmod om Tilbud",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "ea8459a5-e673-4bac-8ad1-c4e9c4c76662",
+        "key":  "products.search.placeholder",
+        "value_en":  "Search products...",
+        "value_da":  "Søg produkter...",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4fde833b-c39d-48d6-9760-5a14d565b497",
+        "key":  "products.search.clear",
+        "value_en":  "Clear search",
+        "value_da":  "Ryd søgning",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "7ed82cd9-2c35-4359-aecd-65397fc863df",
+        "key":  "products.search.noResults",
+        "value_en":  "No products found matching your search.",
+        "value_da":  "Ingen produkter fundet, der matcher din søgning.",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "6b430c23-c064-4a6e-966a-f9ab647c95e7",
+        "key":  "products.quickView",
+        "value_en":  "Quick View",
+        "value_da":  "Hurtigt Kig",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "018c426e-10fa-447c-85ff-012e0b830e4a",
+        "key":  "products.relatedProducts",
+        "value_en":  "Related Products",
+        "value_da":  "Relaterede Produkter",
+        "category":  "products",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "33bab978-eb87-4d4a-9012-f4a998f22efe",
+        "key":  "testimonials.title",
+        "value_en":  "What Our Partners Say",
+        "value_da":  "Hvad Vores Partnere Siger",
+        "category":  "testimonials",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4d06b45e-e33d-4f05-a7df-86088e76f9b3",
+        "key":  "newsletter.title",
+        "value_en":  "Stay Connected",
+        "value_da":  "Hold Dig Opdateret",
+        "category":  "newsletter",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "7f92cdc2-f27b-4875-9d74-62d874ab75eb",
+        "key":  "newsletter.subtitle",
+        "value_en":  "Subscribe to our newsletter for updates on new products and sustainable living tips",
+        "value_da":  "Tilmeld dig vores nyhedsbrev for opdateringer om nye produkter og bæredygtige livsstilstips",
+        "category":  "newsletter",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4178d21a-8a4b-4e7a-81c9-328350bec0c7",
+        "key":  "newsletter.placeholder",
+        "value_en":  "Enter your email",
+        "value_da":  "Indtast din email",
+        "category":  "newsletter",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "ae54eb53-50d2-4207-a398-86dc9490cacc",
+        "key":  "newsletter.button",
+        "value_en":  "Subscribe",
+        "value_da":  "Tilmeld",
+        "category":  "newsletter",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9d2f6b8b-31ee-49dc-b8f8-faa474819c39",
+        "key":  "home.journal.title",
+        "value_en":  "From Our Journal",
+        "value_da":  "Fra Vores Journal",
+        "category":  "home",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d093cd95-cc15-4be2-aecd-b14ca5817cdf",
+        "key":  "home.journal.subtitle",
+        "value_en":  "Stories, insights, and updates from the world of sustainable craftsmanship",
+        "value_da":  "Historier, indsigt og opdateringer fra bæredygtigt håndværks verden",
+        "category":  "home",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "79022331-f0a2-4972-ba82-8139e2ccf235",
+        "key":  "home.journal.cta",
+        "value_en":  "View All Posts",
+        "value_da":  "Se Alle Indlæg",
+        "category":  "home",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "aaabb355-e0c5-4fa9-9489-87ea2b0bf44d",
+        "key":  "home.faq.badge",
+        "value_en":  "FAQ",
+        "value_da":  "FAQ",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "e96f297a-5c6c-4246-bd2c-07fe7448a5a3",
+        "key":  "home.faq.title",
+        "value_en":  "Frequently Asked Questions",
+        "value_da":  "Ofte Stillede Spørgsmål",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "48947566-43fb-4870-b4bb-6f016c87ef82",
+        "key":  "home.faq.subtitle",
+        "value_en":  "Find answers to common questions about our products and services.",
+        "value_da":  "Find svar på almindelige spørgsmål om vores produkter og tjenester.",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "255b1a81-3fde-4826-a451-af80546f33f1",
+        "key":  "home.faq.q1",
+        "value_en":  "What materials are your products made from?",
+        "value_da":  "Hvilke materialer er jeres produkter lavet af?",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d4f56326-1823-4433-aaf5-31a7a6d99c75",
+        "key":  "home.faq.a1",
+        "value_en":  "All our products are made from 100% natural jute fiber, sourced sustainably from Bangladesh. Jute is one of the most eco-friendly fibers available, being fully biodegradable and renewable.",
+        "value_da":  "Alle vores produkter er lavet af 100% naturlig jutefiber, bæredygtigt indkøbt fra Bangladesh. Jute er en af de mest miljøvenlige fibre, da den er fuldt bionedbrydelig og fornybar.",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "e4e5d8b7-9d01-4b0a-a500-aeaae1440366",
+        "key":  "home.faq.q2",
+        "value_en":  "What is the minimum order quantity for bulk orders?",
+        "value_da":  "Hvad er minimumordremængden for bulkordrer?",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d290142c-a000-4dbd-92ee-8cd0ab0c69d7",
+        "key":  "home.faq.a2",
+        "value_en":  "Our minimum order quantity varies by product type. For most items, we accept orders starting from 100 units. Contact us for specific product requirements and we\u0027ll be happy to discuss your needs.",
+        "value_da":  "Vores minimumordremængde varierer efter produkttype. For de fleste varer accepterer vi ordrer fra 100 enheder. Kontakt os for specifikke produktkrav, og vi hjælper gerne.",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "7169fd19-5cef-411d-9278-1463822cfeee",
+        "key":  "home.faq.q3",
+        "value_en":  "Do you offer custom branding and private labeling?",
+        "value_da":  "Tilbyder I tilpasset branding og private labels?",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "558196e1-82db-4e03-9cc3-ec3f59ab75b5",
+        "key":  "home.faq.a3",
+        "value_en":  "Yes! We offer full customization including custom sizes, colors, printing, and private labeling. Our design team can work with you to create products that perfectly match your brand identity.",
+        "value_da":  "Ja! Vi tilbyder fuld tilpasning inklusiv brugerdefinerede størrelser, farver, tryk og private labels. Vores designteam kan arbejde sammen med dig om at skabe produkter, der passer perfekt til din brandidentitet.",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "2756b4e4-6f6f-420a-9a77-cc87bcd47325",
+        "key":  "home.faq.q4",
+        "value_en":  "What are the shipping options to Europe?",
+        "value_da":  "Hvad er forsendelsesmulighederne til Europa?",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "13fbc2ed-72ec-4766-b4e9-5b297085f035",
+        "key":  "home.faq.a4",
+        "value_en":  "We ship to all European countries via sea and air freight. Delivery times typically range from 2-4 weeks for sea freight and 5-7 days for air freight. We handle all customs documentation.",
+        "value_da":  "Vi sender til alle europæiske lande via sø- og luftfragt. Leveringstider er typisk 2-4 uger for søfragt og 5-7 dage for luftfragt. Vi håndterer al tolddokumentation.",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "5d4c62a5-181d-4b61-b420-9177643ef0ff",
+        "key":  "home.faq.q5",
+        "value_en":  "Are your products certified sustainable?",
+        "value_da":  "Er jeres produkter certificeret bæredygtige?",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "1c252501-ebb0-47b2-ad4d-6b02f057d428",
+        "key":  "home.faq.a5",
+        "value_en":  "Yes, our products are OEKO-TEX certified and we follow Fair Trade practices. We also hold ISO 14001 environmental management certification and GOTS certification for our organic jute products.",
+        "value_da":  "Ja, vores produkter er OEKO-TEX-certificerede, og vi følger Fair Trade-praksis. Vi har også ISO 14001-miljøcertificering og GOTS-certificering for vores økologiske juteprodukter.",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9ee54137-1294-4881-b301-e42a0a0663d1",
+        "key":  "home.faq.q6",
+        "value_en":  "How do I request a quote?",
+        "value_da":  "Hvordan anmoder jeg om et tilbud?",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4320bf94-2c63-4bfe-a3ea-093b55a94997",
+        "key":  "home.faq.a6",
+        "value_en":  "You can request a quote by visiting our Contact page and filling out the quotation form. Provide details about the products you\u0027re interested in, quantities, and any customization requirements. We typically respond within 24-48 hours.",
+        "value_da":  "Du kan anmode om et tilbud ved at besøge vores kontaktside og udfylde tilbudsformularen. Angiv detaljer om de produkter, du er interesseret i, mængder og eventuelle tilpasningskrav. Vi svarer typisk inden for 24-48 timer.",
+        "category":  "faq",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "7bdf00c5-a88c-4f38-b196-5965a893d65d",
+        "key":  "footer.rights",
+        "value_en":  "All rights reserved",
+        "value_da":  "Alle rettigheder forbeholdes",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "67ce7d02-ec1e-47c9-a47f-c55a4e4d728d",
+        "key":  "footer.privacy",
+        "value_en":  "Privacy Policy",
+        "value_da":  "Privatlivspolitik",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "b0546af0-d0e5-45f1-9d26-935240d006e0",
+        "key":  "footer.terms",
+        "value_en":  "Terms of Service",
+        "value_da":  "Servicevilkår",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "63033f0a-9d38-41df-83cc-50b1aa2948bc",
+        "key":  "footer.quickLinks",
+        "value_en":  "Quick Links",
+        "value_da":  "Hurtige Links",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "30e32575-615c-40fe-b8b3-5c3620095778",
+        "key":  "footer.certifications",
+        "value_en":  "Certifications",
+        "value_da":  "Certificeringer",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "1eef77a2-e347-4529-afbe-30d88dfb542c",
+        "key":  "footer.newsletter.title",
+        "value_en":  "Stay Updated",
+        "value_da":  "Hold Dig Opdateret",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "91393866-9872-49a5-9dd8-fa246eccb678",
+        "key":  "footer.newsletter.description",
+        "value_en":  "Subscribe to get the latest news, product updates, and sustainability tips.",
+        "value_da":  "Tilmeld dig for at få de seneste nyheder, produktopdateringer og bæredygtige tips.",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "42d10dd3-864b-4474-aad1-5e1b14762a8e",
+        "key":  "footer.newsletter.success",
+        "value_en":  "Thank you for subscribing!",
+        "value_da":  "Tak fordi du tilmeldte dig!",
+        "category":  "footer",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "08d9c0ea-a346-42b7-9ca0-975fd1085035",
+        "key":  "contact.title",
+        "value_en":  "Get in Touch",
+        "value_da":  "Kontakt Os",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "49ae9b71-dd9d-4dba-bd69-69b667528615",
+        "key":  "contact.subtitle",
+        "value_en":  "We\u0027d love to hear from you. Send us a message or request a quote for your business.",
+        "value_da":  "Vi vil meget gerne høre fra dig. Send os en besked eller anmod om et tilbud til din virksomhed.",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "e44ce170-d004-4f51-ba2d-6d6f16d709eb",
+        "key":  "contact.form.name",
+        "value_en":  "Your Name",
+        "value_da":  "Dit Navn",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "f1f4cabb-3c4a-4071-ad23-9c0b80312c96",
+        "key":  "contact.form.email",
+        "value_en":  "Email Address",
+        "value_da":  "Email Adresse",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4acd94c8-25c0-4eaa-8c58-f9590bc08ff1",
+        "key":  "contact.form.company",
+        "value_en":  "Company Name",
+        "value_da":  "Virksomhedsnavn",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "8208de3b-d532-442c-9a81-5206f1982ac5",
+        "key":  "contact.form.phone",
+        "value_en":  "Phone Number",
+        "value_da":  "Telefonnummer",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "5218d2f1-8586-40a5-9c90-64e4538d4368",
+        "key":  "contact.form.product",
+        "value_en":  "Product Interest",
+        "value_da":  "Produktinteresse",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "89a1988d-f71e-446a-be42-0ee6be2d465c",
+        "key":  "contact.form.product.placeholder",
+        "value_en":  "Select a product (optional)",
+        "value_da":  "Vælg et produkt (valgfrit)",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "62c9cb61-8494-4296-8152-38323f0c7078",
+        "key":  "contact.form.quantity",
+        "value_en":  "Estimated Quantity",
+        "value_da":  "Estimeret Mængde",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4b627746-cdbd-46da-8a57-289ef0d018b9",
+        "key":  "contact.form.message",
+        "value_en":  "Your Message",
+        "value_da":  "Din Besked",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "95bd997a-6d4d-498c-bd0f-aea8a60f7e54",
+        "key":  "contact.form.submit",
+        "value_en":  "Send Request",
+        "value_da":  "Send Anmodning",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "0d7ecc35-0684-4809-a712-375e1b4c8be8",
+        "key":  "contact.form.success",
+        "value_en":  "Thank you! Your request has been submitted. We will contact you soon.",
+        "value_da":  "Tak! Din anmodning er blevet sendt. Vi kontakter dig snart.",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "e179acb4-1661-40cf-92d9-90613b9a61e5",
+        "key":  "contact.form.error",
+        "value_en":  "Something went wrong. Please try again.",
+        "value_da":  "Noget gik galt. Prøv venligst igen.",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "81247798-c401-418b-bc47-c7fe19abb2ff",
+        "key":  "contact.info.title",
+        "value_en":  "Contact Information",
+        "value_da":  "Kontaktoplysninger",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "ef7e65a4-9351-41f0-85d0-7b73b7c253b8",
+        "key":  "contact.info.address",
+        "value_en":  "Address",
+        "value_da":  "Adresse",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "fb796d31-9d82-4d05-89c6-a5d8547e8d40",
+        "key":  "contact.info.email",
+        "value_en":  "Email",
+        "value_da":  "Email",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "6557e541-e88e-40ce-8299-0c85f7027577",
+        "key":  "contact.info.phone",
+        "value_en":  "Phone",
+        "value_da":  "Telefon",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "5fbf5354-8214-41a8-bde4-14505765e7ff",
+        "key":  "contact.info.hours",
+        "value_en":  "Business Hours",
+        "value_da":  "Åbningstider",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "45d9715f-bd95-4b02-a9e0-ccf8c698f845",
+        "key":  "contact.info.hours.value",
+        "value_en":  "Mon - Fri: 9:00 AM - 5:00 PM (CET)",
+        "value_da":  "Man - Fre: 9:00 - 17:00 (CET)",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "56d3ddb6-00a9-46a3-a46e-9c9b538ddbb7",
+        "key":  "contact.offices.title",
+        "value_en":  "Our Offices",
+        "value_da":  "Vores Kontorer",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "c5d9bdd1-012b-4eb4-8430-e9691be4d5cc",
+        "key":  "contact.offices.subtitle",
+        "value_en":  "Visit us at our locations in Europe and Asia.",
+        "value_da":  "Besøg os på vores lokationer i Europa og Asien.",
+        "category":  "contact",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "bd27ca43-1951-4f2f-b43d-f9e2a0a30d7a",
+        "key":  "story.hero.title",
+        "value_en":  "Weaving Tradition into Tomorrow",
+        "value_da":  "Væver Tradition ind i Morgendagen",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9afc8bd4-c518-4aa2-9e86-2c1c5f45d7b1",
+        "key":  "story.hero.subtitle",
+        "value_en":  "For over six years, Ecofy has been bridging the rich heritage of Bangladeshi craftsmanship with the sustainable needs of the European market.",
+        "value_da":  "I over seks år har Ecofy bygget bro mellem den rige arv fra bangladeshisk håndværk og det europæiske markeds bæredygtige behov.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "46422d96-8e20-4e9e-9882-f7582bceb8e0",
+        "key":  "story.mission.title",
+        "value_en":  "Our Mission",
+        "value_da":  "Vores Mission",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "245260fc-68df-4217-8572-aceebbc32c87",
+        "key":  "story.mission.description",
+        "value_en":  "At Ecofy, we believe that sustainable business can empower communities while protecting our planet. Our mission is to bring the finest eco-friendly jute products from Bangladesh to homes and businesses across Denmark and Europe.",
+        "value_da":  "Hos Ecofy tror vi på, at bæredygtig forretning kan styrke samfund og samtidig beskytte vores planet. Vores mission er at bringe de fineste miljøvenlige juteprodukter fra Bangladesh til hjem og virksomheder i Danmark og Europa.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "51dcd1b6-d8b8-46a9-adc9-97d96746bd8f",
+        "key":  "story.mission.description2",
+        "value_en":  "We work directly with skilled artisans in rural Bangladesh, ensuring fair wages, safe working conditions, and opportunities for growth. Every product we create tells a story of tradition, sustainability, and human connection.",
+        "value_da":  "Vi arbejder direkte med dygtige håndværkere i landdistrikterne i Bangladesh og sikrer fair løn, sikre arbejdsforhold og muligheder for vækst. Hvert produkt vi skaber fortæller en historie om tradition, bæredygtighed og menneskelig forbindelse.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "21feae58-eaed-4f84-8a68-510074734dcf",
+        "key":  "story.mission.years",
+        "value_en":  "Years of Excellence",
+        "value_da":  "År med Excellence",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "569df7c4-4fa0-43af-85ec-64a446e516ba",
+        "key":  "story.stats.artisans",
+        "value_en":  "Artisans Empowered",
+        "value_da":  "Håndværkere Styrket",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "26b9cf99-6655-4ed8-b049-b918fb493df2",
+        "key":  "story.stats.products",
+        "value_en":  "Unique Products",
+        "value_da":  "Unikke Produkter",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "702875bf-a5bc-463c-b587-022c05bac804",
+        "key":  "story.stats.countries",
+        "value_en":  "Countries Served",
+        "value_da":  "Lande Betjent",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "6fd25fe3-0fc9-4e37-bfc7-20ef7463ceaa",
+        "key":  "story.stats.sustainable",
+        "value_en":  "Sustainable Materials",
+        "value_da":  "Bæredygtige Materialer",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "04f2ce72-4c2f-4b86-a76c-fa8e57d18c50",
+        "key":  "story.timeline.title",
+        "value_en":  "Our Journey",
+        "value_da":  "Vores Rejse",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "0cf7432b-2d9e-4fc0-9ed8-131384fb9fe8",
+        "key":  "story.timeline.subtitle",
+        "value_en":  "From a small idea to an international sustainable brand",
+        "value_da":  "Fra en lille idé til et internationalt bæredygtigt brand",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "1deae140-c4e8-4d3f-8432-83fe364eb01e",
+        "key":  "story.timeline.2018",
+        "value_en":  "Founded with a vision to bring sustainable jute products to Europe",
+        "value_da":  "Grundlagt med en vision om at bringe bæredygtige juteprodukter til Europa",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "c244f163-5ebe-4ea2-90c2-5260757f9baa",
+        "key":  "story.timeline.2019",
+        "value_en":  "Established partnerships with 50+ artisan families in Bangladesh",
+        "value_da":  "Etablerede partnerskaber med 50+ håndværkerfamilier i Bangladesh",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "0d9edf78-4dc8-4486-a0b1-abb5e236eccc",
+        "key":  "story.timeline.2021",
+        "value_en":  "Expanded product line and entered Danish retail market",
+        "value_da":  "Udvidede produktlinjen og indtrådte på det danske detailmarked",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "28d2f4f4-6248-4660-85d4-2da8a8aa02f3",
+        "key":  "story.timeline.2023",
+        "value_en":  "Achieved Fair Trade certification and expanded to 10+ European countries",
+        "value_da":  "Opnåede Fair Trade-certificering og udvidede til 10+ europæiske lande",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "3343bff3-b3b1-4acb-9981-f2539f9ddddf",
+        "key":  "story.timeline.2024",
+        "value_en":  "Launched B2B wholesale program and sustainable packaging initiative",
+        "value_da":  "Lancerede B2B engros-program og bæredygtigt emballageinitiativ",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4f03ca51-bc54-4f68-8a54-443c4c8cd98a",
+        "key":  "story.values.title",
+        "value_en":  "Our Core Values",
+        "value_da":  "Vores Kerneværdier",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "3774673f-beb8-4470-bff4-8876a84da7f2",
+        "key":  "story.values.subtitle",
+        "value_en":  "The principles that guide everything we do",
+        "value_da":  "Principperne der guider alt hvad vi gør",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "f7782ac2-3831-4041-a53e-f1d7acc0adba",
+        "key":  "story.values.sustainability.title",
+        "value_en":  "Sustainability First",
+        "value_da":  "Bæredygtighed Først",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "3de3e5b2-f156-4fd1-a0b6-9e36c5b910dd",
+        "key":  "story.values.sustainability.desc",
+        "value_en":  "Every decision we make considers its environmental impact, from sourcing to shipping.",
+        "value_da":  "Hver beslutning vi træffer tager hensyn til dens miljøpåvirkning, fra sourcing til forsendelse.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4097fe4e-df53-46bc-a6b0-8e559ea3e861",
+        "key":  "story.values.quality.title",
+        "value_en":  "Uncompromising Quality",
+        "value_da":  "Kompromisløs Kvalitet",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "facab2b4-0582-4c61-9e61-543f2e800da4",
+        "key":  "story.values.quality.desc",
+        "value_en":  "We never sacrifice quality for cost. Each product meets the highest European standards.",
+        "value_da":  "Vi ofrer aldrig kvalitet for omkostninger. Hvert produkt opfylder de højeste europæiske standarder.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "37f4ace9-d6ae-41f1-807c-86e35a0546f6",
+        "key":  "story.values.community.title",
+        "value_en":  "Community Focused",
+        "value_da":  "Samfundsfokuseret",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "203837b6-ec70-4efb-a53a-65c0bfffbd67",
+        "key":  "story.values.community.desc",
+        "value_en":  "We invest in the communities that create our products, ensuring lasting positive impact.",
+        "value_da":  "Vi investerer i de samfund der skaber vores produkter og sikrer varig positiv indvirkning.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "c94c38b0-e36b-475e-80c6-00deddf7fc04",
+        "key":  "story.values.transparency.title",
+        "value_en":  "Full Transparency",
+        "value_da":  "Fuld Gennemsigtighed",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "3b76bef8-0ccd-45b2-9ad8-a7ce10565195",
+        "key":  "story.values.transparency.desc",
+        "value_en":  "From farm to doorstep, we maintain complete visibility in our supply chain.",
+        "value_da":  "Fra mark til dørtrin opretholder vi komplet synlighed i vores forsyningskæde.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "2ffac3bb-69df-418d-9b0c-e389775837a7",
+        "key":  "story.artisans.title",
+        "value_en":  "Meet Our Artisans",
+        "value_da":  "Mød Vores Håndværkere",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "14a7e023-80b5-47fd-946f-1d2408d2c006",
+        "key":  "story.artisans.subtitle",
+        "value_en":  "The skilled hands behind every Ecofy product",
+        "value_da":  "De dygtige hænder bag hvert Ecofy-produkt",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "0b4b7099-ca20-4ed4-bd7a-7d0999f1c546",
+        "key":  "story.artisans.weaver",
+        "value_en":  "Master Weaver",
+        "value_da":  "Mestervæver",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d1790fae-1610-41b2-aaa2-e968b37a7324",
+        "key":  "story.artisans.craftsman",
+        "value_en":  "Senior Craftsman",
+        "value_da":  "Senior Håndværker",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d6d047ee-cb29-4c61-8985-7033315fe6ee",
+        "key":  "story.artisans.designer",
+        "value_en":  "Pattern Designer",
+        "value_da":  "Mønsterdesigner",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9b71f29b-450d-4a97-b24e-d0aff7667f97",
+        "key":  "story.artisans.years",
+        "value_en":  "years of experience",
+        "value_da":  "års erfaring",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "5b75aa36-6474-4f25-a10f-5d2934e0e731",
+        "key":  "story.artisans.impact.title",
+        "value_en":  "Creating Lasting Impact",
+        "value_da":  "Skaber Varig Indvirkning",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "8d2c606f-649e-4522-898d-333ab7ad249c",
+        "key":  "story.artisans.impact.description",
+        "value_en":  "By working directly with artisan families, we ensure 40% higher wages than industry average, provide healthcare support, and fund educational programs for their children. Your purchase directly supports these communities.",
+        "value_da":  "Ved at arbejde direkte med håndværkerfamilier sikrer vi 40% højere lønninger end branchegennemsnittet, yder sundhedsstøtte og finansierer uddannelsesprogrammer for deres børn. Dit køb støtter direkte disse samfund.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "0ee7f0c9-e61b-4243-a1ef-30d722788791",
+        "key":  "story.certifications.title",
+        "value_en":  "Certified Excellence",
+        "value_da":  "Certificeret Excellence",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "67c85d65-e374-41a8-b703-2e734ff3825a",
+        "key":  "story.certifications.description",
+        "value_en":  "Our products meet the highest international standards for sustainability, quality, and ethical production.",
+        "value_da":  "Vores produkter opfylder de højeste internationale standarder for bæredygtighed, kvalitet og etisk produktion.",
+        "category":  "story",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "38f73445-bf54-48e9-8db4-1a321006d9d6",
+        "key":  "sust.badge",
+        "value_en":  "Eco-Friendly",
+        "value_da":  "Miljøvenlig",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "fb65a499-dcc4-496f-9d48-f20ea05e1447",
+        "key":  "sust.hero.title",
+        "value_en":  "Sustainability at Our Core",
+        "value_da":  "Bæredygtighed i Vores Kerne",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "98f4da94-c940-41e2-b13b-1d32f05864a4",
+        "key":  "sust.hero.subtitle",
+        "value_en":  "From seed to shelf, every step of our process is designed to minimize environmental impact while maximizing positive social change.",
+        "value_da":  "Fra frø til hylde er hvert trin i vores proces designet til at minimere miljøpåvirkningen og samtidig maksimere positiv social forandring.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "a9866cfa-2a74-41df-862b-2f7e6046e38c",
+        "key":  "sust.jute.title",
+        "value_en":  "Why Jute is the Golden Fiber",
+        "value_da":  "Hvorfor Jute er den Gyldne Fiber",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "681a2ff9-effe-4ce3-bc41-2e15bff87235",
+        "key":  "sust.jute.subtitle",
+        "value_en":  "Jute is one of the most environmentally friendly fibers on the planet. Here\u0027s how we harness its potential.",
+        "value_da":  "Jute er en af de mest miljøvenlige fibre på planeten. Her er hvordan vi udnytter dens potentiale.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "34ec8e67-7d84-4057-8bdf-927a57632c1e",
+        "key":  "sust.practices.biodegradable.title",
+        "value_en":  "100% Biodegradable",
+        "value_da":  "100% Bionedbrydelig",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "b3af8b75-e47f-45b3-9578-88de14c77f90",
+        "key":  "sust.practices.biodegradable.desc",
+        "value_en":  "Jute decomposes completely within 2-3 months, leaving no harmful residue in the environment.",
+        "value_da":  "Jute nedbrydes fuldstændigt inden for 2-3 måneder og efterlader ingen skadelige rester i miljøet.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "bb873138-6c47-4bd3-98bb-0b6becf1ae80",
+        "key":  "sust.practices.water.title",
+        "value_en":  "Low Water Usage",
+        "value_da":  "Lavt Vandforbrug",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "f33a8bbf-36ba-4eee-9442-8c6f79b229cb",
+        "key":  "sust.practices.water.desc",
+        "value_en":  "Jute requires 80% less water than cotton, making it one of the most water-efficient natural fibers.",
+        "value_da":  "Jute kræver 80% mindre vand end bomuld, hvilket gør det til en af de mest vandeffektive naturlige fibre.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "301dc990-9b66-4404-87bf-0cd24a771ad3",
+        "key":  "sust.practices.carbon.title",
+        "value_en":  "Carbon Negative",
+        "value_da":  "Kulstof Negativ",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "753ab0fa-1808-44c7-8cca-acaaa093dcb4",
+        "key":  "sust.practices.carbon.desc",
+        "value_en":  "Jute plants absorb 15 tonnes of CO2 per hectare during their growth cycle, actively fighting climate change.",
+        "value_da":  "Juteplanter optager 15 ton CO2 per hektar under deres vækstcyklus og bekæmper aktivt klimaforandringer.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "b88dba5c-df24-428b-becc-326ead9cbf6c",
+        "key":  "sust.practices.waste.title",
+        "value_en":  "Zero Waste Production",
+        "value_da":  "Nul Affald Produktion",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "32e6bcd6-2803-4848-b144-ce12b9589666",
+        "key":  "sust.practices.waste.desc",
+        "value_en":  "Every part of the jute plant is utilized - nothing goes to waste in our production process.",
+        "value_da":  "Hver del af juteplanten bruges - intet går til spilde i vores produktionsproces.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "a164754a-1a8e-4e68-a5c4-63b8896f5b5d",
+        "key":  "sust.practices.reforestation.title",
+        "value_en":  "Supports Reforestation",
+        "value_da":  "Støtter Genplantning",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "5b06bf53-7dfc-4f2e-9fd8-b28af024485c",
+        "key":  "sust.practices.reforestation.desc",
+        "value_en":  "We plant 10 trees for every 100 products sold, contributing to global reforestation efforts.",
+        "value_da":  "Vi planter 10 træer for hver 100 solgte produkter og bidrager til global genplantning.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "5349af35-a128-493f-9df6-c875c48b8f56",
+        "key":  "sust.practices.energy.title",
+        "value_en":  "Renewable Energy",
+        "value_da":  "Vedvarende Energi",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "c3c14dbf-eabc-44ed-8d31-980a4f7aaea4",
+        "key":  "sust.practices.energy.desc",
+        "value_en":  "Our production facilities run on 100% renewable energy, further reducing our carbon footprint.",
+        "value_da":  "Vores produktionsfaciliteter kører på 100% vedvarende energi, hvilket yderligere reducerer vores CO2-aftryk.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "66cfac7f-47d9-4c77-9935-921c49f06ac6",
+        "key":  "sust.carbon.title",
+        "value_en":  "Our Carbon Commitment",
+        "value_da":  "Vores Kulstofforpligtelse",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "401a6cb0-d69a-4e05-a8ca-779f0242abeb",
+        "key":  "sust.carbon.subtitle",
+        "value_en":  "We\u0027re committed to becoming carbon negative by 2030. Here\u0027s our progress so far.",
+        "value_da":  "Vi er forpligtet til at blive kulstof-negative inden 2030. Her er vores fremskridt indtil videre.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "cabbe09f-0361-4f2f-b994-6a415243f0ac",
+        "key":  "sust.carbon.reduction",
+        "value_en":  "Less Carbon vs. Plastic",
+        "value_da":  "Mindre Kulstof vs. Plastik",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "ebce456c-3651-4731-b798-1120ef5c4626",
+        "key":  "sust.carbon.plastic",
+        "value_en":  "Single-Use Plastics",
+        "value_da":  "Engangsplastik",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "a92ade78-a67a-48c5-9ea8-2323d9d20202",
+        "key":  "sust.carbon.renewable",
+        "value_en":  "Renewable Energy",
+        "value_da":  "Vedvarende Energi",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9db2185a-c8af-4c2c-9f2e-ff589b5cdb0b",
+        "key":  "sust.carbon.trees",
+        "value_en":  "Trees Planted Monthly",
+        "value_da":  "Træer Plantet Månedligt",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9eaae06c-3f21-4532-bafd-90b5d4574fe9",
+        "key":  "sust.carbon.description",
+        "value_en":  "Through partnerships with certified carbon offset programs and our own reforestation initiatives, we\u0027re not just reducing our impact - we\u0027re actively healing the planet. Every product you purchase contributes to this mission.",
+        "value_da":  "Gennem partnerskaber med certificerede kulstofkompensationsprogrammer og vores egne genplantningsinitiativer reducerer vi ikke bare vores påvirkning - vi helbreder aktivt planeten. Hvert produkt du køber bidrager til denne mission.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "331ce1f7-bfc3-4e66-b1d8-b26a68f8bd3b",
+        "key":  "sust.cert.title",
+        "value_en":  "Certifications \u0026 Standards",
+        "value_da":  "Certificeringer \u0026 Standarder",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "91377071-a2eb-4886-9514-a6ebafe5fa2e",
+        "key":  "sust.cert.subtitle",
+        "value_en":  "Our commitment to sustainability is verified by leading international organizations.",
+        "value_da":  "Vores engagement i bæredygtighed er verificeret af førende internationale organisationer.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "baae6d1b-c8f7-462c-8899-eb46343776f4",
+        "key":  "sust.cert.oeko",
+        "value_en":  "Tested for harmful substances. Guarantees product safety for human health and environmental safety.",
+        "value_da":  "Testet for skadelige stoffer. Garanterer produktsikkerhed for menneskers helbred og miljøsikkerhed.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d7c61b2c-e0eb-4e49-b5f9-7ac5374e3242",
+        "key":  "sust.cert.fairtrade",
+        "value_en":  "Ensures fair wages, safe working conditions, and sustainable practices for all workers.",
+        "value_da":  "Sikrer fair løn, sikre arbejdsforhold og bæredygtige praksisser for alle arbejdere.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "04fb93b1-0859-4451-90af-6c10a0329c6e",
+        "key":  "sust.cert.iso",
+        "value_en":  "International standard for effective environmental management systems.",
+        "value_da":  "International standard for effektive miljøledelsessystemer.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "ac7d7146-b46d-4673-bc4f-00eb28d6e70c",
+        "key":  "sust.cert.gots",
+        "value_en":  "Global Organic Textile Standard certification for organic fiber processing.",
+        "value_da":  "Global Organic Textile Standard-certificering for økologisk fiberforarbejdning.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "e29785be-1c82-471e-a979-89f58f3b50d2",
+        "key":  "sust.sdg.title",
+        "value_en":  "UN Sustainable Development Goals",
+        "value_da":  "FN\u0027s Verdensmål for Bæredygtig Udvikling",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "b9fa66c9-0d35-48a1-a069-96e89830bf52",
+        "key":  "sust.sdg.subtitle",
+        "value_en":  "Our work contributes directly to four key UN Sustainable Development Goals.",
+        "value_da":  "Vores arbejde bidrager direkte til fire centrale FN Verdensmål.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "d649069d-b834-4bcb-aac3-0670eb5ed4ee",
+        "key":  "sust.sdg.8",
+        "value_en":  "Decent Work \u0026 Economic Growth",
+        "value_da":  "Anstændige Jobs \u0026 Økonomisk Vækst",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "42d590ab-a2db-4993-aed5-37be01f3e1f1",
+        "key":  "sust.sdg.12",
+        "value_en":  "Responsible Consumption \u0026 Production",
+        "value_da":  "Ansvarligt Forbrug \u0026 Produktion",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "086773c0-7b9b-4b60-8058-45508cf34f45",
+        "key":  "sust.sdg.13",
+        "value_en":  "Climate Action",
+        "value_da":  "Klimaindsats",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "8594ffd8-1836-4a6d-8ac2-2e9b0bfdcc75",
+        "key":  "sust.sdg.15",
+        "value_en":  "Life on Land",
+        "value_da":  "Livet på Land",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "0d4f7b8e-3148-4c37-a3a3-6063629f0220",
+        "key":  "sust.supply.title",
+        "value_en":  "Transparent Supply Chain",
+        "value_da":  "Gennemsigtig Forsyningskæde",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "3e3865a5-71f5-405b-b620-22395803e98b",
+        "key":  "sust.supply.description",
+        "value_en":  "We maintain complete visibility from farm to finished product. Our supply chain is designed for traceability, fairness, and minimal environmental impact.",
+        "value_da":  "Vi opretholder komplet synlighed fra mark til færdigt produkt. Vores forsyningskæde er designet til sporbarhed, retfærdighed og minimal miljøpåvirkning.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "a3820bd7-068b-4411-81cd-96a23048188a",
+        "key":  "sust.supply.step1",
+        "value_en":  "Organic jute farming in Bangladesh",
+        "value_da":  "Økologisk jutedyrkning i Bangladesh",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "b055f318-6d86-444d-93d5-948a2ee27ca6",
+        "key":  "sust.supply.step2",
+        "value_en":  "Fair-wage processing facilities",
+        "value_da":  "Fair-løn forarbejdningsfaciliteter",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "28f48816-5bd9-49fb-a2c4-39f490d0f30f",
+        "key":  "sust.supply.step3",
+        "value_en":  "Eco-friendly packaging \u0026 shipping",
+        "value_da":  "Miljøvenlig emballage \u0026 forsendelse",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "07efc614-c1e4-499a-8c77-2bc5dff7a548",
+        "key":  "sust.supply.step4",
+        "value_en":  "Direct delivery to European markets",
+        "value_da":  "Direkte levering til europæiske markeder",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "1239f4c6-e913-4628-a751-919de2a60371",
+        "key":  "sust.supply.impact.title",
+        "value_en":  "From Farm to You",
+        "value_da":  "Fra Mark til Dig",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "8020606e-d505-49c7-aa17-ede2f79be9bc",
+        "key":  "sust.supply.impact.desc",
+        "value_en":  "Every product can be traced back to the artisan who made it.",
+        "value_da":  "Hvert produkt kan spores tilbage til håndværkeren der lavede det.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "32f96213-eb32-4d30-9adb-4f20b9112222",
+        "key":  "sust.cta.title",
+        "value_en":  "Join Our Sustainable Journey",
+        "value_da":  "Deltag i Vores Bæredygtige Rejse",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "8dcfaaee-fc10-4a8c-bf42-fedba2c6b2f7",
+        "key":  "sust.cta.subtitle",
+        "value_en":  "Choose products that are good for you and the planet.",
+        "value_da":  "Vælg produkter der er gode for dig og planeten.",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "5eead567-7233-428e-b2a9-d169ae6785c5",
+        "key":  "sust.cta.products",
+        "value_en":  "Explore Products",
+        "value_da":  "Udforsk Produkter",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "6393c034-0395-45f0-84fe-8f4b436ebf83",
+        "key":  "sust.cta.contact",
+        "value_en":  "Partner With Us",
+        "value_da":  "Bliv Partner",
+        "category":  "sustainability-page",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "8ce3351f-aa2b-44d0-9010-093169d2ca60",
+        "key":  "journal.badge",
+        "value_en":  "Blog",
+        "value_da":  "Blog",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "3f3b21a2-ee09-4b5a-b78c-79721aea0b71",
+        "key":  "journal.title",
+        "value_en":  "Our Journal",
+        "value_da":  "Vores Journal",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "3568f258-5f15-4ced-a164-8006e08a132c",
+        "key":  "journal.subtitle",
+        "value_en":  "Stories, insights, and updates from the world of sustainable jute craftsmanship.",
+        "value_da":  "Historier, indsigt og opdateringer fra verden af bæredygtigt jute-håndværk.",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9edf87b6-9412-48ab-b507-39f9f16c8f65",
+        "key":  "journal.filter.all",
+        "value_en":  "All Posts",
+        "value_da":  "Alle Indlæg",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "b16ae706-4b8c-47b3-b8d4-758a6895d4e2",
+        "key":  "journal.read-more",
+        "value_en":  "Read More",
+        "value_da":  "Læs Mere",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "79be4a6c-515f-48ff-9f2d-af5773358cdf",
+        "key":  "journal.back",
+        "value_en":  "Back to Journal",
+        "value_da":  "Tilbage til Journal",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9e585ce1-63ac-4074-890d-c2cca9213f20",
+        "key":  "journal.empty.title",
+        "value_en":  "No Posts Yet",
+        "value_da":  "Ingen Indlæg Endnu",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "34e7f96f-ddf7-4c77-90df-6b824f9aee6c",
+        "key":  "journal.empty.description",
+        "value_en":  "We\u0027re working on sharing our stories. Check back soon!",
+        "value_da":  "Vi arbejder på at dele vores historier. Kom tilbage snart!",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "114f01b2-5b5f-47c8-95e2-3f4d3f2e2da8",
+        "key":  "journal.notfound.title",
+        "value_en":  "Post Not Found",
+        "value_da":  "Indlæg Ikke Fundet",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "9016aa25-ff80-4171-90fe-cce3777445e9",
+        "key":  "journal.notfound.description",
+        "value_en":  "The article you\u0027re looking for doesn\u0027t exist or has been removed.",
+        "value_da":  "Artiklen du leder efter eksisterer ikke eller er blevet fjernet.",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "df507a7c-053c-4265-b389-e95e5be3bbe4",
+        "key":  "journal.related",
+        "value_en":  "Related Posts",
+        "value_da":  "Relaterede Indlæg",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "0031e5b3-1183-4110-9825-06dde5830645",
+        "key":  "journal.readingTime",
+        "value_en":  "min read",
+        "value_da":  "min læsning",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    },
+    {
+        "id":  "4c186da2-4c9e-4dff-be6f-daffd33ca46a",
+        "key":  "journal.toc.title",
+        "value_en":  "Table of Contents",
+        "value_da":  "Indholdsfortegnelse",
+        "category":  "journal",
+        "is_active":  true,
+        "created_at":  "2026-02-08T16:15:43.137113+00:00",
+        "updated_at":  "2026-02-08T16:15:43.137113+00:00"
+    }
+]

@@ -1,0 +1,461 @@
+﻿[
+    {
+        "id":  "e5453565-1e37-4cc1-9c76-b1ea2ef9c466",
+        "slug":  "jute-laptop-sleeve",
+        "category_id":  "bags",
+        "name_en":  "Eco Jute Laptop Sleeve",
+        "name_da":  "Øko Jute Laptop Sleeve",
+        "description_en":  "Stylish and sustainable laptop protection made from 100% natural jute fiber. Padded interior with magnetic closure keeps your device safe while making an eco-conscious statement.",
+        "description_da":  "Stilfuld og bæredygtig laptop-beskyttelse lavet af 100% naturlig jutefiber. Polstret indvendigt med magnetisk lukning holder din enhed sikker.",
+        "image_url":  "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+
+                    ],
+        "spec_size":  "35cm x 25cm (fits 13-15\" laptops)",
+        "spec_weight":  null,
+        "spec_material":  "100% Natural Jute with Cotton Lining",
+        "use_cases_en":  [
+                             "Office commute",
+                             "Business travel",
+                             "Student use",
+                             "Gift for professionals"
+                         ],
+        "use_cases_da":  [
+                             "Kontorpendling",
+                             "Forretningsrejser",
+                             "Studenterbrug",
+                             "Gave til professionelle"
+                         ],
+        "featured":  true,
+        "sort_order":  10,
+        "is_active":  true,
+        "created_at":  "2026-01-26T17:07:35.874735+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "d94a24fb-b6df-4bba-a754-5497a8c9ee7b",
+        "slug":  "jute-wine-bag",
+        "category_id":  "bags",
+        "name_en":  "Elegant Jute Wine Bottle Bag",
+        "name_da":  "Elegant Jute Vinflaske Taske",
+        "description_en":  "Elevate your gift-giving with our handcrafted jute wine bottle carrier. Features reinforced bottom and decorative rope handles for a rustic yet refined presentation.",
+        "description_da":  "Løft din gaveuddeling med vores håndlavede jute vinflaskeholder. Med forstærket bund og dekorative rebhåndtag for en rustik, men raffineret præsentation.",
+        "image_url":  "https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+
+                    ],
+        "spec_size":  "Single bottle (fits standard 750ml)",
+        "spec_weight":  null,
+        "spec_material":  "100% Natural Jute",
+        "use_cases_en":  [
+                             "Wine gifts",
+                             "Holiday presents",
+                             "Corporate gifting",
+                             "Wedding favors"
+                         ],
+        "use_cases_da":  [
+                             "Vingaver",
+                             "Feriegaver",
+                             "Firmegaver",
+                             "Bryllupsdekorationer"
+                         ],
+        "featured":  true,
+        "sort_order":  11,
+        "is_active":  true,
+        "created_at":  "2026-01-26T17:07:35.874735+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "df061b7b-5fdb-4d8a-9ba9-f8aa8a11f9b5",
+        "slug":  "shopping-bag-printed",
+        "category_id":  "bags",
+        "name_en":  "Printed Jute Shopping Bag",
+        "name_da":  "Trykt Jute Indkøbstaske",
+        "description_en":  "Stylish printed jute shopping bag with custom branding options. Perfect for retail stores and promotional events.",
+        "description_da":  "Stilfuld trykt jute indkøbstaske med brugerdefinerede brandingmuligheder. Perfekt til detailbutikker og salgsfremmende arrangementer.",
+        "image_url":  "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+                        "https://images.unsplash.com/photo-1597484662317-9bd7bdda2907?w=800\u0026h=800\u0026fit=crop"
+                    ],
+        "spec_size":  "35 x 30 x 15 cm",
+        "spec_weight":  "200g",
+        "spec_material":  "Natural Jute with Laminated Interior",
+        "use_cases_en":  [
+                             "Retail bags",
+                             "Corporate gifts",
+                             "Trade shows",
+                             "Sustainable branding"
+                         ],
+        "use_cases_da":  [
+                             "Detailtasker",
+                             "Virksomhedsgaver",
+                             "Messer",
+                             "Bæredygtig branding"
+                         ],
+        "featured":  true,
+        "sort_order":  6,
+        "is_active":  true,
+        "created_at":  "2026-01-26T11:32:02.901763+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "32c2530e-ac3c-4184-891f-bcb153f5effb",
+        "slug":  "cocoa-bag-70kg",
+        "category_id":  "sacks",
+        "name_en":  "Cocoa Bean Sack 70kg",
+        "name_da":  "Kakaobønne Sæk 70kg",
+        "description_en":  "Specialized jute sack for cocoa bean storage and transport. Breathable fabric maintains product quality.",
+        "description_da":  "Specialiseret jutesæk til opbevaring og transport af kakaobønner. Åndbar stof opretholder produktkvaliteten.",
+        "image_url":  "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+                        "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=800\u0026h=800\u0026fit=crop"
+                    ],
+        "spec_size":  "110 x 70 cm",
+        "spec_weight":  "600g",
+        "spec_material":  "Premium Breathable Jute",
+        "use_cases_en":  [
+                             "Cocoa storage",
+                             "Coffee export",
+                             "Grain storage",
+                             "Agricultural use"
+                         ],
+        "use_cases_da":  [
+                             "Kakaoopbevaring",
+                             "Kaffeeksport",
+                             "Kornopbevaring",
+                             "Landbrugsbrug"
+                         ],
+        "featured":  false,
+        "sort_order":  7,
+        "is_active":  true,
+        "created_at":  "2026-01-26T11:32:02.901763+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "e7ef0b20-cbb5-452a-9329-2133d3a9f404",
+        "slug":  "jute-coffee-sack",
+        "category_id":  "sacks",
+        "name_en":  "Premium Jute Coffee Bean Sack",
+        "name_da":  "Premium Jute Kaffebønne Sæk",
+        "description_en":  "The gold standard for coffee transportation. Our breathable jute sacks protect beans while allowing proper air circulation, preferred by specialty coffee roasters worldwide.",
+        "description_da":  "Guldstandarden for kaffetransport. Vores åndbare jutesække beskytter bønner mens de tillader ordentlig luftcirkulation, foretrukket af specialkaffe-ristere verden over.",
+        "image_url":  "https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+
+                    ],
+        "spec_size":  "60kg capacity, 90cm x 60cm",
+        "spec_weight":  null,
+        "spec_material":  "100% Natural Jute Burlap",
+        "use_cases_en":  [
+                             "Coffee storage",
+                             "Coffee transport",
+                             "Cafe decor",
+                             "Rustic events"
+                         ],
+        "use_cases_da":  [
+                             "Kaffeopbevaring",
+                             "Kaffetransport",
+                             "Cafe dekoration",
+                             "Rustikke arrangementer"
+                         ],
+        "featured":  true,
+        "sort_order":  14,
+        "is_active":  true,
+        "created_at":  "2026-01-26T17:07:35.874735+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "f15cc653-be1e-42f2-abd8-0c8e2d0e0708",
+        "slug":  "eco-friendly-jute-shopping-bag",
+        "category_id":  "bags",
+        "name_en":  "Premium Eco-Friendly Jute Shopping Bag",
+        "name_da":  "Premium Miljøvenlig Jute Indkøbstaske",
+        "description_en":  "A premium eco-friendly jute shopping bag made from natural Bangladeshi jute fiber. Features modern minimalist design with strong stitched handles.",
+        "description_da":  "En premium miljøvenlig jute indkøbstaske lavet af naturlig bangladeshisk jutefiber. Har et moderne minimalistisk design med stærke syede håndtag.",
+        "image_url":  "/products/eco-jute-bag-1.jpg",
+        "gallery":  [
+                        "/products/eco-jute-bag-2.jpg",
+                        "/products/eco-jute-bag-3.jpg"
+                    ],
+        "spec_size":  "40 x 35 x 15 cm",
+        "spec_weight":  null,
+        "spec_material":  "100% Natural Jute",
+        "use_cases_en":  [
+                             "Grocery shopping",
+                             "Beach outings",
+                             "Everyday carry",
+                             "Gift packaging"
+                         ],
+        "use_cases_da":  [
+                             "Dagligvareindkøb",
+                             "Strandture",
+                             "Daglig brug",
+                             "Gaveindpakning"
+                         ],
+        "featured":  true,
+        "sort_order":  0,
+        "is_active":  true,
+        "created_at":  "2026-01-27T12:08:19.16275+00:00",
+        "updated_at":  "2026-01-27T12:08:19.16275+00:00"
+    },
+    {
+        "id":  "695746ad-0717-4870-82e5-c2d4aa5835cb",
+        "slug":  "jute-planter-basket",
+        "category_id":  "decor",
+        "name_en":  "Jute Planter Basket",
+        "name_da":  "Jute Plantekurv",
+        "description_en":  "Beautiful handwoven jute basket perfect for indoor plants. Adds natural warmth to any room while being completely eco-friendly.",
+        "description_da":  "Smuk håndvævet jutekurv perfekt til indendørs planter. Tilføjer naturlig varme til ethvert rum og er helt miljøvenlig.",
+        "image_url":  "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+                        "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800\u0026h=800\u0026fit=crop"
+                    ],
+        "spec_size":  "25 x 25 x 30 cm",
+        "spec_weight":  "180g",
+        "spec_material":  "Handwoven Natural Jute",
+        "use_cases_en":  [
+                             "Indoor plants",
+                             "Storage basket",
+                             "Home décor",
+                             "Gift item"
+                         ],
+        "use_cases_da":  [
+                             "Indendørs planter",
+                             "Opbevaringskurv",
+                             "Boligindretning",
+                             "Gaveartikel"
+                         ],
+        "featured":  true,
+        "sort_order":  4,
+        "is_active":  true,
+        "created_at":  "2026-01-26T11:32:02.901763+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "c867956a-56ba-49bf-bdbb-d3214917497e",
+        "slug":  "jute-wall-hanging",
+        "category_id":  "decor",
+        "name_en":  "Macramé Jute Wall Hanging",
+        "name_da":  "Makramé Jute Vægdekoration",
+        "description_en":  "Handcrafted macramé wall hanging made from natural jute. A beautiful bohemian addition to any living space.",
+        "description_da":  "Håndlavet makramé vægdekoration lavet af naturlig jute. En smuk boheme tilføjelse til ethvert opholdsrum.",
+        "image_url":  "https://images.unsplash.com/photo-1522758971460-1d21eed7dc1d?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+                        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800\u0026h=800\u0026fit=crop"
+                    ],
+        "spec_size":  "60 x 80 cm",
+        "spec_weight":  "350g",
+        "spec_material":  "Natural Jute Macramé",
+        "use_cases_en":  [
+                             "Wall décor",
+                             "Living room accent",
+                             "Bedroom styling",
+                             "Gift item"
+                         ],
+        "use_cases_da":  [
+                             "Vægdekoration",
+                             "Stueaccent",
+                             "Soveværelsesstyling",
+                             "Gaveartikel"
+                         ],
+        "featured":  true,
+        "sort_order":  8,
+        "is_active":  true,
+        "created_at":  "2026-01-26T11:32:02.901763+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "fb135c77-37a8-4ec4-846d-9ac8f3ad8443",
+        "slug":  "jute-table-runner",
+        "category_id":  "decor",
+        "name_en":  "Artisan Jute Table Runner",
+        "name_da":  "Håndværker Jute Bordløber",
+        "description_en":  "Transform your dining experience with our handwoven jute table runner. Natural fringe edges and neutral tones complement any table setting from rustic to modern.",
+        "description_da":  "Forvandl din spiseoplevelse med vores håndvævede jute bordløber. Naturlige frynsekanter og neutrale toner komplementerer enhver borddækning.",
+        "image_url":  "https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+
+                    ],
+        "spec_size":  "180cm x 35cm",
+        "spec_weight":  null,
+        "spec_material":  "100% Natural Jute",
+        "use_cases_en":  [
+                             "Dining table decor",
+                             "Wedding centerpieces",
+                             "Holiday tablescapes",
+                             "Photo shoots"
+                         ],
+        "use_cases_da":  [
+                             "Spisebordsdekoration",
+                             "Bryllupscenterstykker",
+                             "Ferieborddækning",
+                             "Foto shoots"
+                         ],
+        "featured":  true,
+        "sort_order":  12,
+        "is_active":  true,
+        "created_at":  "2026-01-26T17:07:35.874735+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "cdf546e6-811b-4208-9968-54f9eb054ca2",
+        "slug":  "natural-jute-rope",
+        "category_id":  "rope",
+        "name_en":  "Natural Jute Rope 6mm",
+        "name_da":  "Naturlig Jute Reb 6mm",
+        "description_en":  "Premium quality natural jute rope, ideal for crafts, gardening, and decorative purposes. Strong and biodegradable.",
+        "description_da":  "Premium kvalitet naturligt jutereb, ideel til håndværk, havearbejde og dekorative formål. Stærkt og bionedbrydelig.",
+        "image_url":  "https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+                        "https://images.unsplash.com/photo-1516475429286-465d815a0df7?w=800\u0026h=800\u0026fit=crop"
+                    ],
+        "spec_size":  "6mm diameter x 50m",
+        "spec_weight":  "1.2kg",
+        "spec_material":  "100% Natural Jute Fiber",
+        "use_cases_en":  [
+                             "Gardening",
+                             "DIY crafts",
+                             "Packaging",
+                             "Home décor projects"
+                         ],
+        "use_cases_da":  [
+                             "Havearbejde",
+                             "DIY håndværk",
+                             "Emballage",
+                             "Boligindretningsprojekter"
+                         ],
+        "featured":  true,
+        "sort_order":  5,
+        "is_active":  true,
+        "created_at":  "2026-01-26T11:32:02.901763+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "850e3beb-d049-4cf0-974d-ada8f282fae1",
+        "slug":  "garden-twine",
+        "category_id":  "rope",
+        "name_en":  "Biodegradable Garden Twine",
+        "name_da":  "Bionedbrydelig Havesnor",
+        "description_en":  "Eco-friendly garden twine perfect for tying plants and garden tasks. Completely biodegradable and compostable.",
+        "description_da":  "Miljøvenlig havesnor perfekt til at binde planter og haveopgaver. Fuldstændig bionedbrydelig og kompostérbar.",
+        "image_url":  "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+                        "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800\u0026h=800\u0026fit=crop"
+                    ],
+        "spec_size":  "3mm diameter x 100m",
+        "spec_weight":  "400g",
+        "spec_material":  "100% Natural Jute",
+        "use_cases_en":  [
+                             "Plant support",
+                             "Garden projects",
+                             "Craft projects",
+                             "Sustainable packaging"
+                         ],
+        "use_cases_da":  [
+                             "Plantestøtte",
+                             "Haveprojekter",
+                             "Håndværksprojekter",
+                             "Bæredygtig emballage"
+                         ],
+        "featured":  false,
+        "sort_order":  9,
+        "is_active":  true,
+        "created_at":  "2026-01-26T11:32:02.901763+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "4efa42d0-253a-44b6-a6e0-ac76577ceb6b",
+        "slug":  "heavy-duty-rope-10mm",
+        "category_id":  "rope",
+        "name_en":  "Heavy-Duty Jute Rope 10mm",
+        "name_da":  "Heavy-Duty Jute Reb 10mm",
+        "description_en":  "Industrial-strength 10mm jute rope perfect for demanding applications. Biodegradable and sustainable alternative to synthetic ropes with superior grip and durability.",
+        "description_da":  "Industriel styrke 10mm jute reb perfekt til krævende applikationer. Bionedbrydelig og bæredygtig alternativ til syntetiske reb med overlegen greb.",
+        "image_url":  "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600\u0026h=600\u0026fit=crop",
+        "gallery":  [
+
+                    ],
+        "spec_size":  "10mm diameter, 50m coil",
+        "spec_weight":  null,
+        "spec_material":  "100% Natural Jute, 3-ply twisted",
+        "use_cases_en":  [
+                             "Maritime applications",
+                             "Construction",
+                             "Agriculture",
+                             "Landscaping"
+                         ],
+        "use_cases_da":  [
+                             "Maritime applikationer",
+                             "Byggeri",
+                             "Landbrug",
+                             "Landskabsarkitektur"
+                         ],
+        "featured":  true,
+        "sort_order":  13,
+        "is_active":  true,
+        "created_at":  "2026-01-26T17:07:35.874735+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "c869ba59-d4f2-4923-80cb-022e41e32cb8",
+        "slug":  "stylish-jute-wine-bag",
+        "category_id":  "bags",
+        "name_en":  "Stylish Jute Wine Bag",
+        "name_da":  "Stilfuld Jute Vinpose",
+        "description_en":  "A stylish jute wine bag made from high-quality natural jute. Features a slim vertical shape suitable for wine bottles with a premium handcrafted look and minimalist design. Perfect for eco-friendly luxury packaging.",
+        "description_da":  "En stilfuld jute vinpose lavet af naturlig jute af høj kvalitet. Har en slank vertikal form velegnet til vinflasker med et premium håndlavet look og minimalistisk design. Perfekt til miljøvenlig luksusemballage.",
+        "image_url":  "/products/jute-wine-bag-1.jpg",
+        "gallery":  [
+                        "/products/jute-wine-bag-2.jpg",
+                        "/products/jute-wine-bag-3.jpg"
+                    ],
+        "spec_size":  "35 x 10 x 10 cm",
+        "spec_weight":  null,
+        "spec_material":  "100% Natural Jute",
+        "use_cases_en":  [
+                             "Wine gifting",
+                             "Bottle packaging",
+                             "Special occasions",
+                             "Corporate gifts"
+                         ],
+        "use_cases_da":  [
+                             "Vingaver",
+                             "Flaskeemballage",
+                             "Særlige lejligheder",
+                             "Firmegaver"
+                         ],
+        "featured":  false,
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-01-27T14:23:15.499175+00:00",
+        "updated_at":  "2026-01-27T14:23:15.499175+00:00"
+    },
+    {
+        "id":  "cffc4225-f590-4668-ad62-09955cc4720c",
+        "slug":  "eco-friendly-jute-shopping-abc",
+        "category_id":  "decor",
+        "name_en":  "XYZ",
+        "name_da":  "ABCD",
+        "description_en":  "xyz xyz xyz",
+        "description_da":  "abc abcabc abc ",
+        "image_url":  "https://erurvhorlwtemrexefzv.supabase.co/storage/v1/object/public/product-images/1770736174975-e5cuun.jpg",
+        "gallery":  [
+                        "https://erurvhorlwtemrexefzv.supabase.co/storage/v1/object/public/product-images/1770736200587-24bs3n.jpg",
+                        "https://erurvhorlwtemrexefzv.supabase.co/storage/v1/object/public/product-images/1770736203640-p1p46.jpg"
+                    ],
+        "spec_size":  "40 x 35 x 15 cm",
+        "spec_weight":  "1 KG",
+        "spec_material":  "100% Natural Jute",
+        "use_cases_en":  [
+
+                         ],
+        "use_cases_da":  [
+
+                         ],
+        "featured":  true,
+        "sort_order":  10,
+        "is_active":  true,
+        "created_at":  "2026-02-10T15:10:30.392405+00:00",
+        "updated_at":  "2026-02-10T15:10:30.392405+00:00"
+    }
+]

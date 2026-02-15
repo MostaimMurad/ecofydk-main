@@ -1,0 +1,44 @@
+﻿[
+    {
+        "id":  "a1afe909-404e-45cc-ba4e-61ce6ff5808a",
+        "name":  "Lars Jensen",
+        "company":  "GreenMart Copenhagen",
+        "role":  "Sustainability Director",
+        "text_en":  "Ecofy has been our trusted supplier for sustainable packaging. The quality of their jute bags is exceptional, and our customers love the eco-friendly approach.",
+        "text_da":  "Ecofy har været vores betroede leverandør af bæredygtig emballage. Kvaliteten af deres jutetasker er enestående, og vores kunder elsker den miljøvenlige tilgang.",
+        "rating":  5,
+        "image_url":  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100\u0026h=100\u0026fit=crop\u0026crop=face",
+        "sort_order":  1,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "083eddc7-1183-4192-8f3d-bd0249ed5ad8",
+        "name":  "Emma Sørensen",
+        "company":  "Nordic Home Design",
+        "role":  "Creative Director",
+        "text_en":  "The decorative jute products from Ecofy have been a hit in our stores. Beautiful craftsmanship and a great story behind each product.",
+        "text_da":  "De dekorative juteprodukter fra Ecofy har været et hit i vores butikker. Smukt håndværk og en fantastisk historie bag hvert produkt.",
+        "rating":  5,
+        "image_url":  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100\u0026h=100\u0026fit=crop\u0026crop=face",
+        "sort_order":  2,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    },
+    {
+        "id":  "6688d41c-1e66-4521-8329-d4c70ee37d75",
+        "name":  "Mikkel Andersen",
+        "company":  "Organic Farms EU",
+        "role":  "Operations Manager",
+        "text_en":  "We switched to Ecofy\u0027s jute sacks for our grain packaging. Not only are they biodegradable, but they\u0027re also incredibly durable. Highly recommended!",
+        "text_da":  "Vi skiftede til Ecofys jutesække til vores kornemballage. De er ikke kun bionedbrydelige, men også utroligt holdbare. Stærkt anbefalet!",
+        "rating":  5,
+        "image_url":  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100\u0026h=100\u0026fit=crop\u0026crop=face",
+        "sort_order":  3,
+        "is_active":  true,
+        "created_at":  "2026-02-08T15:08:45.271217+00:00",
+        "updated_at":  "2026-02-08T15:08:45.271217+00:00"
+    }
+]
