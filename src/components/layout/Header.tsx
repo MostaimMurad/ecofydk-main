@@ -63,8 +63,8 @@ const Header = () => {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-500",
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-primary/10 shadow-lg shadow-primary/5"
-          : "bg-background/60 backdrop-blur-sm border-b border-transparent"
+          ? "bg-background/95 backdrop-blur-xl border-b border-primary/15 shadow-lg shadow-black/5"
+          : "bg-background/90 backdrop-blur-md border-b border-transparent"
       )}
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
@@ -93,7 +93,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex">
           {navLinks.map((link, index) => (
             <motion.div
               key={link.href}
@@ -104,18 +104,21 @@ const Header = () => {
               <Link
                 to={link.href}
                 className={cn(
-                  'relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300',
+                  'group relative px-4 py-2 text-[13px] font-semibold tracking-wide uppercase rounded-full transition-all duration-300',
                   location.pathname === link.href
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? 'text-white dark:text-white'
+                    : 'text-foreground/70 hover:text-primary'
                 )}
               >
                 {location.pathname === link.href && (
                   <motion.span
                     layoutId="activeNav"
-                    className="absolute inset-0 rounded-full bg-primary/10 border border-primary/20"
+                    className="absolute inset-0 rounded-full bg-primary shadow-md shadow-primary/25"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
+                )}
+                {location.pathname !== link.href && (
+                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-primary rounded-full transition-all duration-300 group-hover:w-5" />
                 )}
                 <span className="relative z-10">{link.label}</span>
               </Link>
@@ -318,10 +321,10 @@ const Header = () => {
                     to={link.href}
                     onClick={() => setIsMenuOpen(false)}
                     className={cn(
-                      'flex items-center gap-3 rounded-xl px-4 py-3 text-base font-medium transition-all duration-300',
+                      'flex items-center gap-3 rounded-xl px-4 py-3 text-base font-semibold tracking-wide transition-all duration-300',
                       location.pathname === link.href
-                        ? 'bg-primary/10 text-primary border border-primary/20'
-                        : 'text-muted-foreground hover:bg-primary/5 hover:text-foreground'
+                        ? 'bg-primary text-white shadow-md shadow-primary/25'
+                        : 'text-foreground/70 hover:bg-primary/5 hover:text-primary'
                     )}
                   >
                     {location.pathname === link.href && (
