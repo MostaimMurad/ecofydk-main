@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  LayoutDashboard, 
-  Package, 
-  FileText, 
-  MessageSquare, 
-  Users, 
-  LogOut, 
-  Menu, 
+import {
+  LayoutDashboard,
+  Package,
+  FileText,
+  MessageSquare,
+  Users,
+  LogOut,
+  Menu,
   X,
   Leaf,
   ChevronRight,
@@ -18,7 +18,8 @@ import {
   Phone,
   Share2,
   ChevronDown,
-  Languages
+  Languages,
+  Layers
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -50,6 +51,7 @@ const navGroups: NavGroup[] = [
       { href: '/admin/products', icon: Package, label: 'Products' },
       { href: '/admin/quotations', icon: MessageSquare, label: 'Quotations' },
       { href: '/admin/blog', icon: FileText, label: 'Blog' },
+      { href: '/admin/content', icon: Layers, label: 'Content Manager' },
     ]
   },
   {
@@ -150,11 +152,11 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
               >
                 <CollapsibleTrigger className="flex items-center justify-between w-full px-2 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors">
                   <span>{group.label}</span>
-                  <ChevronDown 
+                  <ChevronDown
                     className={cn(
                       "h-4 w-4 transition-transform",
                       openGroups[group.label] && "rotate-180"
-                    )} 
+                    )}
                   />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-1 space-y-0.5">

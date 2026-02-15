@@ -36,6 +36,7 @@ import AdminBlog from "./pages/admin/AdminBlog";
 import BlogEditor from "./pages/admin/BlogEditor";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminTranslations from "./pages/admin/AdminTranslations";
+import AdminContentBlocks from "./pages/admin/AdminContentBlocks";
 import AppearanceSettings from "./pages/admin/settings/AppearanceSettings";
 import GeneralSettings from "./pages/admin/settings/GeneralSettings";
 import BrandingSettings from "./pages/admin/settings/BrandingSettings";
@@ -85,6 +86,7 @@ const App = () => (
                     <Route path="/admin/blog/:id" element={<ProtectedRoute requireAdmin><AdminLayout><BlogEditor /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/users" element={<ProtectedRoute requireAdmin><AdminLayout><AdminUsers /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/translations" element={<ProtectedRoute requireAdmin><AdminLayout><AdminTranslations /></AdminLayout></ProtectedRoute>} />
+                    <Route path="/admin/content" element={<ProtectedRoute requireAdmin><AdminLayout><AdminContentBlocks /></AdminLayout></ProtectedRoute>} />
 
                     {/* Admin Settings Routes */}
                     <Route path="/admin/settings/appearance" element={<ProtectedRoute requireAdmin><AdminLayout><AppearanceSettings /></AdminLayout></ProtectedRoute>} />
