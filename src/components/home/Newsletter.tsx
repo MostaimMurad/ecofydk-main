@@ -38,8 +38,8 @@ const Newsletter = () => {
       await subscribeMutation.mutateAsync(email);
       toast({
         title: language === 'en' ? 'Subscribed!' : 'Tilmeldt!',
-        description: language === 'en' 
-          ? 'Thank you for subscribing to our newsletter.' 
+        description: language === 'en'
+          ? 'Thank you for subscribing to our newsletter.'
           : 'Tak fordi du abonnerer på vores nyhedsbrev.',
       });
       setEmail('');
@@ -55,7 +55,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/90 py-20 md:py-28">
+    <section className="relative overflow-hidden py-20 md:py-28" style={{ background: 'linear-gradient(135deg, #0c2818 0%, #1a3c2a 40%, #14332a 70%, #0d2a1e 100%)' }}>
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
