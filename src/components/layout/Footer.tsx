@@ -76,7 +76,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-primary via-primary to-primary/95 text-primary-foreground">
+    <footer className="relative overflow-hidden text-primary-foreground" style={{ background: 'linear-gradient(180deg, #0f2e1e 0%, #1a3c2a 50%, #0c2818 100%)' }}>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -right-32 top-0 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
         <div className="absolute -left-32 bottom-0 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
