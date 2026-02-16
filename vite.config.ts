@@ -30,3 +30,14 @@ export default defineConfig({
     allowedHosts: true,
   },
 });
+
+
+
+export default defineConfig({
+  preview: {
+    host: true,
+    port: 3000,
+    allowedHosts: ['new.ecofy.dk']
+  }
+})
+
