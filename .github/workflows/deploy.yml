@@ -22,12 +22,16 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Lowercase image name
+        run: |
+          echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: ghcr.io/mostaimmurad/ecofydk-app:latest
+          tags: ${{ env.IMAGE_NAME }}:latest
 
       - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@master
@@ -36,7 +40,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           password: ${{ secrets.VPS_PASSWORD }}
           script: |
-            docker pull ghcr.io/mostaimmurad/ecofydk-app:latest
+            docker pull ${{ env.IMAGE_NAME }}:latest
             docker stop ecofydk-app || true
             docker rm ecofydk-app || true
-            docker run -d --name ecofydk-app -p 3001:80 --restart unless-stopped ghcr.io/mostaimmurad/ecofydk-app:latest
+            docker run -d --name ecofydk-app -p 3001:80 --restart unless-stopped ${{ env.IMAGE_NAME }}:latest
