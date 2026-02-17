@@ -1543,3 +1543,21 @@ INSERT INTO public.translations (key, value_en, value_da, category) VALUES
   ('journal.toc.title', 'Table of Contents', 'Indholdsfortegnelse', 'journal');
 
 
+-- ============================================
+-- IMPORTANT: API Access Permissions
+-- These GRANTs are required for self-hosted Supabase
+-- so the REST API (anon/authenticated) can access tables
+-- ============================================
+
+GRANT USAGE ON SCHEMA public TO anon, authenticated;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO anon;
+GRANT ALL ON ALL TABLES IN SCHEMA public TO authenticated;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO anon, authenticated;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO anon;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO authenticated;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT USAGE, SELECT ON SEQUENCES TO anon, authenticated;
+
+-- Allow anonymous users to submit contact forms and newsletter signups
+GRANT INSERT ON public.quotation_requests TO anon;
+GRANT INSERT ON public.newsletter_subscribers TO anon;
+
