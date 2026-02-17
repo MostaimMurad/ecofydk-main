@@ -8,6 +8,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # --- ADD THIS PERMISSIONS BLOCK ---
+    permissions:
+      contents: read
+      packages: write
+    # ----------------------------------
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
