@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Package, Palette, Ruler, Printer, Send, ArrowRight, ArrowLeft, Leaf, CheckCircle, Sparkles, ShieldCheck, Clock, Truck, Factory, MessageSquare } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
@@ -182,8 +181,6 @@ const CustomSolutions = () => {
 
     return (
         <>
-            <Breadcrumb items={[{ label: language === 'da' ? 'Tilpassede Løsninger' : 'Custom Solutions' }]} />
-
             <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
                 {[...Array(4)].map((_, i) => (
                     <FloatingLeaf key={i} delay={i * 3} x={Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200)} />

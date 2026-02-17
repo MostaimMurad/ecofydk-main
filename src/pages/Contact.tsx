@@ -23,7 +23,6 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 
 // Floating Leaf component for background animation
 const FloatingLeaf = ({ delay = 0, x = 0 }: { delay?: number; x?: number }) => (
@@ -120,10 +119,10 @@ const Contact = () => {
   const contactAddress = settings?.contact_address || 'Copenhagen, Denmark';
   const contactEmail = settings?.contact_email || 'info@ecofy.dk';
   const contactPhone = settings?.contact_phone || '+45 12 34 56 78';
-  
+
   const businessHoursBlock = contactBlocks.find(b => b.block_key === (language === 'da' ? 'business_hours_da' : 'business_hours_en'));
   const businessHours = businessHoursBlock?.value || t('contact.info.hours.value');
-  
+
   const whatsappBlock = contactBlocks.find(b => b.block_key === 'whatsapp_number');
   const whatsappNumber = whatsappBlock?.value || '+4520123456';
 
@@ -157,7 +156,7 @@ const Contact = () => {
   ];
 
   const whatsappMessage = encodeURIComponent(
-    language === 'da' 
+    language === 'da'
       ? 'Hej! Jeg vil gerne have mere information om jeres produkter.'
       : 'Hi! I would like more information about your products.'
   );
@@ -173,21 +172,12 @@ const Contact = () => {
             <FloatingLeaf key={i} x={x} delay={i * 2.2} />
           ))}
         </div>
-        
+
         {/* Gradient orbs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
 
         <div className="container relative z-10">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="mb-8"
-          >
-            <Breadcrumb />
-          </motion.div>
 
           <div className="text-center max-w-4xl mx-auto">
             {/* Premium Badge */}
@@ -209,7 +199,7 @@ const Contact = () => {
             >
               {t('contact.title')}
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -285,7 +275,7 @@ const Contact = () => {
                         {language === 'da' ? 'Anmod om Tilbud' : 'Request a Quote'}
                       </h2>
                       <p className="text-muted-foreground mt-2">
-                        {language === 'da' 
+                        {language === 'da'
                           ? 'Udfyld formularen nedenfor, så vender vi tilbage hurtigst muligt.'
                           : 'Fill out the form below and we\'ll get back to you as soon as possible.'}
                       </p>
@@ -309,7 +299,7 @@ const Contact = () => {
                           </p>
                         )}
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="email" className="flex items-center gap-2">
                           <Mail className="h-4 w-4 text-muted-foreground" />
@@ -343,7 +333,7 @@ const Contact = () => {
                           className="h-12 rounded-xl border-border/50 bg-white/50 dark:bg-background/50 focus:border-primary focus:ring-primary/20 transition-all"
                         />
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="phone" className="flex items-center gap-2">
                           <Phone className="h-4 w-4 text-muted-foreground" />
@@ -381,7 +371,7 @@ const Contact = () => {
                           </SelectContent>
                         </Select>
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="quantity">{t('contact.form.quantity')}</Label>
                         <Input
@@ -499,7 +489,7 @@ const Contact = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-600" />
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30" />
-                
+
                 <div className="relative z-10 p-6 text-white">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -518,7 +508,7 @@ const Contact = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       <Button

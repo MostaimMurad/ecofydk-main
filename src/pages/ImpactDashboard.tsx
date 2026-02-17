@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, Globe, TreePine, Droplets, Package, Truck, Recycle, Target, Users, Building2, ArrowRight, Sparkles, TrendingUp, Award } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
@@ -128,8 +127,6 @@ const ImpactDashboard = () => {
 
     return (
         <>
-            <Breadcrumb items={[{ label: language === 'da' ? 'Vores Påvirkning' : 'Our Impact' }]} />
-
             {/* Floating Leaves */}
             <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
                 {[...Array(5)].map((_, i) => (

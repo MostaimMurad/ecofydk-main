@@ -13,7 +13,6 @@ import RelatedPosts from '@/components/journal/RelatedPosts';
 import ReadingTime from '@/components/journal/ReadingTime';
 import TableOfContents from '@/components/journal/TableOfContents';
 import ReadingProgressBar from '@/components/journal/ReadingProgressBar';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 
 // Floating leaf animation component
 const FloatingLeaf = ({ delay, duration, left }: { delay: number; duration: number; left: string }) => (
@@ -21,16 +20,16 @@ const FloatingLeaf = ({ delay, duration, left }: { delay: number; duration: numb
     className="absolute pointer-events-none"
     style={{ left }}
     initial={{ y: -20, opacity: 0, rotate: 0 }}
-    animate={{ 
-      y: ['0%', '100%'], 
+    animate={{
+      y: ['0%', '100%'],
       opacity: [0, 0.5, 0.5, 0],
       rotate: [0, 180]
     }}
-    transition={{ 
-      duration, 
-      delay, 
-      repeat: Infinity, 
-      ease: "linear" 
+    transition={{
+      duration,
+      delay,
+      repeat: Infinity,
+      ease: "linear"
     }}
   >
     <Leaf className="h-3 w-3 text-primary/15" />
@@ -47,8 +46,8 @@ const JournalPost = () => {
     post?.category || null
   );
 
-  const currentUrl = typeof window !== 'undefined' 
-    ? `${window.location.origin}${location.pathname}` 
+  const currentUrl = typeof window !== 'undefined'
+    ? `${window.location.origin}${location.pathname}`
     : '';
 
   const getLocalizedContent = (field: 'title' | 'excerpt' | 'content') => {
@@ -104,17 +103,17 @@ const JournalPost = () => {
   return (
     <div className="min-h-screen">
       <ReadingProgressBar />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-primary/5 to-background">
         {/* Floating Leaves */}
         <div className="absolute inset-0 overflow-hidden h-[400px]">
           {[...Array(6)].map((_, i) => (
-            <FloatingLeaf 
-              key={i} 
-              delay={i * 1.5} 
-              duration={12 + i * 2} 
-              left={`${15 + i * 15}%`} 
+            <FloatingLeaf
+              key={i}
+              delay={i * 1.5}
+              duration={12 + i * 2}
+              left={`${15 + i * 15}%`}
             />
           ))}
         </div>
@@ -124,19 +123,6 @@ const JournalPost = () => {
         <div className="absolute -right-32 top-20 h-48 w-48 rounded-full bg-accent/10 blur-3xl" />
 
         <article className="container relative z-10 py-8 md:py-12">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Breadcrumb 
-              items={[
-                { label: 'Journal', href: '/journal' },
-              ]}
-              currentPage={getLocalizedContent('title')}
-            />
-          </motion.div>
 
           {/* Header */}
           <header className="mx-auto max-w-3xl mt-8">
@@ -146,8 +132,8 @@ const JournalPost = () => {
               transition={{ duration: 0.5 }}
             >
               {post.category && (
-                <Badge 
-                  variant="secondary" 
+                <Badge
+                  variant="secondary"
                   className="mb-6 bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-primary/20 px-4 py-2 shadow-lg"
                 >
                   {post.category}
@@ -155,7 +141,7 @@ const JournalPost = () => {
               )}
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -164,7 +150,7 @@ const JournalPost = () => {
               {getLocalizedContent('title')}
             </motion.h1>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -198,7 +184,7 @@ const JournalPost = () => {
 
       {/* Cover Image with Premium Styling */}
       {post.cover_image && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
@@ -217,7 +203,7 @@ const JournalPost = () => {
       {/* Content Section */}
       <section className="container py-12 md:py-16">
         {/* Table of Contents with Glass-morphism */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -229,7 +215,7 @@ const JournalPost = () => {
         </motion.div>
 
         {/* Article Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -239,7 +225,7 @@ const JournalPost = () => {
         </motion.div>
 
         {/* Social Share (Bottom) with Glass-morphism */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -255,7 +241,7 @@ const JournalPost = () => {
         </motion.div>
 
         {/* Related Posts */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -266,7 +252,7 @@ const JournalPost = () => {
         </motion.div>
 
         {/* Footer with Premium Button */}
-        <motion.footer 
+        <motion.footer
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

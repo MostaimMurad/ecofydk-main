@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Globe, Leaf, TrendingUp, Users, ArrowRight, MapPin, Clock, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
@@ -47,8 +46,6 @@ const Careers = () => {
 
     return (
         <>
-            <Breadcrumb items={[{ label: language === 'da' ? 'Karriere' : 'Careers' }]} />
-
             {/* Hero */}
             <section className="relative overflow-hidden py-20 md:py-28">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5" />

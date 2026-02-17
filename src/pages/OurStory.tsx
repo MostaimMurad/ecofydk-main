@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Leaf, Heart, Users, Globe, Award, Handshake, Sparkles, Star, Quote } from 'lucide-react';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import heroOurStory from '@/assets/hero-our-story.jpg';
 import missionProduction from '@/assets/mission-production.jpg';
 import artisanFatima from '@/assets/artisan-fatima.jpg';
@@ -94,7 +93,7 @@ const OurStory = () => {
       {/* Hero Section with Premium Styling */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroOurStory})` }}
         >
@@ -123,14 +122,6 @@ const OurStory = () => {
         </div>
 
         <div className="container relative z-10 flex h-full items-center">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="absolute top-6 left-0"
-          >
-            <Breadcrumb className="text-white/80" />
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -194,7 +185,7 @@ const OurStory = () => {
               <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
                 {t('story.mission.title')}
               </h2>
-              
+
               <div className="mt-8 backdrop-blur-xl bg-white/80 dark:bg-card/80 rounded-3xl p-6 border border-border/50 shadow-xl">
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   {t('story.mission.description')}
@@ -238,7 +229,7 @@ const OurStory = () => {
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-emerald-600 to-primary" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30" />
-        
+
         <div className="container relative z-10">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {stats.map((stat, index) => (
@@ -309,7 +300,7 @@ const OurStory = () => {
           <div className="relative mx-auto max-w-4xl">
             {/* Timeline line */}
             <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 bg-gradient-to-b from-primary via-emerald-500 to-primary/50 rounded-full" />
-            
+
             {timeline.map((item, index) => (
               <motion.div
                 key={item.year}
@@ -317,9 +308,8 @@ const OurStory = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className={`relative mb-12 flex items-center ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}
+                className={`relative mb-12 flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
               >
                 <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
                   <motion.div
@@ -332,7 +322,7 @@ const OurStory = () => {
                     <p className="mt-3 text-muted-foreground">{item.text}</p>
                   </motion.div>
                 </div>
-                
+
                 {/* Timeline dot */}
                 <motion.div
                   whileHover={{ scale: 1.3 }}
@@ -340,7 +330,7 @@ const OurStory = () => {
                 >
                   <div className="h-2 w-2 rounded-full bg-white" />
                 </motion.div>
-                
+
                 <div className="w-1/2" />
               </motion.div>
             ))}
@@ -351,7 +341,7 @@ const OurStory = () => {
       {/* Values Section with Gradient Cards */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        
+
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -478,7 +468,7 @@ const OurStory = () => {
             <div className="relative overflow-hidden rounded-3xl">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-emerald-600 to-primary" />
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30" />
-              
+
               <div className="relative z-10 p-8 md:p-12 text-center text-white">
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
@@ -521,7 +511,7 @@ const OurStory = () => {
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
               {t('story.certifications.description')}
             </p>
-            
+
             <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
               {certNames.map((cert, index) => (
                 <motion.div

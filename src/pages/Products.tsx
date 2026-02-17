@@ -9,7 +9,6 @@ import ProductSort, { SortOption } from '@/components/products/ProductSort';
 import ViewToggle, { ViewMode } from '@/components/products/ViewToggle';
 import ProductCard from '@/components/products/ProductCard';
 import ProductListCard from '@/components/products/ProductListCard';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
@@ -157,15 +156,6 @@ const Products = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
 
         <div className="container relative z-10">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="mb-4"
-          >
-            <Breadcrumb />
-          </motion.div>
 
           <div className="text-center max-w-4xl mx-auto">
             {/* Premium Badge */}

@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, Droplets, Wind, Recycle, Timer, ShieldCheck, TrendingDown, Factory, Sprout, Globe, ArrowRight, ChevronDown, Sparkles, TreePine, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
@@ -103,8 +102,6 @@ const WhyJute = () => {
 
     return (
         <>
-            <Breadcrumb items={[{ label: language === 'da' ? 'Hvorfor Jute?' : 'Why Jute?' }]} />
-
             {/* Floating leaves background */}
             <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
                 {[...Array(6)].map((_, i) => (

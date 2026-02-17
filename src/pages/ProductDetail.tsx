@@ -14,7 +14,6 @@ import OriginSupplier from '@/components/products/OriginSupplier';
 import ESGImpact from '@/components/products/ESGImpact';
 import GovernanceCompliance from '@/components/products/GovernanceCompliance';
 import ProductCTA from '@/components/products/ProductCTA';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Button } from '@/components/ui/button';
 
 // Floating particle component
@@ -103,20 +102,6 @@ const ProductDetail = () => {
         </div>
 
         <div className="container relative z-10">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="mb-8"
-          >
-            <Breadcrumb
-              items={[
-                { label: language === 'da' ? 'Produkter' : 'Products', href: '/products' },
-              ]}
-              currentPage={name}
-            />
-          </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Image Gallery */}

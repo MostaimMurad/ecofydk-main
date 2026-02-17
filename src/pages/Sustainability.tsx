@@ -4,7 +4,6 @@ import { Leaf, Droplets, Wind, Recycle, Award, TreePine, Factory, Globe, CheckCi
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import heroSustainability from '@/assets/hero-sustainability.jpg';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
 
@@ -108,7 +107,7 @@ const Sustainability = () => {
       {/* Hero Section with Premium Styling */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroSustainability})` }}
         >
@@ -137,14 +136,6 @@ const Sustainability = () => {
         </div>
 
         <div className="container relative z-10 flex h-full items-center">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="absolute top-6 left-0"
-          >
-            <Breadcrumb className="text-white/80" />
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -187,7 +178,7 @@ const Sustainability = () => {
         {/* Background decoration */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        
+
         {/* Floating leaves */}
         <div className="absolute inset-0 overflow-hidden">
           {[15, 35, 55, 75, 92].map((x, i) => (
@@ -249,7 +240,7 @@ const Sustainability = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-green-600 to-emerald-700" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30" />
-        
+
         {/* Animated background orbs */}
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
@@ -330,7 +321,7 @@ const Sustainability = () => {
       {/* Certifications Section with Premium Cards */}
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        
+
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -439,7 +430,7 @@ const Sustainability = () => {
       {/* Supply Chain Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
-        
+
         <div className="container relative z-10">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div
@@ -456,12 +447,12 @@ const Sustainability = () => {
                 <Globe className="h-4 w-4" />
                 {language === 'da' ? 'Vores Forsyningskæde' : 'Our Supply Chain'}
               </motion.div>
-              
+
               <h2 className="font-serif text-3xl font-bold md:text-4xl lg:text-5xl">{t('sust.supply.title')}</h2>
               <p className="mt-6 text-lg text-muted-foreground">
                 {t('sust.supply.description')}
               </p>
-              
+
               <div className="mt-8 space-y-4">
                 {supplySteps.map((step, index) => (
                   <motion.div
@@ -517,7 +508,7 @@ const Sustainability = () => {
             <div className="relative overflow-hidden rounded-3xl">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-emerald-600 to-primary" />
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30" />
-              
+
               {/* Animated orbs */}
               <motion.div
                 animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }}
@@ -529,7 +520,7 @@ const Sustainability = () => {
                 transition={{ duration: 10, repeat: Infinity, delay: 2 }}
                 className="absolute -bottom-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"
               />
-              
+
               <div className="relative z-10 py-16 px-8 md:py-20 text-center text-white">
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
@@ -538,10 +529,10 @@ const Sustainability = () => {
                 >
                   <Sparkles className="h-8 w-8" />
                 </motion.div>
-                
+
                 <h2 className="font-serif text-3xl font-bold md:text-4xl lg:text-5xl">{t('sust.cta.title')}</h2>
                 <p className="mt-4 text-white/90 text-lg max-w-2xl mx-auto">{t('sust.cta.subtitle')}</p>
-                
+
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-xl h-14 px-8 text-lg">

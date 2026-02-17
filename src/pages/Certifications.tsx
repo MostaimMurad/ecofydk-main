@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Award, FileCheck, Globe, Leaf, CheckCircle, ArrowRight, Sparkles, Download, QrCode, Factory, Truck, Eye } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
@@ -75,8 +74,6 @@ const Certifications = () => {
 
     return (
         <>
-            <Breadcrumb items={[{ label: language === 'da' ? 'Certificeringer' : 'Certifications & Compliance' }]} />
-
             <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
                 {[...Array(4)].map((_, i) => (
                     <FloatingLeaf key={i} delay={i * 3} x={Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200)} />

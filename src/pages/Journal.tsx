@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Calendar, ArrowRight, BookOpen, ChevronLeft, ChevronRight, Sparkles, Leaf } from 'lucide-react';
 import { format } from 'date-fns';
-import Breadcrumb from '@/components/layout/Breadcrumb';
 
 // Floating leaf animation component
 const FloatingLeaf = ({ delay, duration, left }: { delay: number; duration: number; left: string }) => (
@@ -16,16 +15,16 @@ const FloatingLeaf = ({ delay, duration, left }: { delay: number; duration: numb
     className="absolute pointer-events-none"
     style={{ left }}
     initial={{ y: -20, opacity: 0, rotate: 0 }}
-    animate={{ 
-      y: ['0%', '100vh'], 
+    animate={{
+      y: ['0%', '100vh'],
       opacity: [0, 1, 1, 0],
       rotate: [0, 360]
     }}
-    transition={{ 
-      duration, 
-      delay, 
-      repeat: Infinity, 
-      ease: "linear" 
+    transition={{
+      duration,
+      delay,
+      repeat: Infinity,
+      ease: "linear"
     }}
   >
     <Leaf className="h-4 w-4 text-primary/20" />
@@ -36,7 +35,7 @@ const Journal = () => {
   const { language, t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [currentPage, setCurrentPage] = useState<number>(1);
-  
+
   const { data, isLoading: postsLoading } = useBlogPosts(selectedCategory, currentPage);
   const { data: categories } = useBlogCategories();
 
@@ -73,7 +72,7 @@ const Journal = () => {
     if (!data) return [];
     const pages: (number | 'ellipsis')[] = [];
     const { totalPages } = data;
-    
+
     if (totalPages <= 5) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
     } else {
@@ -95,11 +94,11 @@ const Journal = () => {
         {/* Floating Leaves */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(8)].map((_, i) => (
-            <FloatingLeaf 
-              key={i} 
-              delay={i * 2} 
-              duration={15 + i * 2} 
-              left={`${10 + i * 12}%`} 
+            <FloatingLeaf
+              key={i}
+              delay={i * 2}
+              duration={15 + i * 2}
+              left={`${10 + i * 12}%`}
             />
           ))}
         </div>
@@ -109,15 +108,6 @@ const Journal = () => {
         <div className="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
 
         <div className="container relative z-10">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
-          >
-            <Breadcrumb />
-          </motion.div>
 
           <div className="text-center">
             <motion.div
@@ -125,8 +115,8 @@ const Journal = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Badge 
-                variant="secondary" 
+              <Badge
+                variant="secondary"
                 className="mb-6 bg-white/80 dark:bg-white/10 backdrop-blur-sm border border-primary/20 px-4 py-2 text-sm shadow-lg"
               >
                 <Sparkles className="mr-2 h-4 w-4 text-primary" />
@@ -134,7 +124,7 @@ const Journal = () => {
               </Badge>
             </motion.div>
 
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -145,7 +135,7 @@ const Journal = () => {
               </span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -169,11 +159,10 @@ const Journal = () => {
             variant={selectedCategory === 'all' ? 'default' : 'ghost'}
             size="sm"
             onClick={() => handleCategoryChange('all')}
-            className={`rounded-full transition-all duration-300 ${
-              selectedCategory === 'all' 
-                ? 'shadow-lg shadow-primary/25' 
+            className={`rounded-full transition-all duration-300 ${selectedCategory === 'all'
+                ? 'shadow-lg shadow-primary/25'
                 : 'hover:bg-primary/10'
-            }`}
+              }`}
           >
             {t('journal.filter.all')}
           </Button>
@@ -183,11 +172,10 @@ const Journal = () => {
               variant={selectedCategory === cat ? 'default' : 'ghost'}
               size="sm"
               onClick={() => handleCategoryChange(cat)}
-              className={`rounded-full transition-all duration-300 ${
-                selectedCategory === cat 
-                  ? 'shadow-lg shadow-primary/25' 
+              className={`rounded-full transition-all duration-300 ${selectedCategory === cat
+                  ? 'shadow-lg shadow-primary/25'
                   : 'hover:bg-primary/10'
-              }`}
+                }`}
             >
               {cat}
             </Button>
@@ -200,7 +188,7 @@ const Journal = () => {
         {/* Background decorative elements */}
         <div className="absolute top-20 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-40 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
-        
+
         {postsLoading ? (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[...Array(6)].map((_, i) => (
@@ -243,7 +231,7 @@ const Journal = () => {
                           />
                           {/* Gradient overlay */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                          
+
                           {/* Category badge on image */}
                           {post.category && (
                             <motion.div
@@ -251,15 +239,15 @@ const Journal = () => {
                               animate={{ opacity: 1, y: 0 }}
                               className="absolute top-4 left-4"
                             >
-                              <Badge 
-                                variant="secondary" 
+                              <Badge
+                                variant="secondary"
                                 className="backdrop-blur-xl bg-white/80 dark:bg-black/50 border-white/30 text-xs font-medium shadow-lg"
                               >
                                 {post.category}
                               </Badge>
                             </motion.div>
                           )}
-                          
+
                           {/* Read indicator on hover */}
                           <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
                             <div className="flex items-center gap-2 bg-white/90 dark:bg-black/70 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium shadow-lg">
@@ -269,7 +257,7 @@ const Journal = () => {
                           </div>
                         </div>
                       )}
-                      
+
                       {/* Content */}
                       <div className="p-6 relative">
                         {/* Date */}
@@ -281,19 +269,19 @@ const Journal = () => {
                             <span>{format(new Date(post.published_at), 'MMM d, yyyy')}</span>
                           </div>
                         )}
-                        
+
                         {/* Title */}
                         <h2 className="font-semibold text-lg line-clamp-2 group-hover:text-primary transition-colors duration-300">
                           {getLocalizedContent(post, 'title')}
                         </h2>
-                        
+
                         {/* Excerpt */}
                         <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
                           {getLocalizedContent(post, 'excerpt')}
                         </p>
-                        
+
                         {/* Read More Link */}
-                        <motion.div 
+                        <motion.div
                           className="mt-4 inline-flex items-center text-sm font-medium text-primary"
                           whileHover={{ x: 4 }}
                           transition={{ duration: 0.2 }}
@@ -301,7 +289,7 @@ const Journal = () => {
                           {t('journal.read-more')}
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </motion.div>
-                        
+
                         {/* Decorative corner accent */}
                         <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-primary/10 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
@@ -342,11 +330,10 @@ const Journal = () => {
                           variant={currentPage === page ? 'default' : 'ghost'}
                           size="icon"
                           onClick={() => handlePageClick(page)}
-                          className={`h-10 w-10 rounded-xl transition-all duration-300 ${
-                            currentPage === page 
-                              ? 'shadow-lg shadow-primary/25' 
+                          className={`h-10 w-10 rounded-xl transition-all duration-300 ${currentPage === page
+                              ? 'shadow-lg shadow-primary/25'
                               : 'hover:bg-primary/10'
-                          }`}
+                            }`}
                         >
                           {page}
                         </Button>
@@ -366,8 +353,8 @@ const Journal = () => {
                 </div>
 
                 <span className="text-sm text-muted-foreground">
-                  {language === 'da' 
-                    ? `Side ${currentPage} af ${data.totalPages}` 
+                  {language === 'da'
+                    ? `Side ${currentPage} af ${data.totalPages}`
                     : `Page ${currentPage} of ${data.totalPages}`
                   }
                 </span>
@@ -375,7 +362,7 @@ const Journal = () => {
             )}
           </>
         ) : (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
