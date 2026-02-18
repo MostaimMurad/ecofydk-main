@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useQuery } from '@tanstack/react-query';
 import {
   LayoutDashboard,
   Package,
@@ -19,12 +20,15 @@ import {
   Share2,
   ChevronDown,
   Languages,
-  Layers
+  Layers,
+  Bug
 } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import AdminFeedbackForm from './AdminFeedbackForm';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -52,6 +56,7 @@ const navGroups: NavGroup[] = [
       { href: '/admin/quotations', icon: MessageSquare, label: 'Quotations' },
       { href: '/admin/blog', icon: FileText, label: 'Blog' },
       { href: '/admin/content', icon: Layers, label: 'Content Manager' },
+      { href: '/admin/feedback', icon: Bug, label: 'Issue Tracker' },
     ]
   },
   {
@@ -83,6 +88,19 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     'Main Menu': true,
     'Site Settings': true,
     'Admin': true,
+  });
+
+  // Open ticket count for badge
+  const { data: openTicketCount } = useQuery({
+    queryKey: ['admin-feedback-count'],
+    queryFn: async () => {
+      const { count, error } = await supabase
+        .from('feedback_tickets')
+        .select('*', { count: 'exact', head: true })
+        .in('status', ['open', 'in_progress']);
+      if (error) return 0;
+      return count || 0;
+    },
   });
 
   const handleSignOut = async () => {
@@ -164,6 +182,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
                     .filter(item => !item.adminOnly || userRole === 'admin')
                     .map((item) => {
                       const isActive = isItemActive(item.href);
+                      const showBadge = item.href === '/admin/feedback' && openTicketCount && openTicketCount > 0;
                       return (
                         <Link
                           key={item.href}
@@ -178,7 +197,12 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
                         >
                           <item.icon className="h-4 w-4" />
                           {item.label}
-                          {isActive && <ChevronRight className="ml-auto h-4 w-4" />}
+                          {showBadge && (
+                            <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white px-1">
+                              {openTicketCount}
+                            </span>
+                          )}
+                          {isActive && !showBadge && <ChevronRight className="ml-auto h-4 w-4" />}
                         </Link>
                       );
                     })}
@@ -235,6 +259,9 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
             {children}
           </motion.div>
         </main>
+
+        {/* Floating Feedback Form */}
+        <AdminFeedbackForm />
       </div>
     </div>
   );
