@@ -163,7 +163,7 @@ const ProductDetail = () => {
                 </p>
 
                 {/* Use Cases */}
-                {useCases.length > 0 && (
+                {useCases.length > 0 && product.section_visibility?.use_cases !== false && (
                   <div className="mt-6 pt-6 border-t border-border/50">
                     <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
                       <Leaf className="h-4 w-4 text-primary" />
@@ -225,16 +225,24 @@ const ProductDetail = () => {
       <section className="pb-12 sm:pb-16">
         <div className="container max-w-5xl">
           {/* Section 2: Materials & Composition */}
-          <MaterialsComposition product={product} />
+          {product.section_visibility?.specs !== false && (
+            <MaterialsComposition product={product} />
+          )}
 
           {/* Section 3: Origin & Supplier Information */}
-          <OriginSupplier />
+          {product.section_visibility?.origin !== false && (
+            <OriginSupplier product={product} />
+          )}
 
           {/* Section 4: Sustainability & ESG Impact */}
-          <ESGImpact />
+          {product.section_visibility?.esg !== false && (
+            <ESGImpact product={product} />
+          )}
 
           {/* Section 5: Governance & Compliance */}
-          <GovernanceCompliance />
+          {product.section_visibility?.governance !== false && (
+            <GovernanceCompliance product={product} />
+          )}
 
           {/* Section 6: Request Sample / WhatsApp CTA */}
           <ProductCTA productName={name} />

@@ -21,7 +21,8 @@ import {
   ChevronDown,
   Languages,
   Layers,
-  Bug
+  Bug,
+  FolderOpen
 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
@@ -53,6 +54,7 @@ const navGroups: NavGroup[] = [
     items: [
       { href: '/admin', icon: LayoutDashboard, label: 'Dashboard' },
       { href: '/admin/products', icon: Package, label: 'Products' },
+      { href: '/admin/categories', icon: FolderOpen, label: 'Categories' },
       { href: '/admin/quotations', icon: MessageSquare, label: 'Quotations' },
       { href: '/admin/blog', icon: FileText, label: 'Blog' },
       { href: '/admin/content', icon: Layers, label: 'Content Manager' },

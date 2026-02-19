@@ -31,6 +31,7 @@ import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
 import ProductEditor from "./pages/admin/ProductEditor";
+import AdminCategories from "./pages/admin/AdminCategories";
 import AdminQuotations from "./pages/admin/AdminQuotations";
 import AdminBlog from "./pages/admin/AdminBlog";
 import BlogEditor from "./pages/admin/BlogEditor";
@@ -82,6 +83,7 @@ const App = () => (
                     <Route path="/admin" element={<ProtectedRoute requireAdmin><AdminLayout><AdminDashboard /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/products" element={<ProtectedRoute requireAdmin><AdminLayout><AdminProducts /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/products/:id" element={<ProtectedRoute requireAdmin><AdminLayout><ProductEditor /></AdminLayout></ProtectedRoute>} />
+                    <Route path="/admin/categories" element={<ProtectedRoute requireAdmin><AdminLayout><AdminCategories /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/quotations" element={<ProtectedRoute requireAdmin><AdminLayout><AdminQuotations /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/blog" element={<ProtectedRoute requireAdmin><AdminLayout><AdminBlog /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/blog/:id" element={<ProtectedRoute requireAdmin><AdminLayout><BlogEditor /></AdminLayout></ProtectedRoute>} />

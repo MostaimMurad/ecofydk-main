@@ -1,6 +1,70 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 
+// ── Extended JSONB field types ──
+export interface CompositionItem {
+  name_en: string;
+  name_da: string;
+  percentage: number;
+}
+
+export interface OriginSupplierData {
+  supplier_name?: string;
+  location?: string;
+  country_code?: string;
+  established?: string;
+  artisans?: string;
+  certifications?: string[];
+  story_en?: string;
+  story_da?: string;
+  transparency_en?: string;
+  transparency_da?: string;
+}
+
+export interface ESGMetric {
+  label_en: string;
+  label_da: string;
+  value: string;
+  description_en: string;
+  description_da: string;
+}
+
+export interface SDGGoal {
+  number: number;
+  title_en: string;
+  title_da: string;
+}
+
+export interface ESGImpactData {
+  metrics?: ESGMetric[];
+  sdg_goals?: SDGGoal[];
+  climate_badge_en?: string;
+  climate_badge_da?: string;
+}
+
+export interface CertificationItem {
+  name: string;
+  description_en: string;
+  description_da: string;
+}
+
+export interface GovernanceData {
+  certifications?: CertificationItem[];
+  compliance_en?: string[];
+  compliance_da?: string[];
+  qa_statement_en?: string;
+  qa_statement_da?: string;
+}
+
+export interface SectionVisibility {
+  specs?: boolean;
+  use_cases?: boolean;
+  origin?: boolean;
+  esg?: boolean;
+  governance?: boolean;
+}
+
+// ── Core types ──
 export interface Product {
   id: string;
   slug: string;
@@ -21,6 +85,12 @@ export interface Product {
   is_active: boolean;
   created_at: string;
   updated_at: string;
+  // Extended JSONB fields
+  composition: CompositionItem[] | null;
+  origin_supplier: OriginSupplierData | null;
+  esg_impact: ESGImpactData | null;
+  governance: GovernanceData | null;
+  section_visibility: SectionVisibility | null;
 }
 
 export interface Category {
@@ -58,7 +128,7 @@ export const useProducts = (categoryId?: string, page: number = 1) => {
 
       const totalCount = count || 0;
       const totalPages = Math.ceil(totalCount / PRODUCTS_PER_PAGE);
-      
+
       // Then fetch paginated data
       const from = (page - 1) * PRODUCTS_PER_PAGE;
       const to = from + PRODUCTS_PER_PAGE - 1;

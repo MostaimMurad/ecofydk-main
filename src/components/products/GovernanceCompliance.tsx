@@ -1,45 +1,42 @@
 import { motion } from 'framer-motion';
-import { Shield, Award, CheckCircle2, FileCheck, Scale, Lock, BadgeCheck } from 'lucide-react';
+import { Shield, Award, CheckCircle, FileCheck } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Product } from '@/hooks/useProducts';
 
-const GovernanceCompliance = () => {
+interface GovernanceComplianceProps {
+  product?: Product;
+}
+
+const GovernanceCompliance = ({ product }: GovernanceComplianceProps) => {
   const { language } = useLanguage();
 
-  const certifications = [
-    {
-      name: 'OEKO-TEX® Standard 100',
-      description: language === 'da' ? 'Testet for skadelige stoffer' : 'Tested for harmful substances',
-      icon: Shield,
-      color: 'from-blue-500 to-blue-600',
-    },
-    {
-      name: 'GOTS Certified',
-      description: language === 'da' ? 'Global organisk tekstil standard' : 'Global Organic Textile Standard',
-      icon: Award,
-      color: 'from-emerald-500 to-green-600',
-    },
-    {
-      name: 'Fair Trade',
-      description: language === 'da' ? 'Etisk handel certificeret' : 'Ethical trade certified',
-      icon: Scale,
-      color: 'from-amber-500 to-orange-600',
-    },
-    {
-      name: 'ISO 9001:2015',
-      description: language === 'da' ? 'Kvalitetsstyringssystem' : 'Quality Management System',
-      icon: FileCheck,
-      color: 'from-purple-500 to-violet-600',
-    },
-  ];
+  const data = product?.governance && Object.keys(product.governance).length > 0
+    ? product.governance
+    : null;
 
-  const complianceChecks = [
-    language === 'da' ? 'Ingen børnearbejde politik' : 'No Child Labor Policy',
-    language === 'da' ? 'Fair lønstandard' : 'Fair Wage Standard',
-    language === 'da' ? 'Sikre arbejdsforhold' : 'Safe Working Conditions',
-    language === 'da' ? 'Miljøbeskyttelse' : 'Environmental Protection',
-    language === 'da' ? 'Anti-korruptionspolitik' : 'Anti-Corruption Policy',
-    language === 'da' ? 'Forsyningskæde gennemsigtighed' : 'Supply Chain Transparency',
-  ];
+  const certifications = data?.certifications?.length
+    ? data.certifications.map(c => ({
+      name: c.name,
+      description: language === 'da' ? c.description_da : c.description_en,
+    }))
+    : [
+      { name: 'OEKO-TEX® Standard 100', description: language === 'da' ? 'Testet for skadelige stoffer' : 'Tested for harmful substances' },
+      { name: 'GOTS Certified', description: language === 'da' ? 'Global organisk tekstil standard' : 'Global Organic Textile Standard' },
+      { name: 'Fair Trade', description: language === 'da' ? 'Etisk handel certificeret' : 'Ethical trade certified' },
+      { name: 'ISO 9001:2015', description: language === 'da' ? 'Kvalitetsstyringssystem' : 'Quality Management System' },
+    ];
+
+  const complianceChecks = data
+    ? (language === 'da' ? data.compliance_da || [] : data.compliance_en || [])
+    : language === 'da'
+      ? ['Ingen børnearbejde politik', 'Fair lønstandard', 'Sikre arbejdsforhold', 'Miljøbeskyttelse', 'Anti-korruptionspolitik', 'Forsyningskæde gennemsigtighed']
+      : ['No Child Labor Policy', 'Fair Wage Standard', 'Safe Working Conditions', 'Environmental Protection', 'Anti-Corruption Policy', 'Supply Chain Transparency'];
+
+  const qaStatement = data
+    ? (language === 'da' ? data.qa_statement_da : data.qa_statement_en) || ''
+    : language === 'da'
+      ? 'Hvert produkt gennemgår streng kvalitetskontrol inden afsendelse. Vi tilbyder fuld tilfredshedsgaranti.'
+      : 'Every product undergoes rigorous quality control before shipping. We offer a full satisfaction guarantee.';
 
   return (
     <motion.section
@@ -49,121 +46,87 @@ const GovernanceCompliance = () => {
       transition={{ duration: 0.6 }}
       className="py-8"
     >
-      <div className="backdrop-blur-xl bg-white/80 dark:bg-card/80 rounded-3xl p-8 border border-border/50 shadow-xl overflow-hidden relative">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-emerald-500 to-amber-500" />
-        
+      <div className="backdrop-blur-xl bg-white/80 dark:bg-card/80 rounded-3xl p-8 border border-border/50 shadow-xl">
         <motion.h2
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="font-serif text-2xl font-bold text-foreground mb-2 flex items-center gap-3"
+          className="font-serif text-2xl font-bold text-foreground mb-6 flex items-center gap-3"
         >
-          <div className="p-2 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl">
-            <Shield className="h-6 w-6 text-primary" />
+          <div className="p-2 bg-gradient-to-br from-purple-500/20 to-purple-500/5 rounded-xl">
+            <Shield className="h-6 w-6 text-purple-600" />
           </div>
           {language === 'da' ? 'Governance & Compliance' : 'Governance & Compliance'}
         </motion.h2>
-        
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-muted-foreground mb-8"
-        >
-          {language === 'da' 
-            ? 'Vores forpligtelse til kvalitet, etik og overholdelse af internationale standarder'
-            : 'Our commitment to quality, ethics, and compliance with international standards'}
-        </motion.p>
 
-        {/* Certifications Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {certifications.map((cert, index) => (
-            <motion.div
-              key={cert.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              whileHover={{ scale: 1.03, y: -5 }}
-              className="relative p-5 rounded-2xl bg-muted/30 border border-border/30 group overflow-hidden text-center"
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-              
-              <motion.div
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-                className={`mx-auto w-14 h-14 rounded-2xl bg-gradient-to-br ${cert.color} flex items-center justify-center mb-3 shadow-lg`}
-              >
-                <cert.icon className="h-7 w-7 text-white" />
-              </motion.div>
-              
-              <h4 className="font-semibold text-sm text-foreground line-clamp-2">{cert.name}</h4>
-              <p className="text-xs text-muted-foreground mt-1">{cert.description}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Compliance Checklist */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20"
-        >
-          <div className="flex items-center gap-2 mb-4">
-            <BadgeCheck className="h-5 w-5 text-primary" />
-            <h3 className="font-semibold text-foreground">
-              {language === 'da' ? 'Etisk Sourcing Tjekliste' : 'Ethical Sourcing Checklist'}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Certifications */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+              <Award className="h-4 w-4" />
+              {language === 'da' ? 'Certificeringer' : 'Certifications'}
             </h3>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {complianceChecks.map((check, index) => (
-              <motion.div
-                key={check}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 + index * 0.05 }}
-                className="flex items-center gap-2"
-              >
+            <div className="space-y-3">
+              {certifications.map((cert, index) => (
                 <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
+                  key={cert.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.6 + index * 0.05, type: 'spring' }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-3 p-3 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-100 dark:border-purple-900/30"
                 >
-                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                  <div className="p-2 bg-white dark:bg-background rounded-lg shadow-sm">
+                    <Award className="h-4 w-4 text-purple-600" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm text-foreground">{cert.name}</p>
+                    <p className="text-xs text-muted-foreground">{cert.description}</p>
+                  </div>
                 </motion.div>
-                <span className="text-sm text-foreground">{check}</span>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
-        </motion.div>
 
-        {/* Quality Assurance Statement */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.7 }}
-          className="mt-6 p-4 rounded-xl bg-muted/30 border border-border/30 flex items-start gap-3"
-        >
-          <Lock className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-          <div>
-            <h4 className="font-medium text-foreground text-sm">
-              {language === 'da' ? 'Kvalitetssikring' : 'Quality Assurance'}
-            </h4>
-            <p className="text-xs text-muted-foreground mt-1">
-              {language === 'da' 
-                ? 'Hvert produkt gennemgår streng kvalitetskontrol før afsendelse. Vi tilbyder fuld tilfredshedsgaranti.'
-                : 'Every product undergoes rigorous quality control before shipping. We offer a full satisfaction guarantee.'}
-            </p>
+          {/* Compliance Checklist */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+              <FileCheck className="h-4 w-4" />
+              {language === 'da' ? 'Etisk Sourcing' : 'Ethical Sourcing'}
+            </h3>
+            <div className="space-y-2">
+              {complianceChecks.map((check, index) => (
+                <motion.div
+                  key={check}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className="flex items-center gap-3 p-2"
+                >
+                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                  <span className="text-sm text-foreground">{check}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* QA Statement */}
+            {qaStatement && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="mt-4 p-4 rounded-xl bg-gradient-to-br from-primary/5 to-purple-500/5 border border-primary/10"
+              >
+                <p className="text-sm text-muted-foreground flex items-start gap-2">
+                  <Shield className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  {qaStatement}
+                </p>
+              </motion.div>
+            )}
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

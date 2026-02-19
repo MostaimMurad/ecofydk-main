@@ -16,11 +16,15 @@ const MaterialsComposition = ({ product }: MaterialsCompositionProps) => {
     { icon: Layers, label: language === 'da' ? 'Materiale' : 'Material', value: product.spec_material, color: 'from-emerald-500/20 to-green-500/20' },
   ].filter((spec) => spec.value);
 
-  const composition = [
-    { name: language === 'da' ? '100% Naturlig Jute' : '100% Natural Jute', percentage: 85, icon: Leaf },
-    { name: language === 'da' ? 'Bomuldsforstærkning' : 'Cotton Reinforcement', percentage: 10, icon: Droplets },
-    { name: language === 'da' ? 'Naturlige Farvestoffer' : 'Natural Dyes', percentage: 5, icon: Package },
-  ];
+  // Use dynamic composition if available, otherwise fall back to hardcoded
+  const hasComposition = product.composition && Array.isArray(product.composition) && product.composition.length > 0;
+  const composition = hasComposition
+    ? product.composition!.map(c => ({ name: language === 'da' ? c.name_da : c.name_en, percentage: c.percentage, icon: Leaf }))
+    : [
+      { name: language === 'da' ? '100% Naturlig Jute' : '100% Natural Jute', percentage: 85, icon: Leaf },
+      { name: language === 'da' ? 'Bomuldsforstærkning' : 'Cotton Reinforcement', percentage: 10, icon: Droplets },
+      { name: language === 'da' ? 'Naturlige Farvestoffer' : 'Natural Dyes', percentage: 5, icon: Package },
+    ];
 
   return (
     <motion.section
