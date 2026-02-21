@@ -5,12 +5,15 @@ import {
     Plus, Edit, Trash2, Search, ChevronDown, ChevronRight,
     FileText, Copy, Filter, Home, BookOpen, Leaf, ShieldCheck,
     BarChart3, Briefcase, Users, DollarSign, Wrench, Globe,
-    LayoutGrid, Save, X, Eye, ChevronUp, History, Image as ImageIcon
+    LayoutGrid, Save, X, Eye, ChevronUp, History, Image as ImageIcon, HelpCircle
 } from 'lucide-react';
 import { DraftPublishBadge } from '@/components/admin/DraftPublishBadge';
 import { ContentVersionHistory } from '@/components/admin/ContentVersionHistory';
 import RichTextEditor from '@/components/admin/RichTextEditor';
 import MediaPicker from '@/components/admin/MediaPicker';
+import ColorPicker from '@/components/admin/ColorPicker';
+import IconPicker from '@/components/admin/IconPicker';
+import MetadataEditor from '@/components/admin/MetadataEditor';
 import { supabase } from '@/integrations/supabase/client';
 import type { Json } from '@/integrations/supabase/types';
 import { Button } from '@/components/ui/button';
@@ -28,6 +31,8 @@ import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { Switch } from '@/components/ui/switch';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -142,6 +147,7 @@ interface ContentBlock {
     image_url: string | null;
     metadata: Record<string, unknown>;
     sort_order: number;
+    is_active: boolean;
     status: string;
     published_at: string | null;
 }
@@ -150,7 +156,7 @@ const emptyBlock: Omit<ContentBlock, 'id'> = {
     section: '', block_key: '', title_en: '', title_da: '',
     description_en: '', description_da: '', value: '', icon: '',
     color: '', image_url: '', metadata: {}, sort_order: 0,
-    status: 'published', published_at: null,
+    is_active: true, status: 'published', published_at: null,
 };
 
 // ── Helper: get page for a section ────────────────────────────────
@@ -230,17 +236,24 @@ function InlineBlockEditor({
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                 <div>
-                    <Label className="text-xs font-medium text-muted-foreground">Value</Label>
-                    <Input value={edited.value || ''} onChange={e => setEdited({ ...edited, value: e.target.value })} className="mt-1" />
+                    <Label className="text-xs font-medium text-muted-foreground flex items-center gap-1">
+                        Value
+                        <Tooltip><TooltipTrigger asChild><HelpCircle className="h-3 w-3 text-muted-foreground/50" /></TooltipTrigger>
+                            <TooltipContent side="top" className="max-w-[200px] text-xs">
+                                A short data value for this block — e.g., a number like "500+", a percentage like "95%", or a URL.
+                            </TooltipContent></Tooltip>
+                    </Label>
+                    <Input value={edited.value || ''} onChange={e => setEdited({ ...edited, value: e.target.value })} className="mt-1" placeholder="e.g., 500+, 95%, https://..." />
+                    <p className="text-[10px] text-muted-foreground mt-1">Used for counters, stats, and dynamic content</p>
                 </div>
-                <div>
-                    <Label className="text-xs font-medium text-muted-foreground">Icon</Label>
-                    <Input value={edited.icon || ''} onChange={e => setEdited({ ...edited, icon: e.target.value })} className="mt-1" placeholder="e.g. ShieldCheck" />
-                </div>
-                <div>
-                    <Label className="text-xs font-medium text-muted-foreground">Color</Label>
-                    <Input value={edited.color || ''} onChange={e => setEdited({ ...edited, color: e.target.value })} className="mt-1" placeholder="e.g. from-green-500 to-emerald-600" />
-                </div>
+                <IconPicker
+                    value={edited.icon || ''}
+                    onChange={icon => setEdited({ ...edited, icon })}
+                />
+                <ColorPicker
+                    value={edited.color || ''}
+                    onChange={color => setEdited({ ...edited, color })}
+                />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
@@ -268,8 +281,7 @@ function InlineBlockEditor({
             </div>
 
             <div className="mt-4">
-                <Label className="text-xs font-medium text-muted-foreground">Metadata (JSON)</Label>
-                <Textarea value={metaText} onChange={e => setMetaText(e.target.value)} rows={4} className="mt-1 font-mono text-xs" />
+                <MetadataEditor value={metaText} onChange={setMetaText} />
             </div>
 
             <div className="flex items-center justify-end gap-2 mt-4 pt-4 border-t">
@@ -587,9 +599,18 @@ const AdminContentBlocks = () => {
                                                         >
                                                             <div className="border-t divide-y">
                                                                 {items.map(block => (
-                                                                    <div key={block.id}>
+                                                                    <div key={block.id} className={block.is_active === false ? 'opacity-50' : ''}>
                                                                         {/* Block Row */}
                                                                         <div className="flex items-center gap-4 px-4 py-3 hover:bg-muted/20 transition-colors group">
+                                                                            {/* Enable/Disable Toggle */}
+                                                                            <Switch
+                                                                                checked={block.is_active !== false}
+                                                                                onCheckedChange={(checked) => {
+                                                                                    updateMutation.mutate({ ...block, is_active: checked });
+                                                                                }}
+                                                                                className="shrink-0 data-[state=unchecked]:bg-muted-foreground/20"
+                                                                                title={block.is_active !== false ? 'Active — visible on site' : 'Disabled — hidden from site'}
+                                                                            />
                                                                             <div className="flex-1 min-w-0">
                                                                                 <div className="flex items-center gap-2">
                                                                                     <code className="text-xs bg-muted px-2 py-0.5 rounded font-mono shrink-0">
@@ -599,9 +620,12 @@ const AdminContentBlocks = () => {
                                                                                         <Badge variant="outline" className="text-[10px]">{block.icon}</Badge>
                                                                                     )}
                                                                                     <DraftPublishBadge id={block.id} status={block.status || 'published'} table="content_blocks" />
+                                                                                    {block.is_active === false && (
+                                                                                        <Badge variant="outline" className="text-[10px] text-muted-foreground border-muted-foreground/30">Disabled</Badge>
+                                                                                    )}
                                                                                 </div>
                                                                                 <div className="flex gap-4 mt-1">
-                                                                                    <p className="text-sm truncate flex-1">
+                                                                                    <p className={`text-sm truncate flex-1 ${block.is_active === false ? 'line-through text-muted-foreground' : ''}`}>
                                                                                         {block.title_en || <span className="text-muted-foreground italic">No title</span>}
                                                                                     </p>
                                                                                     {block.value && (
@@ -718,17 +742,24 @@ const AdminContentBlocks = () => {
                         </div>
                         <div className="grid grid-cols-3 gap-4">
                             <div>
-                                <Label>Value</Label>
-                                <Input value={newBlock.value || ''} onChange={e => setNewBlock({ ...newBlock, value: e.target.value })} />
+                                <Label className="flex items-center gap-1">
+                                    Value
+                                    <Tooltip><TooltipTrigger asChild><HelpCircle className="h-3 w-3 text-muted-foreground/50" /></TooltipTrigger>
+                                        <TooltipContent side="top" className="max-w-[200px] text-xs">
+                                            A short data value — e.g., "500+", "95%", or a URL
+                                        </TooltipContent></Tooltip>
+                                </Label>
+                                <Input value={newBlock.value || ''} onChange={e => setNewBlock({ ...newBlock, value: e.target.value })} placeholder="e.g., 500+, 95%" />
+                                <p className="text-[10px] text-muted-foreground mt-1">Used for counters, stats, links</p>
                             </div>
-                            <div>
-                                <Label>Icon</Label>
-                                <Input value={newBlock.icon || ''} onChange={e => setNewBlock({ ...newBlock, icon: e.target.value })} placeholder="e.g. ShieldCheck" />
-                            </div>
-                            <div>
-                                <Label>Color</Label>
-                                <Input value={newBlock.color || ''} onChange={e => setNewBlock({ ...newBlock, color: e.target.value })} />
-                            </div>
+                            <IconPicker
+                                value={newBlock.icon || ''}
+                                onChange={icon => setNewBlock({ ...newBlock, icon })}
+                            />
+                            <ColorPicker
+                                value={newBlock.color || ''}
+                                onChange={color => setNewBlock({ ...newBlock, color })}
+                            />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div>
@@ -740,10 +771,7 @@ const AdminContentBlocks = () => {
                                 <Input type="number" value={newBlock.sort_order} onChange={e => setNewBlock({ ...newBlock, sort_order: parseInt(e.target.value) || 0 })} />
                             </div>
                         </div>
-                        <div>
-                            <Label>Metadata (JSON)</Label>
-                            <Textarea value={metadataText} onChange={e => setMetadataText(e.target.value)} rows={4} className="font-mono text-xs" />
-                        </div>
+                        <MetadataEditor value={metadataText} onChange={setMetadataText} />
                     </div>
                     <DialogFooter>
                         <Button variant="outline" onClick={() => setIsCreating(false)}>Cancel</Button>
