@@ -13,12 +13,16 @@ import Newsletter from '@/components/home/Newsletter';
 import { useSiteSettings } from '@/hooks/useSiteSettings';
 
 const Index = () => {
-  const { data: settings } = useSiteSettings();
-  const heroVariant = (settings?.hero_variant || 'video') as HeroVariant;
+  const { data: settings, isLoading } = useSiteSettings();
+  const heroVariant = (settings?.hero_variant || 'pattern') as HeroVariant;
 
   return (
     <>
-      <HeroSection variant={heroVariant} />
+      {isLoading ? (
+        <div className="relative min-h-screen bg-gradient-to-br from-background to-muted" />
+      ) : (
+        <HeroSection variant={heroVariant} />
+      )}
       <TrustedPartners />
       <FeaturedProducts />
       <ImpactCounter />
@@ -35,3 +39,4 @@ const Index = () => {
 };
 
 export default Index;
+
