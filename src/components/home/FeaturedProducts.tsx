@@ -22,8 +22,8 @@ const FeaturedProducts = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
@@ -36,17 +36,17 @@ const FeaturedProducts = () => {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
-      
+
       <div className="container relative">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="mb-16 text-center md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -55,17 +55,14 @@ const FeaturedProducts = () => {
           >
             <Sparkles className="h-4 w-4 text-accent" />
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-              {language === 'en' ? 'Featured Collection' : 'Udvalgt Kollektion'}
+              {t('home.products.badge')}
             </span>
           </motion.div>
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-foreground/70">
             {t('products.title')}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            {language === 'en' 
-              ? 'Handcrafted with love by Bangladeshi artisans, each piece tells a unique story'
-              : 'Håndlavet med kærlighed af bangladeshiske håndværkere, hvert stykke fortæller en unik historie'
-            }
+            {t('home.products.subtitle')}
           </p>
         </motion.div>
 
@@ -87,7 +84,7 @@ const FeaturedProducts = () => {
 
         {/* Products Grid */}
         {!isLoading && products && (
-          <motion.div 
+          <motion.div
             className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
             variants={containerVariants}
             initial="hidden"
@@ -115,22 +112,22 @@ const FeaturedProducts = () => {
                           whileHover={{ scale: 1.08 }}
                           transition={{ duration: 0.6 }}
                         />
-                        
+
                         {/* Gradient overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        
+
                         {/* Quick view button */}
-                        <motion.div 
+                        <motion.div
                           className="absolute bottom-4 left-4 right-4"
                           initial={{ opacity: 0, y: 20 }}
                           whileHover={{ opacity: 1, y: 0 }}
                         >
                           <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                            <Button 
-                              size="sm" 
+                            <Button
+                              size="sm"
                               className="w-full backdrop-blur-sm bg-white/90 text-foreground hover:bg-white"
                             >
-                              {language === 'en' ? 'View Details' : 'Se Detaljer'}
+                              {t('home.products.viewdetails')}
                             </Button>
                           </div>
                         </motion.div>
@@ -140,7 +137,7 @@ const FeaturedProducts = () => {
                           <div className="absolute top-4 left-4">
                             <span className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1.5 text-xs font-semibold text-accent-foreground shadow-lg">
                               <Sparkles className="h-3 w-3" />
-                              {language === 'en' ? 'Featured' : 'Udvalgt'}
+                              {t('home.products.featured')}
                             </span>
                           </div>
                         )}
@@ -157,10 +154,10 @@ const FeaturedProducts = () => {
                         <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
                           {description}
                         </p>
-                        
+
                         {/* View link */}
                         <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                          <span>{language === 'en' ? 'Learn More' : 'Læs Mere'}</span>
+                          <span>{t('home.products.learnmore')}</span>
                           <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>
@@ -173,21 +170,21 @@ const FeaturedProducts = () => {
         )}
 
         {/* View All Button */}
-        <motion.div 
+        <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <Button 
-            asChild 
-            variant="outline" 
+          <Button
+            asChild
+            variant="outline"
             size="lg"
             className="group gap-2 px-8 py-6 text-base font-semibold border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
           >
             <Link to="/products">
-              {language === 'en' ? 'Explore All Products' : 'Udforsk Alle Produkter'}
+              {t('home.products.exploreall')}
               <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>

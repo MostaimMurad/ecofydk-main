@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
 
 const TrustedPartners = () => {
-    const { language } = useLanguage();
+    const { language, t } = useLanguage();
 
     const { data: partnerBlocks } = useContentBlocks('home_partners');
 
@@ -28,12 +28,10 @@ const TrustedPartners = () => {
                     className="text-center mb-10"
                 >
                     <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-2">
-                        {language === 'da' ? 'Betroet af' : 'Trusted By'}
+                        {t('home.partners.badge')}
                     </p>
                     <h3 className="text-xl md:text-2xl font-bold text-foreground/80">
-                        {language === 'da'
-                            ? '200+ B2B-virksomheder i hele Europa'
-                            : '200+ B2B Businesses Across Europe'}
+                        {t('home.partners.title')}
                     </h3>
                 </motion.div>
 

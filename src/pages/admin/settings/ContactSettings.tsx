@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Loader2, Mail, MapPin } from 'lucide-react';
+import { Phone, Loader2, Mail, MapPin, Map } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -18,6 +18,7 @@ const ContactSettings = () => {
     contact_email: '',
     contact_phone: '',
     contact_address: '',
+    map_embed_url: '',
   });
 
   useEffect(() => {
@@ -26,13 +27,14 @@ const ContactSettings = () => {
         contact_email: settings.contact_email || '',
         contact_phone: settings.contact_phone || '',
         contact_address: settings.contact_address || '',
+        map_embed_url: (settings as any).map_embed_url || '',
       });
     }
   }, [settings]);
 
   const handleSave = async () => {
     try {
-      await updateSettings.mutateAsync(formData);
+      await updateSettings.mutateAsync(formData as any);
       toast({ title: 'Saved', description: 'Contact settings updated successfully!' });
     } catch (error) {
       toast({ title: 'Error', description: 'Failed to save settings', variant: 'destructive' });
@@ -120,8 +122,8 @@ const ContactSettings = () => {
               />
             </div>
 
-            <Button 
-              onClick={handleSave} 
+            <Button
+              onClick={handleSave}
               disabled={updateSettings.isPending}
               className="w-full sm:w-auto"
             >
@@ -131,8 +133,71 @@ const ContactSettings = () => {
           </CardContent>
         </Card>
       </motion.div>
+
+      {/* Google Map Settings */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Map className="h-5 w-5 text-primary" />
+              Google Map Location
+            </CardTitle>
+            <CardDescription>
+              Paste a Google Maps embed URL to show your location on the contact page.
+              Go to Google Maps → Share → Embed a map → Copy the <code>src</code> URL from the iframe code.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="map_embed_url" className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-muted-foreground" />
+                Map Embed URL
+              </Label>
+              <Input
+                id="map_embed_url"
+                type="url"
+                value={formData.map_embed_url}
+                onChange={(e) => setFormData(prev => ({ ...prev, map_embed_url: e.target.value }))}
+                placeholder="https://www.google.com/maps/embed?pb=..."
+              />
+            </div>
+
+            {/* Map Preview */}
+            {formData.map_embed_url && (
+              <div className="space-y-2">
+                <Label className="text-sm text-muted-foreground">Preview</Label>
+                <div className="aspect-video rounded-xl overflow-hidden border border-border/50 shadow-sm">
+                  <iframe
+                    src={formData.map_embed_url}
+                    className="w-full h-full"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Map Preview"
+                  />
+                </div>
+              </div>
+            )}
+
+            <Button
+              onClick={handleSave}
+              disabled={updateSettings.isPending}
+              className="w-full sm:w-auto"
+            >
+              {updateSettings.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Save Map Settings
+            </Button>
+          </CardContent>
+        </Card>
+      </motion.div>
     </div>
   );
 };
 
 export default ContactSettings;
+

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import {
@@ -22,7 +22,15 @@ import {
   Languages,
   Layers,
   Bug,
-  FolderOpen
+  FolderOpen,
+  Home,
+  BookOpen,
+  ShieldCheck,
+  BarChart3,
+  Briefcase,
+  DollarSign,
+  Wrench,
+  LayoutGrid,
 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
@@ -48,6 +56,24 @@ interface NavGroup {
   items: NavItem[];
 }
 
+// ── Content Manager sub-pages ──────────────────────────────────────
+const CONTENT_SUB_PAGES = [
+  { id: 'all', label: 'All Pages', icon: LayoutGrid },
+  { id: 'homepage', label: 'Homepage', icon: Home },
+  { id: 'our-story', label: 'Our Story', icon: BookOpen },
+  { id: 'sustainability', label: 'Sustainability', icon: Leaf },
+  { id: 'contact', label: 'Contact', icon: Globe },
+  { id: 'footer', label: 'Footer', icon: LayoutGrid },
+  { id: 'why-jute', label: 'Why Jute', icon: ShieldCheck },
+  { id: 'certifications-page', label: 'Certifications', icon: ShieldCheck },
+  { id: 'impact', label: 'Impact', icon: BarChart3 },
+  { id: 'case-studies', label: 'Case Studies', icon: Briefcase },
+  { id: 'pricing', label: 'Pricing', icon: DollarSign },
+  { id: 'careers', label: 'Careers', icon: Users },
+  { id: 'resources', label: 'Resources', icon: FileText },
+  { id: 'custom', label: 'Custom Solutions', icon: Wrench },
+];
+
 const navGroups: NavGroup[] = [
   {
     label: 'Main Menu',
@@ -57,7 +83,8 @@ const navGroups: NavGroup[] = [
       { href: '/admin/categories', icon: FolderOpen, label: 'Categories' },
       { href: '/admin/quotations', icon: MessageSquare, label: 'Quotations' },
       { href: '/admin/blog', icon: FileText, label: 'Blog' },
-      { href: '/admin/content', icon: Layers, label: 'Content Manager' },
+      // Content Manager is handled separately (has sub-menu)
+      { href: '/admin/media', icon: ImageIcon, label: 'Media Library' },
       { href: '/admin/feedback', icon: Bug, label: 'Issue Tracker' },
     ]
   },
@@ -84,6 +111,7 @@ const navGroups: NavGroup[] = [
 const AdminLayout = ({ children }: AdminLayoutProps) => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { user, userRole, signOut } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({
@@ -91,6 +119,9 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     'Site Settings': true,
     'Admin': true,
   });
+  const [contentSubOpen, setContentSubOpen] = useState(() =>
+    location.pathname.startsWith('/admin/content')
+  );
 
   // Open ticket count for badge
   const { data: openTicketCount } = useQuery({
@@ -117,9 +148,8 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
     return location.pathname.startsWith(href);
   };
 
-  const isGroupActive = (group: NavGroup) => {
-    return group.items.some(item => isItemActive(item.href));
-  };
+  const isContentActive = location.pathname.startsWith('/admin/content');
+  const activeContentPage = searchParams.get('page') || 'all';
 
   const toggleGroup = (label: string) => {
     setOpenGroups(prev => ({ ...prev, [label]: !prev[label] }));
@@ -127,6 +157,89 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
 
   const filteredGroups = navGroups.filter(
     (group) => !group.adminOnly || userRole === 'admin'
+  );
+
+  // ── Render a single nav item ─────────────────────────────────
+  const renderNavItem = (item: NavItem) => {
+    const isActive = isItemActive(item.href);
+    const showBadge = item.href === '/admin/feedback' && openTicketCount && openTicketCount > 0;
+    return (
+      <Link
+        key={item.href}
+        to={item.href}
+        onClick={() => setSidebarOpen(false)}
+        className={cn(
+          "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
+          isActive
+            ? "bg-primary text-primary-foreground"
+            : "text-muted-foreground hover:text-foreground hover:bg-muted"
+        )}
+      >
+        <item.icon className="h-4 w-4" />
+        {item.label}
+        {showBadge && (
+          <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white px-1">
+            {openTicketCount}
+          </span>
+        )}
+        {isActive && !showBadge && <ChevronRight className="ml-auto h-4 w-4" />}
+      </Link>
+    );
+  };
+
+  // ── Content Manager sub-menu ──────────────────────────────────
+  const renderContentManagerNav = () => (
+    <div className="space-y-0.5">
+      {/* Content Manager parent */}
+      <button
+        onClick={() => {
+          setContentSubOpen(!contentSubOpen);
+          if (!isContentActive) {
+            navigate('/admin/content');
+            setSidebarOpen(false);
+          }
+        }}
+        className={cn(
+          "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
+          isContentActive
+            ? "bg-primary text-primary-foreground"
+            : "text-muted-foreground hover:text-foreground hover:bg-muted"
+        )}
+      >
+        <Layers className="h-4 w-4" />
+        Content Manager
+        <ChevronDown className={cn(
+          "ml-auto h-4 w-4 transition-transform",
+          contentSubOpen && "rotate-180"
+        )} />
+      </button>
+
+      {/* Sub-pages */}
+      {contentSubOpen && (
+        <div className="ml-3 pl-4 border-l-2 border-border/50 space-y-0.5 py-1">
+          {CONTENT_SUB_PAGES.map(sub => {
+            const isSubActive = isContentActive && activeContentPage === sub.id;
+            const SubIcon = sub.icon;
+            return (
+              <Link
+                key={sub.id}
+                to={sub.id === 'all' ? '/admin/content' : `/admin/content?page=${sub.id}`}
+                onClick={() => setSidebarOpen(false)}
+                className={cn(
+                  "flex items-center gap-2.5 px-3 py-2 rounded-md text-[13px] transition-colors",
+                  isSubActive
+                    ? "bg-primary/10 text-primary font-medium"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                )}
+              >
+                <SubIcon className="h-3.5 w-3.5" />
+                {sub.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 
   return (
@@ -182,31 +295,18 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
                 <CollapsibleContent className="mt-1 space-y-0.5">
                   {group.items
                     .filter(item => !item.adminOnly || userRole === 'admin')
-                    .map((item) => {
-                      const isActive = isItemActive(item.href);
-                      const showBadge = item.href === '/admin/feedback' && openTicketCount && openTicketCount > 0;
-                      return (
-                        <Link
-                          key={item.href}
-                          to={item.href}
-                          onClick={() => setSidebarOpen(false)}
-                          className={cn(
-                            "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
-                            isActive
-                              ? "bg-primary text-primary-foreground"
-                              : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                          )}
-                        >
-                          <item.icon className="h-4 w-4" />
-                          {item.label}
-                          {showBadge && (
-                            <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white px-1">
-                              {openTicketCount}
-                            </span>
-                          )}
-                          {isActive && !showBadge && <ChevronRight className="ml-auto h-4 w-4" />}
-                        </Link>
-                      );
+                    .map((item, _i, filteredItems) => {
+                      // Insert Content Manager after Blog
+                      const rendered = renderNavItem(item);
+                      if (item.label === 'Blog') {
+                        return (
+                          <div key={`${item.href}-with-content`}>
+                            {rendered}
+                            {renderContentManagerNav()}
+                          </div>
+                        );
+                      }
+                      return rendered;
                     })}
                 </CollapsibleContent>
               </Collapsible>

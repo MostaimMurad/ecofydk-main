@@ -31,6 +31,10 @@ const HeroContent = ({
   const { data: heroStats = [] } = useContentBlocks('hero_stats');
   const { data: badgeBlock } = useContentBlock('hero', 'badge');
   const { data: sinceBlock } = useContentBlock('hero', 'since');
+  const { data: taglineBlock } = useContentBlock('hero', 'tagline');
+  const { data: subtitleBlock } = useContentBlock('hero', 'subtitle');
+  const { data: ctaPrimaryBlock } = useContentBlock('hero', 'cta_primary');
+  const { data: ctaSecondaryBlock } = useContentBlock('hero', 'cta_secondary');
 
   const isLight = textColor === 'light';
   const isCenter = alignment === 'center';
@@ -48,13 +52,29 @@ const HeroContent = ({
     scrollDot: isLight ? 'bg-white/70' : 'bg-foreground/70',
   };
 
-  const sinceText = sinceBlock 
+  const sinceText = sinceBlock
     ? (language === 'en' ? sinceBlock.title_en : sinceBlock.title_da) || 'Since 2020'
     : 'Since 2020';
 
   const badgeText = badgeBlock
     ? (language === 'en' ? badgeBlock.title_en : badgeBlock.title_da) || 'Premium Sustainable Jute'
     : language === 'en' ? 'Premium Sustainable Jute' : 'Premium Bæredygtig Jute';
+
+  const heroTagline = taglineBlock
+    ? (language === 'en' ? taglineBlock.title_en : taglineBlock.title_da) || t('hero.tagline')
+    : t('hero.tagline');
+
+  const heroSubtitle = subtitleBlock
+    ? (language === 'en' ? subtitleBlock.title_en : subtitleBlock.title_da) || t('hero.subtitle')
+    : t('hero.subtitle');
+
+  const ctaPrimaryText = ctaPrimaryBlock
+    ? (language === 'en' ? ctaPrimaryBlock.title_en : ctaPrimaryBlock.title_da) || t('hero.cta')
+    : t('hero.cta');
+
+  const ctaSecondaryText = ctaSecondaryBlock
+    ? (language === 'en' ? ctaSecondaryBlock.title_en : ctaSecondaryBlock.title_da) || t('about.cta')
+    : t('about.cta');
 
   const stats = heroStats.map((block) => ({
     value: block.value || '',
@@ -101,7 +121,7 @@ const HeroContent = ({
         compact ? "text-4xl md:text-5xl lg:text-6xl max-w-3xl" : "text-5xl md:text-6xl lg:text-8xl max-w-5xl")}
         initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
         <motion.span className="block" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }}>
-          {t('hero.tagline')}
+          {heroTagline}
         </motion.span>
       </motion.h1>
 
@@ -109,7 +129,7 @@ const HeroContent = ({
       <motion.p className={cn("mt-8 leading-relaxed", textClasses.secondary,
         compact ? "text-base md:text-lg max-w-xl" : "text-lg md:text-xl lg:text-2xl max-w-2xl")}
         initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.7 }}>
-        {t('hero.subtitle')}
+        {heroSubtitle}
       </motion.p>
 
       {/* CTA Buttons */}
@@ -119,7 +139,7 @@ const HeroContent = ({
           "group relative gap-3 font-semibold shadow-2xl shadow-primary/30 transition-all hover:shadow-primary/50 hover:scale-105 overflow-hidden",
           compact ? "px-8 py-6 text-sm" : "px-10 py-7 text-base")}>
           <Link to="/products">
-            <span className="relative z-10">{t('hero.cta')}</span>
+            <span className="relative z-10">{ctaPrimaryText}</span>
             <motion.span className="relative z-10" animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
               <ArrowRight className={compact ? "h-4 w-4" : "h-5 w-5"} />
             </motion.span>
@@ -129,12 +149,12 @@ const HeroContent = ({
         </Button>
         <Button asChild variant="outline" size="lg" className={cn(
           "group gap-3 font-semibold transition-all hover:scale-105",
-          isLight ? "bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/15 hover:border-white/40" 
+          isLight ? "bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/15 hover:border-white/40"
             : "bg-background/50 backdrop-blur-md border-primary/20 hover:bg-primary/5 hover:border-primary/40",
           compact ? "px-8 py-6 text-sm" : "px-10 py-7 text-base")}>
           <Link to="/our-story">
             <Play className="h-4 w-4" />
-            {t('about.cta')}
+            {ctaSecondaryText}
           </Link>
         </Button>
       </motion.div>
@@ -162,7 +182,7 @@ const HeroContent = ({
           <motion.div className="flex flex-col items-center gap-3 cursor-pointer group"
             animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
             <span className={cn("text-xs uppercase tracking-[0.2em] transition-colors", textClasses.tertiary)}>
-              {language === 'en' ? 'Explore' : 'Udforsk'}
+              {t('home.hero.scroll')}
             </span>
             <div className={cn("w-6 h-10 rounded-full border-2 flex items-start justify-center p-1.5 transition-colors", textClasses.scrollBorder)}>
               <motion.div className={cn("w-1.5 h-1.5 rounded-full", textClasses.scrollDot)}

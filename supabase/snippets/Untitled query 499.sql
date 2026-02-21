@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS public.content_block_versions (id UUID PRIMARY KEY, content_block_id UU)

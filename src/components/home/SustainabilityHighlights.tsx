@@ -41,7 +41,7 @@ const SustainabilityHighlights = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl translate-x-1/2" />
-      
+
       <div className="container relative">
         {/* Section Header */}
         <motion.div className="mb-16 text-center md:mb-20" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
@@ -50,14 +50,12 @@ const SustainabilityHighlights = () => {
             initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <Leaf className="h-4 w-4 text-primary" />
             <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-              {language === 'en' ? 'Our Commitment' : 'Vores Engagement'}
+              {t('home.sustainability.badge')}
             </span>
           </motion.div>
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl">{t('sustainability.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            {language === 'en' 
-              ? 'Every choice we make reflects our dedication to the planet and its people'
-              : 'Hvert valg vi træffer afspejler vores dedikation til planeten og dens mennesker'}
+            {t('home.sustainability.subtitle')}
           </p>
         </motion.div>
 
@@ -109,7 +107,7 @@ const SustainabilityHighlights = () => {
           viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
           <Button asChild size="lg" className="gap-2 px-8 py-6 text-base font-semibold">
             <Link to="/sustainability">
-              {language === 'en' ? 'Learn About Our Mission' : 'Læs Om Vores Mission'}
+              {t('home.sustainability.cta')}
               <Leaf className="h-4 w-4" />
             </Link>
           </Button>

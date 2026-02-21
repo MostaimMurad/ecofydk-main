@@ -561,6 +561,45 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Google Map */}
+      {(settings as any)?.map_embed_url && (
+        <section className="py-12 sm:py-16">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-8"
+            >
+              <h2 className="font-serif text-3xl font-bold text-foreground">
+                {language === 'da' ? 'Find Os' : 'Find Us'}
+              </h2>
+              <p className="mt-2 text-muted-foreground">
+                {language === 'da' ? 'Besøg os på vores kontor' : 'Visit us at our office'}
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="rounded-3xl overflow-hidden border border-border/50 shadow-xl"
+            >
+              <iframe
+                src={(settings as any).map_embed_url}
+                className="w-full h-[400px] md:h-[500px]"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Our Location"
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* Office Locations with Maps */}
       <OfficeLocations />
     </div>

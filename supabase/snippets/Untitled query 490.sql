@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS public.content_block_versions (id UUID NOT NULL DEFAULT gen_random_uuid() PRIMARY KEY, content_block_id UUID NOT NULL REFERENCES public.content_blocks(id) ON DELETE CASCADE, changed_by UUID REFERENCES auth.users(id), changed_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(), change_type TEXT NOT NULL DEFAULT '')

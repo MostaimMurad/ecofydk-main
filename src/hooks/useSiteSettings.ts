@@ -21,6 +21,9 @@ export interface SiteSettings {
   social_instagram: string | null;
   social_linkedin: string | null;
   social_twitter: string | null;
+  map_embed_url: string;
+  map_latitude: string;
+  map_longitude: string;
   updated_at: string;
   updated_by: string | null;
 }
@@ -36,7 +39,7 @@ export const useSiteSettings = () => {
         .maybeSingle();
 
       if (error) throw error;
-      
+
       // Return default if no settings exist
       if (!data) {
         return {
@@ -56,6 +59,9 @@ export const useSiteSettings = () => {
           social_instagram: null,
           social_linkedin: null,
           social_twitter: null,
+          map_embed_url: '',
+          map_latitude: '',
+          map_longitude: '',
           updated_at: new Date().toISOString(),
           updated_by: null,
         };
@@ -73,7 +79,7 @@ export const useUpdateSiteSettings = () => {
   return useMutation({
     mutationFn: async (updates: Partial<Omit<SiteSettings, 'id' | 'updated_at' | 'updated_by'>>) => {
       const { data: { user } } = await supabase.auth.getUser();
-      
+
       const { data, error } = await supabase
         .from('site_settings')
         .upsert({

@@ -23,6 +23,8 @@ const CookieConsent = () => {
     });
 
     useEffect(() => {
+        // Skip in dev mode
+        if (import.meta.env.DEV) return;
         const stored = localStorage.getItem(COOKIE_KEY);
         if (!stored) {
             const timer = setTimeout(() => setShowBanner(true), 1500);

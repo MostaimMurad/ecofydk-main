@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -37,8 +38,9 @@ import AdminBlog from "./pages/admin/AdminBlog";
 import BlogEditor from "./pages/admin/BlogEditor";
 import AdminUsers from "./pages/admin/AdminUsers";
 import AdminTranslations from "./pages/admin/AdminTranslations";
-import AdminContentBlocks from "./pages/admin/AdminContentBlocks";
+const AdminContentBlocks = lazy(() => import("./pages/admin/AdminContentBlocks"));
 import AdminFeedback from "./pages/admin/AdminFeedback";
+const AdminMedia = lazy(() => import("./pages/admin/AdminMedia"));
 import AppearanceSettings from "./pages/admin/settings/AppearanceSettings";
 import GeneralSettings from "./pages/admin/settings/GeneralSettings";
 import BrandingSettings from "./pages/admin/settings/BrandingSettings";
@@ -89,8 +91,9 @@ const App = () => (
                     <Route path="/admin/blog/:id" element={<ProtectedRoute requireAdmin><AdminLayout><BlogEditor /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/users" element={<ProtectedRoute requireAdmin><AdminLayout><AdminUsers /></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/translations" element={<ProtectedRoute requireAdmin><AdminLayout><AdminTranslations /></AdminLayout></ProtectedRoute>} />
-                    <Route path="/admin/content" element={<ProtectedRoute requireAdmin><AdminLayout><AdminContentBlocks /></AdminLayout></ProtectedRoute>} />
+                    <Route path="/admin/content" element={<ProtectedRoute requireAdmin><AdminLayout><Suspense fallback={<div className="flex items-center justify-center h-64"><div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full" /></div>}><AdminContentBlocks /></Suspense></AdminLayout></ProtectedRoute>} />
                     <Route path="/admin/feedback" element={<ProtectedRoute requireAdmin><AdminLayout><AdminFeedback /></AdminLayout></ProtectedRoute>} />
+                    <Route path="/admin/media" element={<ProtectedRoute requireAdmin><AdminLayout><Suspense fallback={<div className="flex items-center justify-center h-64"><div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full" /></div>}><AdminMedia /></Suspense></AdminLayout></ProtectedRoute>} />
 
                     {/* Admin Settings Routes */}
                     <Route path="/admin/settings/appearance" element={<ProtectedRoute requireAdmin><AdminLayout><AppearanceSettings /></AdminLayout></ProtectedRoute>} />

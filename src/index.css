@@ -208,3 +208,45 @@
     50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.4); }
   }
 }
+
+/* TipTap Rich Text Editor Styles */
+.tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: hsl(var(--muted-foreground));
+  opacity: 0.5;
+  pointer-events: none;
+  height: 0;
+}
+
+.tiptap:focus {
+  outline: none;
+}
+
+.tiptap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.tiptap img.ProseMirror-selectednode {
+  outline: 2px solid hsl(var(--primary));
+  border-radius: 0.5rem;
+}
+
+.tiptap a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tiptap mark {
+  background-color: hsl(38 70% 50% / 0.3);
+  border-radius: 0.15rem;
+  padding: 0.1em 0.2em;
+}
+
+.tiptap hr {
+  border-color: hsl(var(--border));
+  margin: 1rem 0;
+}

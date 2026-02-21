@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useAutoTranslate } from '@/hooks/useAutoTranslate';
 import { useToast } from '@/hooks/use-toast';
+import RichTextEditor from '@/components/admin/RichTextEditor';
 
 interface TranslatableFieldProps {
     /** The label shown above the field pair */
@@ -21,12 +22,16 @@ interface TranslatableFieldProps {
     onDaChange: (value: string) => void;
     /** If true, render Textarea instead of Input */
     multiline?: boolean;
+    /** If true, render RichTextEditor instead of Textarea */
+    richText?: boolean;
     /** Number of rows for textarea */
     rows?: number;
     /** Placeholder text for English field */
     enPlaceholder?: string;
     /** Placeholder text for Danish field */
     daPlaceholder?: string;
+    /** If true, stack fields vertically instead of side-by-side */
+    stacked?: boolean;
 }
 
 const TranslatableField = ({
@@ -36,9 +41,11 @@ const TranslatableField = ({
     onEnChange,
     onDaChange,
     multiline = false,
+    richText = false,
     rows = 3,
     enPlaceholder = '',
     daPlaceholder = '',
+    stacked = false,
 }: TranslatableFieldProps) => {
     const { translate, isTranslating } = useAutoTranslate();
     const { toast } = useToast();
@@ -69,6 +76,35 @@ const TranslatableField = ({
 
     const InputComponent = multiline ? Textarea : Input;
 
+    const renderField = (lang: 'en' | 'da', value: string, onChange: (v: string) => void, placeholder: string) => {
+        const flag = lang === 'en' ? '🇬🇧' : '🇩🇰';
+        const langLabel = lang === 'en' ? 'English' : 'Dansk';
+
+        return (
+            <div className="space-y-1.5">
+                <div className="flex items-center gap-1.5">
+                    <span className="text-xs">{flag}</span>
+                    <span className="text-xs font-medium text-muted-foreground">{langLabel}</span>
+                </div>
+                {richText ? (
+                    <RichTextEditor
+                        value={value}
+                        onChange={onChange}
+                        placeholder={placeholder}
+                    />
+                ) : (
+                    <InputComponent
+                        value={value}
+                        onChange={(e) => onChange(e.target.value)}
+                        placeholder={placeholder}
+                        rows={multiline ? rows : undefined}
+                        className="transition-all focus:ring-2 focus:ring-primary/20"
+                    />
+                )}
+            </div>
+        );
+    };
+
     return (
         <div className="space-y-3">
             <div className="flex items-center justify-between">
@@ -90,36 +126,9 @@ const TranslatableField = ({
                 )}
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-                {/* English field */}
-                <div className="space-y-1.5">
-                    <div className="flex items-center gap-1.5">
-                        <span className="text-xs">🇬🇧</span>
-                        <span className="text-xs font-medium text-muted-foreground">English</span>
-                    </div>
-                    <InputComponent
-                        value={enValue}
-                        onChange={(e) => onEnChange(e.target.value)}
-                        placeholder={enPlaceholder}
-                        rows={multiline ? rows : undefined}
-                        className="transition-all focus:ring-2 focus:ring-primary/20"
-                    />
-                </div>
-
-                {/* Danish field */}
-                <div className="space-y-1.5">
-                    <div className="flex items-center gap-1.5">
-                        <span className="text-xs">🇩🇰</span>
-                        <span className="text-xs font-medium text-muted-foreground">Dansk</span>
-                    </div>
-                    <InputComponent
-                        value={daValue}
-                        onChange={(e) => onDaChange(e.target.value)}
-                        placeholder={daPlaceholder}
-                        rows={multiline ? rows : undefined}
-                        className="transition-all focus:ring-2 focus:ring-primary/20"
-                    />
-                </div>
+            <div className={stacked ? "space-y-4" : "grid gap-3 sm:grid-cols-2"}>
+                {renderField('en', enValue, onEnChange, enPlaceholder)}
+                {renderField('da', daValue, onDaChange, daPlaceholder)}
             </div>
 
             {/* Translation controls */}

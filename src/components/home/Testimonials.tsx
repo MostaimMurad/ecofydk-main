@@ -11,7 +11,7 @@ const FloatingLeaf = ({ delay, duration, startX, startY }: { delay: number; dura
     className="absolute text-primary/10 pointer-events-none"
     style={{ left: startX, top: startY }}
     initial={{ opacity: 0, rotate: 0, y: 0 }}
-    animate={{ 
+    animate={{
       opacity: [0, 0.3, 0.3, 0],
       rotate: [0, 180, 360],
       y: [0, -100, -200],
@@ -68,36 +68,36 @@ const Testimonials = () => {
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Premium gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
-      
+
       {/* Decorative gradient orbs */}
-      <motion.div 
+      <motion.div
         className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.div 
+      <motion.div
         className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-accent/10 to-transparent rounded-full blur-3xl"
         animate={{ scale: [1.1, 1, 1.1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
-      
+
       {/* Floating leaves */}
       <FloatingLeaf delay={0} duration={12} startX="10%" startY="80%" />
       <FloatingLeaf delay={2} duration={15} startX="85%" startY="70%" />
       <FloatingLeaf delay={4} duration={10} startX="20%" startY="90%" />
       <FloatingLeaf delay={6} duration={14} startX="70%" startY="85%" />
       <FloatingLeaf delay={8} duration={11} startX="50%" startY="75%" />
-      
+
       <div className="container relative">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="mb-16 text-center md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-2 rounded-full backdrop-blur-xl bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/20 px-5 py-2.5 mb-6 shadow-lg"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -107,14 +107,14 @@ const Testimonials = () => {
           >
             <Sparkles className="h-4 w-4 text-accent" />
             <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-              {language === 'en' ? 'Testimonials' : 'Anbefalinger'}
+              {t('home.testimonials.badge')}
             </span>
           </motion.div>
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">
             {t('testimonials.title')}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            {language === 'en' 
+            {language === 'en'
               ? 'Hear from businesses who have made the sustainable switch with Ecofy'
               : 'Hør fra virksomheder, der har foretaget det bæredygtige skifte med Ecofy'
             }
@@ -123,7 +123,7 @@ const Testimonials = () => {
 
         {/* Featured Testimonial - Glass morphism card */}
         <div className="max-w-5xl mx-auto">
-          <motion.div 
+          <motion.div
             className="relative rounded-3xl backdrop-blur-xl bg-white/70 dark:bg-white/10 border border-white/40 dark:border-white/20 p-8 md:p-12 shadow-2xl overflow-hidden"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ const Testimonials = () => {
           >
             {/* Inner glow effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
-            
+
             {/* Animated quote decoration */}
             <motion.div
               className="absolute top-8 right-8"
@@ -141,7 +141,7 @@ const Testimonials = () => {
             >
               <Quote className="h-24 w-24 text-primary/15" />
             </motion.div>
-            
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
@@ -233,11 +233,10 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.button key={testimonial.id}
               onClick={() => { setIsAutoPlaying(false); setActiveIndex(index); }}
-              className={`text-left p-6 rounded-2xl backdrop-blur-xl transition-all duration-300 ${
-                index === activeIndex 
-                  ? 'bg-gradient-to-br from-primary/20 to-accent/10 border-2 border-primary/40 shadow-xl shadow-primary/10' 
+              className={`text-left p-6 rounded-2xl backdrop-blur-xl transition-all duration-300 ${index === activeIndex
+                  ? 'bg-gradient-to-br from-primary/20 to-accent/10 border-2 border-primary/40 shadow-xl shadow-primary/10'
                   : 'bg-white/50 dark:bg-white/5 border border-white/30 dark:border-white/10 hover:bg-white/70 dark:hover:bg-white/10 hover:border-primary/30 hover:shadow-lg'
-              }`}
+                }`}
               whileHover={{ y: -6, scale: 1.02 }} whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

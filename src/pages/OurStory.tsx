@@ -50,6 +50,24 @@ const OurStory = () => {
   const { data: storyStats } = useContentBlocks('story_stats');
   const { data: storyValues } = useContentBlocks('story_values');
   const { data: storyCerts } = useContentBlocks('story_certifications');
+  const { data: missionBlocks } = useContentBlocks('story_mission');
+
+  // Mission section dynamic data
+  const missionBlock = missionBlocks?.find(b => b.block_key === 'mission_main');
+  const missionTitle = missionBlock
+    ? (language === 'da' ? (missionBlock.title_da || missionBlock.title_en) : missionBlock.title_en) || t('story.mission.title')
+    : t('story.mission.title');
+  const missionDesc1 = missionBlock
+    ? (language === 'da' ? (missionBlock.description_da || missionBlock.description_en) : missionBlock.description_en) || t('story.mission.description')
+    : t('story.mission.description');
+  const missionDesc2 = missionBlock
+    ? (language === 'da' ? ((missionBlock.metadata as Record<string, string>)?.description2_da || (missionBlock.metadata as Record<string, string>)?.description2_en) : (missionBlock.metadata as Record<string, string>)?.description2_en) || t('story.mission.description2')
+    : t('story.mission.description2');
+  const missionOverlayValue = (missionBlock?.metadata as Record<string, string>)?.overlay_value || '6+';
+  const missionOverlayLabel = missionBlock
+    ? (language === 'da' ? ((missionBlock.metadata as Record<string, string>)?.overlay_label_da || (missionBlock.metadata as Record<string, string>)?.overlay_label_en) : (missionBlock.metadata as Record<string, string>)?.overlay_label_en) || (language === 'da' ? 'Års Erfaring' : 'Years Experience')
+    : (language === 'da' ? 'Års Erfaring' : 'Years Experience');
+  const missionImage = missionBlock?.image_url || missionProduction;
 
   const statIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     artisans: Users,
@@ -183,15 +201,15 @@ const OurStory = () => {
               </motion.div>
 
               <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
-                {t('story.mission.title')}
+                {missionTitle}
               </h2>
 
               <div className="mt-8 backdrop-blur-xl bg-white/80 dark:bg-card/80 rounded-3xl p-6 border border-border/50 shadow-xl">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  {t('story.mission.description')}
+                  {missionDesc1}
                 </p>
                 <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                  {t('story.mission.description2')}
+                  {missionDesc2}
                 </p>
               </div>
             </motion.div>
@@ -205,7 +223,7 @@ const OurStory = () => {
             >
               <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-muted shadow-2xl">
                 <img
-                  src={missionProduction}
+                  src={missionImage}
                   alt="Jute production process - artisans at work"
                   className="h-full w-full object-cover"
                 />
@@ -217,8 +235,8 @@ const OurStory = () => {
                 transition={{ delay: 0.3 }}
                 className="absolute -bottom-6 -left-6 backdrop-blur-xl bg-white/90 dark:bg-card/90 rounded-2xl p-6 shadow-xl border border-border/50"
               >
-                <p className="text-4xl font-bold bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">6+</p>
-                <p className="text-sm text-muted-foreground">{t('story.mission.years')}</p>
+                <p className="text-4xl font-bold bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">{missionOverlayValue}</p>
+                <p className="text-sm text-muted-foreground">{missionOverlayLabel}</p>
               </motion.div>
             </motion.div>
           </div>

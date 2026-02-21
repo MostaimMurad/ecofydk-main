@@ -3,36 +3,39 @@ import { MessageSquare, Palette, Package, Truck, ArrowRight, Sparkles } from 'lu
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useContentBlocks } from '@/hooks/useContentBlocks';
+
+const iconMap: Record<string, React.ReactElement> = {
+    MessageSquare: <MessageSquare className="h-7 w-7" />,
+    Palette: <Palette className="h-7 w-7" />,
+    Package: <Package className="h-7 w-7" />,
+    Truck: <Truck className="h-7 w-7" />,
+};
+
+const defaultSteps = [
+    { title_en: 'Tell Us Your Needs', title_da: 'Fortæl Os', desc_en: 'Share your requirements — product type, quantity, branding, and delivery timeline', desc_da: 'Del dine krav — produkttype, mængde, branding og levering', icon: 'MessageSquare', color: 'from-blue-500 to-cyan-600' },
+    { title_en: 'We Design & Sample', title_da: 'Vi Designer', desc_en: 'Receive design mockups and physical samples for your approval', desc_da: 'Få design mockups og fysiske prøver til godkendelse', icon: 'Palette', color: 'from-purple-500 to-violet-600' },
+    { title_en: 'Production', title_da: 'Produktion', desc_en: 'Bulk manufacturing with strict quality control at our partner factories', desc_da: 'Masseproduktion med streng kvalitetskontrol i Bangladesh', icon: 'Package', color: 'from-amber-500 to-orange-600' },
+    { title_en: 'Delivery to Your Door', title_da: 'Levering', desc_en: 'Direct shipping to your EU warehouse with full compliance documentation', desc_da: 'Direkte forsendelse til dit EU-lager med fuld dokumentation', icon: 'Truck', color: 'from-emerald-500 to-teal-600' },
+];
 
 const HowItWorks = () => {
-    const { language } = useLanguage();
+    const { language, t } = useLanguage();
+    const { data: blocks } = useContentBlocks('homepage_howitworks');
 
-    const steps = [
-        {
-            icon: <MessageSquare className="h-7 w-7" />,
-            title: language === 'da' ? 'Fortæl Os' : 'Tell Us Your Needs',
-            desc: language === 'da' ? 'Del dine krav — produkttype, mængde, branding og levering' : 'Share your requirements — product type, quantity, branding, and delivery timeline',
-            color: 'from-blue-500 to-cyan-600',
-        },
-        {
-            icon: <Palette className="h-7 w-7" />,
-            title: language === 'da' ? 'Vi Designer' : 'We Design & Sample',
-            desc: language === 'da' ? 'Få design mockups og fysiske prøver til godkendelse' : 'Receive design mockups and physical samples for your approval',
-            color: 'from-purple-500 to-violet-600',
-        },
-        {
-            icon: <Package className="h-7 w-7" />,
-            title: language === 'da' ? 'Produktion' : 'Production',
-            desc: language === 'da' ? 'Masseproduktion med streng kvalitetskontrol i Bangladesh' : 'Bulk manufacturing with strict quality control at our partner factories',
-            color: 'from-amber-500 to-orange-600',
-        },
-        {
-            icon: <Truck className="h-7 w-7" />,
-            title: language === 'da' ? 'Levering' : 'Delivery to Your Door',
-            desc: language === 'da' ? 'Direkte forsendelse til dit EU-lager med fuld dokumentation' : 'Direct shipping to your EU warehouse with full compliance documentation',
-            color: 'from-emerald-500 to-teal-600',
-        },
-    ];
+    const steps = (blocks && blocks.length > 0)
+        ? blocks.map(block => ({
+            icon: iconMap[block.icon || 'MessageSquare'] || <MessageSquare className="h-7 w-7" />,
+            title: language === 'da' ? (block.title_da || block.title_en || '') : (block.title_en || ''),
+            desc: language === 'da' ? (block.description_da || block.description_en || '') : (block.description_en || ''),
+            color: block.color || 'from-blue-500 to-cyan-600',
+        }))
+        : defaultSteps.map(d => ({
+            icon: iconMap[d.icon] || <MessageSquare className="h-7 w-7" />,
+            title: language === 'da' ? d.title_da : d.title_en,
+            desc: language === 'da' ? d.desc_da : d.desc_en,
+            color: d.color,
+        }));
 
     return (
         <section className="py-16 md:py-24 relative overflow-hidden">
@@ -53,16 +56,14 @@ const HowItWorks = () => {
                     >
                         <Sparkles className="h-4 w-4 text-primary" />
                         <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-                            {language === 'da' ? 'Enkel Proces' : 'Simple Process'}
+                            {t('home.howitworks.badge')}
                         </span>
                     </motion.div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                        {language === 'da' ? 'Hvordan Det Fungerer' : 'How It Works'}
+                        {t('home.howitworks.title')}
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                        {language === 'da'
-                            ? 'Fra forespørgsel til levering — vi gør det enkelt for dig'
-                            : 'From inquiry to delivery — we make it simple for you'}
+                        {t('home.howitworks.subtitle')}
                     </p>
                 </motion.div>
 
@@ -106,7 +107,7 @@ const HowItWorks = () => {
                         className="rounded-full bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 shadow-lg shadow-primary/25 px-8"
                     >
                         <Link to="/custom-solutions">
-                            {language === 'da' ? 'Start Dit Projekt' : 'Start Your Project'}
+                            {t('home.howitworks.cta')}
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Link>
                     </Button>

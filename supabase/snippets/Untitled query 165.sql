@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS public.content_block_versions (id UUID PRIMARY KEY DEFAULT gen_random_uuid(), content_blocks_id UUID REFERENCES public.)

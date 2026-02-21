@@ -2,10 +2,43 @@ import { motion } from 'framer-motion';
 import { Play, Leaf, Quote } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useState } from 'react';
+import { useContentBlocks } from '@/hooks/useContentBlocks';
 
 const FounderVideo = () => {
-    const { language } = useLanguage();
+    const { language, t } = useLanguage();
     const [isPlaying, setIsPlaying] = useState(false);
+    const { data: blocks } = useContentBlocks('homepage_founder');
+
+    // Extract founder data from content blocks or use defaults
+    const founderBlock = blocks?.find(b => b.block_key === 'founder_main');
+    const statsBlocks = blocks?.filter(b => b.block_key.startsWith('founder_stat_')) || [];
+
+    const videoUrl = founderBlock?.value || 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+    const founderName = (founderBlock?.metadata as Record<string, string>)?.founder_name || 'Mostaim Ahmed';
+    const founderTitle = (founderBlock?.metadata as Record<string, string>)?.founder_title || 'Founder & CEO, Ecofy ApS';
+    const founderInitials = (founderBlock?.metadata as Record<string, string>)?.initials || 'MA';
+    const sectionTitle = language === 'da'
+        ? (founderBlock?.title_da || 'Mød Grundlæggeren')
+        : (founderBlock?.title_en || 'Meet the Founder');
+    const sectionSubtitle = language === 'da'
+        ? (founderBlock?.description_da || 'Se hvordan Ecofy startede og vores vision for en bæredygtig fremtid')
+        : (founderBlock?.description_en || 'See how Ecofy started and our vision for a sustainable future');
+    const quoteText = language === 'da'
+        ? ((founderBlock?.metadata as Record<string, string>)?.quote_da || '"Vi startede Ecofy med én enkel idé: at erstatte plastik med jute, ét produkt ad gangen. I dag leverer vi til 200+ virksomheder i hele Europa, og vi er kun lige begyndt."')
+        : ((founderBlock?.metadata as Record<string, string>)?.quote_en || '"We started Ecofy with one simple idea: replace plastic with jute, one product at a time. Today we deliver to 200+ businesses across Europe, and we\'re just getting started."');
+
+    const defaultMiniStats = [
+        { value: '2019', label: language === 'da' ? 'Grundlagt' : 'Founded' },
+        { value: '200+', label: language === 'da' ? 'B2B Kunder' : 'B2B Clients' },
+        { value: '14+', label: language === 'da' ? 'Produkter' : 'Products' },
+    ];
+
+    const miniStats = statsBlocks.length > 0
+        ? statsBlocks.map(b => ({
+            value: b.value || '',
+            label: language === 'da' ? (b.title_da || b.title_en || '') : (b.title_en || ''),
+        }))
+        : defaultMiniStats;
 
     return (
         <section className="py-16 md:py-24 relative overflow-hidden">
@@ -26,16 +59,14 @@ const FounderVideo = () => {
                     >
                         <Leaf className="h-4 w-4 text-primary" />
                         <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-                            {language === 'da' ? 'Vores Historie' : 'Our Story'}
+                            {t('home.founder.badge')}
                         </span>
                     </motion.div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                        {language === 'da' ? 'Mød Grundlæggeren' : 'Meet the Founder'}
+                        {sectionTitle}
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                        {language === 'da'
-                            ? 'Se hvordan Ecofy startede og vores vision for en bæredygtig fremtid'
-                            : 'See how Ecofy started and our vision for a sustainable future'}
+                        {sectionSubtitle}
                     </p>
                 </motion.div>
 
@@ -62,7 +93,7 @@ const FounderVideo = () => {
                                                 <Play className="h-8 w-8 text-white ml-1" />
                                             </motion.button>
                                             <p className="text-sm font-medium text-white/80">
-                                                {language === 'da' ? 'Se video (2 min)' : 'Watch Video (2 min)'}
+                                                {t('home.founder.watchvideo')}
                                             </p>
                                         </div>
                                     </div>
@@ -75,7 +106,7 @@ const FounderVideo = () => {
                             ) : (
                                 <iframe
                                     className="absolute inset-0 w-full h-full"
-                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                                    src={`${videoUrl}${videoUrl.includes('?') ? '&' : '?'}autoplay=1`}
                                     title="Ecofy Founder Video"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
@@ -94,28 +125,22 @@ const FounderVideo = () => {
                         <div className="relative">
                             <Quote className="h-10 w-10 text-primary/20 absolute -top-2 -left-2" />
                             <blockquote className="text-lg md:text-xl italic text-foreground leading-relaxed pl-8 border-l-4 border-primary/30">
-                                {language === 'da'
-                                    ? '"Vi startede Ecofy med én enkel idé: at erstatte plastik med jute, ét produkt ad gangen. I dag leverer vi til 200+ virksomheder i hele Europa, og vi er kun lige begyndt."'
-                                    : '"We started Ecofy with one simple idea: replace plastic with jute, one product at a time. Today we deliver to 200+ businesses across Europe, and we\'re just getting started."'}
+                                {quoteText}
                             </blockquote>
                         </div>
 
                         <div className="flex items-center gap-4 pt-4">
                             <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                                MA
+                                {founderInitials}
                             </div>
                             <div>
-                                <p className="font-bold text-foreground">Mostaim Ahmed</p>
-                                <p className="text-sm text-muted-foreground">Founder & CEO, Ecofy ApS</p>
+                                <p className="font-bold text-foreground">{founderName}</p>
+                                <p className="text-sm text-muted-foreground">{founderTitle}</p>
                             </div>
                         </div>
 
                         <div className="grid grid-cols-3 gap-4 pt-4">
-                            {[
-                                { value: '2019', label: language === 'da' ? 'Grundlagt' : 'Founded' },
-                                { value: '200+', label: language === 'da' ? 'B2B Kunder' : 'B2B Clients' },
-                                { value: '14+', label: language === 'da' ? 'Produkter' : 'Products' },
-                            ].map((stat) => (
+                            {miniStats.map((stat) => (
                                 <div key={stat.label} className="text-center p-3 rounded-xl bg-primary/5 border border-primary/10">
                                     <div className="text-xl font-bold text-primary">{stat.value}</div>
                                     <div className="text-xs text-muted-foreground">{stat.label}</div>
@@ -130,3 +155,4 @@ const FounderVideo = () => {
 };
 
 export default FounderVideo;
+

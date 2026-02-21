@@ -11,6 +11,9 @@ const ExitIntentPopup = () => {
     const { language } = useLanguage();
     const [showPopup, setShowPopup] = useState(false);
 
+    // Disable popup in dev mode to avoid blocking browser testing
+    const isDev = import.meta.env.DEV;
+
     const handleMouseLeave = useCallback((e: MouseEvent) => {
         // Trigger only when cursor moves toward the top (exit intent)
         if (e.clientY <= 5) {
@@ -23,6 +26,7 @@ const ExitIntentPopup = () => {
     }, []);
 
     useEffect(() => {
+        if (isDev) return; // No popup in dev mode
         // Only add listener on desktop and after a delay
         const timer = setTimeout(() => {
             document.addEventListener('mouseleave', handleMouseLeave);

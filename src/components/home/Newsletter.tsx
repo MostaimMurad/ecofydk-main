@@ -80,7 +80,7 @@ const Newsletter = () => {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <Badge variant="secondary" className="mb-6 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm text-white/90 shadow-lg">
               <Sparkles className="mr-2 h-4 w-4" />
-              {language === 'en' ? 'Stay Connected' : 'Hold Forbindelsen'}
+              {t('home.newsletter.badge')}
             </Badge>
           </motion.div>
 
@@ -106,7 +106,7 @@ const Newsletter = () => {
                   <CheckCircle className="h-6 w-6 text-emerald-400" />
                 </div>
                 <span className="text-lg font-medium text-white">
-                  {language === 'en' ? 'You\'re subscribed!' : 'Du er tilmeldt!'}
+                  {t('home.newsletter.subscribed')}
                 </span>
               </motion.div>
             ) : (
