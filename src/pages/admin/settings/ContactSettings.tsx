@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Loader2, Mail, MapPin, Map } from 'lucide-react';
+import { Phone, Loader2, Mail, MapPin, Map, Building2 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -18,6 +18,7 @@ const ContactSettings = () => {
     contact_email: '',
     contact_phone: '',
     contact_address: '',
+    cvr_number: '',
     map_embed_url: '',
   });
 
@@ -27,6 +28,7 @@ const ContactSettings = () => {
         contact_email: settings.contact_email || '',
         contact_phone: settings.contact_phone || '',
         contact_address: settings.contact_address || '',
+        cvr_number: (settings as any).cvr_number || '',
         map_embed_url: (settings as any).map_embed_url || '',
       });
     }
@@ -120,6 +122,22 @@ const ContactSettings = () => {
                 placeholder="e.g., Kolding 6000, Denmark"
                 rows={2}
               />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="cvr_number" className="flex items-center gap-2">
+                <Building2 className="h-4 w-4 text-muted-foreground" />
+                CVR Number
+              </Label>
+              <Input
+                id="cvr_number"
+                value={formData.cvr_number}
+                onChange={(e) => setFormData(prev => ({ ...prev, cvr_number: e.target.value }))}
+                placeholder="e.g., DK-12345678"
+              />
+              <p className="text-xs text-muted-foreground">
+                Danish company registration number (CVR) displayed in footer and legal pages
+              </p>
             </div>
 
             <Button

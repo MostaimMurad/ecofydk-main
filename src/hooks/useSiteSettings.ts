@@ -17,6 +17,7 @@ export interface SiteSettings {
   contact_email: string;
   contact_phone: string;
   contact_address: string;
+  cvr_number: string;
   social_facebook: string | null;
   social_instagram: string | null;
   social_linkedin: string | null;
@@ -55,6 +56,7 @@ export const useSiteSettings = () => {
           contact_email: 'hello@ecofy.dk',
           contact_phone: '+45 12 34 56 78',
           contact_address: 'Copenhagen, Denmark',
+          cvr_number: '',
           social_facebook: null,
           social_instagram: null,
           social_linkedin: null,

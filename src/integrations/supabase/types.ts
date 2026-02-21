@@ -88,8 +88,10 @@ export type Database = {
           image_url: string | null
           is_active: boolean
           metadata: Json | null
+          published_at: string | null
           section: string
           sort_order: number
+          status: string
           title_da: string | null
           title_en: string | null
           updated_at: string
@@ -106,8 +108,10 @@ export type Database = {
           image_url?: string | null
           is_active?: boolean
           metadata?: Json | null
+          published_at?: string | null
           section: string
           sort_order?: number
+          status?: string
           title_da?: string | null
           title_en?: string | null
           updated_at?: string
@@ -124,8 +128,10 @@ export type Database = {
           image_url?: string | null
           is_active?: boolean
           metadata?: Json | null
+          published_at?: string | null
           section?: string
           sort_order?: number
+          status?: string
           title_da?: string | null
           title_en?: string | null
           updated_at?: string
@@ -472,11 +478,15 @@ export type Database = {
           contact_address: string | null
           contact_email: string | null
           contact_phone: string | null
+          cvr_number: string | null
           footer_text_da: string | null
           footer_text_en: string | null
           hero_variant: string
           id: string
           logo_url: string | null
+          map_embed_url: string | null
+          map_latitude: string | null
+          map_longitude: string | null
           site_tagline_da: string | null
           site_tagline_en: string | null
           site_title_da: string | null
@@ -492,11 +502,15 @@ export type Database = {
           contact_address?: string | null
           contact_email?: string | null
           contact_phone?: string | null
+          cvr_number?: string | null
           footer_text_da?: string | null
           footer_text_en?: string | null
           hero_variant?: string
           id?: string
           logo_url?: string | null
+          map_embed_url?: string | null
+          map_latitude?: string | null
+          map_longitude?: string | null
           site_tagline_da?: string | null
           site_tagline_en?: string | null
           site_title_da?: string | null
@@ -512,11 +526,15 @@ export type Database = {
           contact_address?: string | null
           contact_email?: string | null
           contact_phone?: string | null
+          cvr_number?: string | null
           footer_text_da?: string | null
           footer_text_en?: string | null
           hero_variant?: string
           id?: string
           logo_url?: string | null
+          map_embed_url?: string | null
+          map_latitude?: string | null
+          map_longitude?: string | null
           site_tagline_da?: string | null
           site_tagline_en?: string | null
           site_title_da?: string | null
