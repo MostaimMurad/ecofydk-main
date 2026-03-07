@@ -54,7 +54,7 @@ export const PAGES: PageDef[] = [
         description: 'Hero, impact counters, featured products, partners',
         sections: ['hero', 'hero_stats', 'stats', 'features', 'trusted_partners',
             'sustainability_highlights', 'sustainability_stats', 'newsletter_trust',
-            'about', 'about_stats', 'about_features'],
+            'about', 'about_stats', 'about_features', 'homepage_founder'],
         color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
     },
     {
