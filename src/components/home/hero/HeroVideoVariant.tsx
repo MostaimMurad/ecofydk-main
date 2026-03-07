@@ -1,13 +1,18 @@
 import { motion } from 'framer-motion';
 import heroVideo from '@/assets/hero-jute-video.mp4';
 import HeroContent from './HeroContent';
+import { useSiteSettings } from '@/hooks/useSiteSettings';
 
 const HeroVideoVariant = () => {
+  const { data: settings } = useSiteSettings();
+  const videoSrc = settings?.hero_video_url || heroVideo;
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
+          key={videoSrc}
           autoPlay
           loop
           muted
@@ -15,7 +20,7 @@ const HeroVideoVariant = () => {
           preload="metadata"
           className="h-full w-full object-cover scale-105"
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
         
         {/* Multi-layer gradients for depth */}

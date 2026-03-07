@@ -12,6 +12,7 @@ export interface SiteSettings {
   site_tagline_en: string;
   site_tagline_da: string;
   logo_url: string | null;
+  hero_video_url: string | null;
   footer_text_en: string;
   footer_text_da: string;
   contact_email: string;
@@ -51,6 +52,7 @@ export const useSiteSettings = () => {
           site_tagline_en: 'Sustainable Jute Products from Bangladesh',
           site_tagline_da: 'Bæredygtige juteprodukter fra Bangladesh',
           logo_url: null,
+          hero_video_url: null,
           footer_text_en: 'Crafting sustainable stories since 2019',
           footer_text_da: 'Skaber bæredygtige historier siden 2019',
           contact_email: 'hello@ecofy.dk',
