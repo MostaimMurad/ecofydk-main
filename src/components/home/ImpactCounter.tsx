@@ -117,6 +117,30 @@ const ImpactCounter = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary via-emerald-700 to-teal-700" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_transparent_50%,_rgba(0,0,0,0.3))]" />
 
+            {/* Animated background orbs */}
+            <motion.div
+                animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }}
+                transition={{ duration: 8, repeat: Infinity }}
+                className="absolute top-0 left-1/4 w-80 h-80 bg-white/10 rounded-full blur-3xl"
+            />
+            <motion.div
+                animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }}
+                transition={{ duration: 10, repeat: Infinity, delay: 2 }}
+                className="absolute bottom-0 right-1/4 w-80 h-80 bg-white/10 rounded-full blur-3xl"
+            />
+
+            {/* Floating particles */}
+            {[15, 35, 55, 75, 90].map((x, i) => (
+                <motion.div
+                    key={i}
+                    className="absolute w-1.5 h-1.5 bg-white/20 rounded-full pointer-events-none"
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: [0, 0.5, 0], y: [-10, 300] }}
+                    transition={{ duration: 10, delay: i * 1.5, repeat: Infinity }}
+                    style={{ left: `${x}%`, top: 0 }}
+                />
+            ))}
+
             <div className="container relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

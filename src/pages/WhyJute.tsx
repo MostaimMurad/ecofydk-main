@@ -166,7 +166,15 @@ const WhyJute = () => {
                     {/* Comparison Cards - Desktop */}
                     <div className="hidden md:block">
                         <div className="grid grid-cols-4 gap-4 mb-6">
-                            <div className="p-4 font-semibold text-lg">Metric</div>
+                            <div className="p-4 rounded-xl bg-gradient-to-br from-foreground/5 to-muted/30 border border-border/50 flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="flex items-center justify-center gap-2 font-bold text-foreground text-lg mb-1">
+                                        <ShieldCheck className="h-5 w-5 text-primary" />
+                                        {language === 'da' ? 'Sammenligning' : 'Comparison'}
+                                    </div>
+                                    <span className="text-xs text-muted-foreground">{language === 'da' ? 'Miljøpåvirkning' : 'Environmental Impact'}</span>
+                                </div>
+                            </div>
                             <div className="p-4 rounded-xl bg-gradient-to-br from-primary/10 to-emerald-500/10 border border-primary/20 text-center">
                                 <div className="flex items-center justify-center gap-2 font-bold text-primary text-lg mb-1">
                                     <Leaf className="h-5 w-5" /> Jute

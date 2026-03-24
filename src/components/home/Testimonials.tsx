@@ -1,32 +1,9 @@
-import { Star, Quote, ChevronLeft, ChevronRight, Leaf, Sparkles } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useTestimonials } from '@/hooks/useTestimonials';
-
-// Floating leaf component
-const FloatingLeaf = ({ delay, duration, startX, startY }: { delay: number; duration: number; startX: string; startY: string }) => (
-  <motion.div
-    className="absolute text-primary/10 pointer-events-none"
-    style={{ left: startX, top: startY }}
-    initial={{ opacity: 0, rotate: 0, y: 0 }}
-    animate={{
-      opacity: [0, 0.3, 0.3, 0],
-      rotate: [0, 180, 360],
-      y: [0, -100, -200],
-      x: [0, 30, -30, 0]
-    }}
-    transition={{
-      duration,
-      delay,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }}
-  >
-    <Leaf className="h-8 w-8" />
-  </motion.div>
-);
 
 const Testimonials = () => {
   const { language, t } = useLanguage();
@@ -65,28 +42,12 @@ const Testimonials = () => {
   const current = testimonials[activeIndex];
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
-      {/* Premium gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
-
-      {/* Decorative gradient orbs */}
-      <motion.div
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"
-        animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-accent/10 to-transparent rounded-full blur-3xl"
-        animate={{ scale: [1.1, 1, 1.1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
-
-      {/* Floating leaves */}
-      <FloatingLeaf delay={0} duration={12} startX="10%" startY="80%" />
-      <FloatingLeaf delay={2} duration={15} startX="85%" startY="70%" />
-      <FloatingLeaf delay={4} duration={10} startX="20%" startY="90%" />
-      <FloatingLeaf delay={6} duration={14} startX="70%" startY="85%" />
-      <FloatingLeaf delay={8} duration={11} startX="50%" startY="75%" />
+    <section className="relative py-24 md:py-32 overflow-hidden bg-[#FAFAF8]">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, #8B7355 1px, transparent 0)`,
+        backgroundSize: '48px 48px',
+      }} />
 
       <div className="container relative">
         {/* Section Header */}
@@ -98,19 +59,18 @@ const Testimonials = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 rounded-full backdrop-blur-xl bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/20 px-5 py-2.5 mb-6 shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-5 py-2 mb-6"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.05 }}
           >
-            <Sparkles className="h-4 w-4 text-accent" />
+            <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-sm font-semibold uppercase tracking-widest text-primary">
               {t('home.testimonials.badge')}
             </span>
           </motion.div>
-          <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl text-foreground">
             {t('testimonials.title')}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -121,150 +81,188 @@ const Testimonials = () => {
           </p>
         </motion.div>
 
-        {/* Featured Testimonial - Glass morphism card */}
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            className="relative rounded-3xl backdrop-blur-xl bg-white/70 dark:bg-white/10 border border-white/40 dark:border-white/20 p-8 md:p-12 shadow-2xl overflow-hidden"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Inner glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
-
-            {/* Animated quote decoration */}
+        {/* Main testimonial area — two-column layout */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            {/* ─── Left: Featured testimonial card ─── */}
             <motion.div
-              className="absolute top-8 right-8"
-              animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.05, 1] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="lg:col-span-8 relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              <Quote className="h-24 w-24 text-primary/15" />
+              <div className="relative h-full rounded-3xl bg-white border border-border/60 p-8 md:p-12 shadow-sm overflow-hidden">
+                {/* Decorative accent — top-left green bar */}
+                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary via-primary/60 to-transparent rounded-l-3xl" />
+
+                {/* Quote icon */}
+                <div className="absolute top-8 right-8 md:top-10 md:right-10">
+                  <Quote className="h-16 w-16 md:h-20 md:w-20 text-primary/8" />
+                </div>
+
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeIndex}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    className="relative z-10 flex flex-col justify-between h-full"
+                  >
+                    {/* Stars */}
+                    <div>
+                      <div className="flex gap-1 mb-8">
+                        {Array.from({ length: current.rating }).map((_, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: i * 0.08, type: "spring", stiffness: 300 }}
+                          >
+                            <Star className="h-5 w-5 fill-amber-400 text-amber-400" />
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      {/* Quote Text */}
+                      <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif leading-relaxed text-foreground/90 mb-10">
+                        "{language === 'en' ? current.text_en : current.text_da}"
+                      </blockquote>
+                    </div>
+
+                    {/* Author + Navigation */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="relative">
+                          <img
+                            src={current.image_url || ''}
+                            alt={current.name}
+                            className="h-14 w-14 rounded-full object-cover ring-2 ring-primary/10"
+                          />
+                        </div>
+                        <div>
+                          <div className="text-lg font-bold text-foreground">{current.name}</div>
+                          <div className="text-sm text-muted-foreground">{current.role}</div>
+                          <div className="text-sm font-medium text-primary">{current.company}</div>
+                        </div>
+                      </div>
+
+                      {/* Navigation */}
+                      <div className="hidden md:flex items-center gap-2">
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          onClick={prevTestimonial}
+                          className="rounded-full h-10 w-10 border-border/60 hover:bg-primary hover:text-white hover:border-primary transition-all"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="icon"
+                          onClick={nextTestimonial}
+                          className="rounded-full h-10 w-10 border-border/60 hover:bg-primary hover:text-white hover:border-primary transition-all"
+                        >
+                          <ChevronRight className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Progress bar */}
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-border/20">
+                  <motion.div
+                    className="h-full bg-primary"
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 6, ease: "linear" }}
+                    key={activeIndex}
+                  />
+                </div>
+              </div>
             </motion.div>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, y: 20, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -20, scale: 0.98 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="relative z-10"
-              >
-                {/* Animated Stars */}
-                <div className="flex gap-1.5 mb-8">
-                  {Array.from({ length: current.rating }).map((_, i) => (
+            {/* ─── Right: Testimonial selector cards ─── */}
+            <motion.div
+              className="lg:col-span-4 flex flex-row lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <motion.button
+                  key={testimonial.id}
+                  onClick={() => { setIsAutoPlaying(false); setActiveIndex(index); }}
+                  className={`relative flex-shrink-0 w-full text-left p-5 rounded-2xl transition-all duration-300 border ${
+                    index === activeIndex
+                      ? 'bg-white border-primary/30 shadow-md'
+                      : 'bg-white/60 border-border/40 hover:bg-white hover:border-border/60 hover:shadow-sm'
+                  }`}
+                  whileHover={{ x: 4 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  {/* Active indicator */}
+                  {index === activeIndex && (
                     <motion.div
-                      key={i}
-                      initial={{ opacity: 0, scale: 0, rotate: -180 }}
-                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                      transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
-                    >
-                      <Star className="h-7 w-7 fill-accent text-accent drop-shadow-lg" />
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Quote Text */}
-                <blockquote className="text-2xl md:text-3xl lg:text-4xl font-serif leading-relaxed text-foreground mb-10">
-                  <span className="bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 bg-clip-text">
-                    "{language === 'en' ? current.text_en : current.text_da}"
-                  </span>
-                </blockquote>
-
-                {/* Author */}
-                <div className="flex items-center gap-5">
-                  <motion.div className="relative" whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-md opacity-50" />
-                    <img
-                      src={current.image_url || ''}
-                      alt={current.name}
-                      className="relative h-16 w-16 rounded-full object-cover ring-4 ring-white/50 dark:ring-white/20"
+                      className="absolute left-0 top-4 bottom-4 w-1 bg-primary rounded-r-full"
+                      layoutId="activeIndicator"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
-                  </motion.div>
-                  <div>
-                    <div className="text-xl font-bold">{current.name}</div>
-                    <div className="text-muted-foreground">{current.role}</div>
-                    <div className="text-sm font-medium bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      {current.company}
+                  )}
+
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={testimonial.image_url || ''}
+                      alt={testimonial.name}
+                      className={`h-11 w-11 rounded-full object-cover transition-all ${
+                        index === activeIndex ? 'ring-2 ring-primary/30' : 'ring-1 ring-border/30'
+                      }`}
+                    />
+                    <div className="min-w-0">
+                      <div className={`font-semibold text-sm truncate ${index === activeIndex ? 'text-foreground' : 'text-foreground/70'}`}>
+                        {testimonial.name}
+                      </div>
+                      <div className="text-xs text-muted-foreground truncate">{testimonial.company}</div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
 
-            {/* Navigation buttons */}
-            <div className="absolute bottom-8 right-8 flex items-center gap-3">
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="outline" size="icon" onClick={prevTestimonial}
-                  className="rounded-full h-12 w-12 backdrop-blur-xl bg-white/50 dark:bg-white/10 border-white/30 dark:border-white/20 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all shadow-lg">
-                  <ChevronLeft className="h-5 w-5" />
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="outline" size="icon" onClick={nextTestimonial}
-                  className="rounded-full h-12 w-12 backdrop-blur-xl bg-white/50 dark:bg-white/10 border-white/30 dark:border-white/20 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all shadow-lg">
-                  <ChevronRight className="h-5 w-5" />
-                </Button>
-              </motion.div>
-            </div>
+                  {/* Mini stars */}
+                  <div className="flex gap-0.5 mt-3">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className={`h-3.5 w-3.5 ${
+                        index === activeIndex ? 'fill-amber-400 text-amber-400' : 'fill-amber-300/60 text-amber-300/60'
+                      }`} />
+                    ))}
+                  </div>
 
-            {/* Progress bar */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-border/30">
-              <motion.div className="h-full bg-gradient-to-r from-primary to-accent" initial={{ width: "0%" }} animate={{ width: "100%" }}
-                transition={{ duration: 6, ease: "linear" }} key={activeIndex} />
-            </div>
-
-            {/* Mobile progress dots */}
-            <div className="flex justify-center gap-2 mt-8 md:hidden">
-              {testimonials.map((_, index) => (
-                <motion.button key={index}
-                  onClick={() => { setIsAutoPlaying(false); setActiveIndex(index); }}
-                  className={`h-2 rounded-full transition-all ${index === activeIndex ? 'w-8 bg-gradient-to-r from-primary to-accent' : 'w-2 bg-border/50'}`}
-                  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} />
+                  {/* Preview text */}
+                  <p className={`mt-2 text-xs leading-relaxed line-clamp-2 ${
+                    index === activeIndex ? 'text-muted-foreground' : 'text-muted-foreground/60'
+                  }`}>
+                    "{(language === 'en' ? testimonial.text_en : testimonial.text_da).substring(0, 80)}..."
+                  </p>
+                </motion.button>
               ))}
-            </div>
-          </motion.div>
-        </div>
+            </motion.div>
+          </div>
 
-        {/* Testimonial Cards Grid */}
-        <motion.div className="grid gap-6 md:grid-cols-3 mt-12"
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
-          {testimonials.map((testimonial, index) => (
-            <motion.button key={testimonial.id}
-              onClick={() => { setIsAutoPlaying(false); setActiveIndex(index); }}
-              className={`text-left p-6 rounded-2xl backdrop-blur-xl transition-all duration-300 ${index === activeIndex
-                  ? 'bg-gradient-to-br from-primary/20 to-accent/10 border-2 border-primary/40 shadow-xl shadow-primary/10'
-                  : 'bg-white/50 dark:bg-white/5 border border-white/30 dark:border-white/10 hover:bg-white/70 dark:hover:bg-white/10 hover:border-primary/30 hover:shadow-lg'
+          {/* Mobile navigation */}
+          <div className="flex justify-center gap-2 mt-6 md:hidden">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => { setIsAutoPlaying(false); setActiveIndex(index); }}
+                className={`h-2 rounded-full transition-all ${
+                  index === activeIndex ? 'w-8 bg-primary' : 'w-2 bg-border/50'
                 }`}
-              whileHover={{ y: -6, scale: 1.02 }} whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <div className="flex items-center gap-4">
-                <motion.div className="relative" whileHover={{ rotate: 5 }}>
-                  {index === activeIndex && (
-                    <motion.div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-md"
-                      layoutId="activeGlow" initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} />
-                  )}
-                  <img src={testimonial.image_url || ''} alt={testimonial.name}
-                    className="relative h-12 w-12 rounded-full object-cover ring-2 ring-white/50" />
-                </motion.div>
-                <div>
-                  <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.company}</div>
-                </div>
-              </div>
-              <div className="flex gap-1 mt-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-                ))}
-              </div>
-              {index === activeIndex && (
-                <motion.div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent rounded-b-2xl" layoutId="activeBar" />
-              )}
-            </motion.button>
-          ))}
-        </motion.div>
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

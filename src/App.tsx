@@ -17,6 +17,9 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import OurStory from "./pages/OurStory";
 import Sustainability from "./pages/Sustainability";
+import Innovation from "./pages/Innovation";
+import Gallery from "./pages/Gallery";
+import Partnerships from "./pages/Partnerships";
 import Journal from "./pages/Journal";
 import JournalPost from "./pages/JournalPost";
 import Contact from "./pages/Contact";
@@ -68,6 +71,9 @@ const App = () => (
                     <Route path="/products/:id" element={<Layout><ProductDetail /></Layout>} />
                     <Route path="/our-story" element={<Layout><OurStory /></Layout>} />
                     <Route path="/sustainability" element={<Layout><Sustainability /></Layout>} />
+                    <Route path="/innovation" element={<Layout><Innovation /></Layout>} />
+                    <Route path="/gallery" element={<Layout><Gallery /></Layout>} />
+                    <Route path="/partnerships" element={<Layout><Partnerships /></Layout>} />
                     <Route path="/why-jute" element={<Layout><WhyJute /></Layout>} />
                     <Route path="/impact" element={<Layout><ImpactDashboard /></Layout>} />
                     <Route path="/custom-solutions" element={<Layout><CustomSolutions /></Layout>} />
