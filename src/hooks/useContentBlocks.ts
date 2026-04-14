@@ -15,6 +15,7 @@ export interface ContentBlock {
   image_url: string | null;
   metadata: Record<string, unknown>;
   sort_order: number;
+  is_active: boolean;
 }
 
 export const useContentBlocks = (section: string) => {
@@ -25,6 +26,7 @@ export const useContentBlocks = (section: string) => {
         .from('content_blocks')
         .select('*')
         .eq('section', section)
+        .eq('is_active', true)
         .order('sort_order', { ascending: true });
 
       if (error) throw error;
@@ -43,6 +45,7 @@ export const useContentBlock = (section: string, blockKey: string) => {
         .select('*')
         .eq('section', section)
         .eq('block_key', blockKey)
+        .eq('is_active', true)
         .maybeSingle();
 
       if (error) throw error;
@@ -50,3 +53,4 @@ export const useContentBlock = (section: string, blockKey: string) => {
     },
   });
 };
+

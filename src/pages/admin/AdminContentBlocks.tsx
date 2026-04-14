@@ -5,7 +5,7 @@ import {
     Plus, Edit, Trash2, Search, ChevronDown, ChevronRight,
     FileText, Copy, Filter, Home, BookOpen, Leaf, ShieldCheck,
     BarChart3, Briefcase, Users, DollarSign, Wrench, Globe,
-    LayoutGrid, Save, X, Eye, ChevronUp, History, Image as ImageIcon, HelpCircle
+    LayoutGrid, Save, X, Eye, EyeOff, ChevronUp, History, Image as ImageIcon, HelpCircle
 } from 'lucide-react';
 import { DraftPublishBadge } from '@/components/admin/DraftPublishBadge';
 import { ContentVersionHistory } from '@/components/admin/ContentVersionHistory';
@@ -35,16 +35,23 @@ import { Switch } from '@/components/ui/switch';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
+import { useSectionVisibility, useToggleSectionVisibility } from '@/hooks/useSectionVisibility';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 // ── Page definitions with icons and metadata ──────────────────────
+interface ComponentSectionDef {
+    key: string;
+    label: string;
+}
+
 interface PageDef {
     id: string;
     label: string;
     icon: any;
     description: string;
     sections: string[];
+    componentSections?: ComponentSectionDef[]; // UI-level sections that can be toggled
     color: string;
 }
 
@@ -55,24 +62,61 @@ export const PAGES: PageDef[] = [
         sections: ['hero', 'hero_stats', 'stats', 'features', 'trusted_partners',
             'sustainability_highlights', 'sustainability_stats', 'newsletter_trust',
             'about', 'about_stats', 'about_features', 'homepage_founder'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'trusted_partners', label: 'Trusted Partners' },
+            { key: 'featured_products', label: 'Featured Products' },
+            { key: 'impact_counter', label: 'Impact Counter' },
+            { key: 'about', label: 'About Section' },
+            { key: 'how_it_works', label: 'How It Works' },
+            { key: 'sustainability_highlights', label: 'Sustainability Highlights' },
+            { key: 'recent_posts', label: 'Recent Posts' },
+            { key: 'testimonials', label: 'Testimonials' },
+            { key: 'founder_video', label: 'Founder Video' },
+            { key: 'faq', label: 'FAQ' },
+            { key: 'newsletter', label: 'Newsletter' },
+        ],
         color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
     },
     {
         id: 'our-story', label: 'Our Story', icon: BookOpen,
         description: 'Timeline, team members, artisans, values',
         sections: ['story_stats'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'timeline', label: 'Timeline' },
+            { key: 'team', label: 'Team Members' },
+            { key: 'artisans', label: 'Artisans' },
+            { key: 'values', label: 'Values' },
+            { key: 'stats', label: 'Statistics' },
+        ],
         color: 'bg-purple-500/10 text-purple-600 dark:text-purple-400',
     },
     {
         id: 'sustainability', label: 'Sustainability', icon: Leaf,
         description: 'Practices, carbon stats, certifications, SDGs',
         sections: ['sustainability_practices', 'carbon_stats', 'certifications', 'sdg_goals'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'practices', label: 'Sustainability Practices' },
+            { key: 'carbon', label: 'Carbon & Environmental Stats' },
+            { key: 'certifications', label: 'Certifications' },
+            { key: 'sdg', label: 'SDG Goals' },
+            { key: 'supply_chain', label: 'Supply Chain' },
+            { key: 'cta', label: 'Call to Action' },
+        ],
         color: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
     },
     {
         id: 'contact', label: 'Contact', icon: Globe,
         description: 'WhatsApp, business hours, offices',
         sections: ['contact'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'form', label: 'Contact Form' },
+            { key: 'offices', label: 'Office Locations' },
+            { key: 'map', label: 'Map' },
+        ],
         color: 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
     },
     {
@@ -85,42 +129,85 @@ export const PAGES: PageDef[] = [
         id: 'why-jute', label: 'Why Jute', icon: ShieldCheck,
         description: 'Comparison, lifecycle, statistics',
         sections: ['whyjute_comparison', 'whyjute_lifecycle', 'whyjute_stats'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'comparison', label: 'Material Comparison' },
+            { key: 'lifecycle', label: 'Lifecycle' },
+            { key: 'facts', label: 'Jute Facts' },
+            { key: 'stats', label: 'Statistics' },
+            { key: 'cta', label: 'Call to Action' },
+        ],
         color: 'bg-teal-500/10 text-teal-600 dark:text-teal-400',
     },
     {
         id: 'certifications-page', label: 'Certifications', icon: ShieldCheck,
         description: 'List, supply chain, regulations',
         sections: ['certifications_list', 'certifications_supplychain', 'certifications_regulations'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'list', label: 'Certifications List' },
+            { key: 'supply_chain', label: 'Supply Chain' },
+            { key: 'regulations', label: 'EU Regulations' },
+        ],
         color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400',
     },
     {
         id: 'impact', label: 'Impact Dashboard', icon: BarChart3,
         description: 'Stats, milestones',
         sections: ['impact_stats', 'impact_milestones'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'stats', label: 'Impact Statistics' },
+            { key: 'sdg', label: 'SDG Contributions' },
+            { key: 'milestones', label: 'Milestones' },
+        ],
         color: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
     },
     {
         id: 'case-studies', label: 'Case Studies', icon: Briefcase,
         description: 'Client case studies, industries',
         sections: ['casestudies_list', 'casestudies_industries'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'list', label: 'Case Studies List' },
+            { key: 'industries', label: 'Industries' },
+            { key: 'cta', label: 'Call to Action' },
+        ],
         color: 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400',
     },
     {
         id: 'pricing', label: 'Pricing Guide', icon: DollarSign,
         description: 'Tiers, shipping, FAQ',
         sections: ['pricing_tiers', 'pricing_shipping', 'pricing_faq'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'tiers', label: 'Pricing Tiers' },
+            { key: 'shipping', label: 'Shipping Info' },
+            { key: 'faq', label: 'FAQ' },
+            { key: 'cta', label: 'Call to Action' },
+        ],
         color: 'bg-orange-500/10 text-orange-600 dark:text-orange-400',
     },
     {
         id: 'careers', label: 'Careers', icon: Users,
         description: 'Positions, perks',
         sections: ['careers_positions', 'careers_perks'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'positions', label: 'Open Positions' },
+            { key: 'perks', label: 'Company Perks' },
+            { key: 'cta', label: 'Call to Action' },
+        ],
         color: 'bg-pink-500/10 text-pink-600 dark:text-pink-400',
     },
     {
         id: 'resources', label: 'Resources Hub', icon: FileText,
         description: 'Downloadable resources',
         sections: ['resources_items'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'resources', label: 'Resources List' },
+        ],
         color: 'bg-violet-500/10 text-violet-600 dark:text-violet-400',
     },
     {
@@ -128,9 +215,20 @@ export const PAGES: PageDef[] = [
         description: 'Product types, materials, sizes, branding, process',
         sections: ['custom_product_types', 'custom_materials', 'custom_sizes',
             'custom_branding', 'custom_process', 'custom_why'],
+        componentSections: [
+            { key: 'hero', label: 'Hero Section' },
+            { key: 'product_types', label: 'Product Types' },
+            { key: 'materials', label: 'Materials' },
+            { key: 'sizes', label: 'Sizes & Dimensions' },
+            { key: 'branding', label: 'Custom Branding' },
+            { key: 'process', label: 'Process Steps' },
+            { key: 'why', label: 'Why Choose Us' },
+            { key: 'cta', label: 'Call to Action' },
+        ],
         color: 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
     },
 ];
+
 
 // ── Content Block Type ────────────────────────────────────────────
 interface ContentBlock {
@@ -404,13 +502,19 @@ const AdminContentBlocks = () => {
     });
 
     // ── Computed data ─────────────────────────────────────────────
+    // ── Section visibility ─────────────────────────────────────
+    const { data: visibilityData } = useSectionVisibility();
+    const toggleVisibility = useToggleSectionVisibility();
+
     const groupedBlocks = useMemo(() => {
         if (!blocks) return {};
-        return blocks.reduce((acc, block) => {
-            if (!acc[block.section]) acc[block.section] = [];
-            acc[block.section].push(block);
-            return acc;
-        }, {} as Record<string, ContentBlock[]>);
+        return blocks
+            .filter(block => block.section !== '_section_visibility') // Hide meta-entries
+            .reduce((acc, block) => {
+                if (!acc[block.section]) acc[block.section] = [];
+                acc[block.section].push(block);
+                return acc;
+            }, {} as Record<string, ContentBlock[]>);
     }, [blocks]);
 
     // Count blocks per page
@@ -530,6 +634,68 @@ const AdminContentBlocks = () => {
                         </Card>
                     )}
 
+                    {/* Section Visibility Panel */}
+                    {activePage !== 'all' && activePage !== 'other' && (() => {
+                        const page = PAGES.find(p => p.id === activePage);
+                        if (!page?.componentSections?.length) return null;
+                        return (
+                            <Card className="mb-4 border-dashed">
+                                <CardHeader className="pb-3 pt-4 px-4">
+                                    <div className="flex items-center gap-2">
+                                        <Eye className="h-4 w-4 text-muted-foreground" />
+                                        <CardTitle className="text-sm font-semibold">Section Visibility</CardTitle>
+                                        <Badge variant="secondary" className="text-[10px] ml-auto">
+                                            {page.componentSections.filter(cs => visibilityData?.map[`${page.id}:${cs.key}`] !== false).length}/{page.componentSections.length} visible
+                                        </Badge>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="px-4 pb-4 pt-0">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                                        {page.componentSections.map(cs => {
+                                            const isVis = visibilityData?.map[`${page.id}:${cs.key}`] !== false;
+                                            return (
+                                                <div
+                                                    key={cs.key}
+                                                    className={cn(
+                                                        "flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border transition-all",
+                                                        isVis
+                                                            ? "bg-background border-border hover:border-primary/30"
+                                                            : "bg-orange-50/50 border-orange-200/50 dark:bg-orange-950/10 dark:border-orange-800/30"
+                                                    )}
+                                                >
+                                                    <div className="flex items-center gap-2 min-w-0">
+                                                        {isVis
+                                                            ? <Eye className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                                                            : <EyeOff className="h-3.5 w-3.5 text-orange-400 shrink-0" />
+                                                        }
+                                                        <span className={cn(
+                                                            "text-xs font-medium truncate",
+                                                            !isVis && "text-muted-foreground line-through"
+                                                        )}>
+                                                            {cs.label}
+                                                        </span>
+                                                    </div>
+                                                    <Switch
+                                                        checked={isVis}
+                                                        onCheckedChange={(checked) => {
+                                                            toggleVisibility.mutate({
+                                                                pageId: page.id,
+                                                                sectionKey: cs.key,
+                                                                visible: checked,
+                                                            });
+                                                        }}
+                                                        disabled={toggleVisibility.isPending}
+                                                        className="shrink-0 scale-90 data-[state=unchecked]:bg-orange-300/40"
+                                                    />
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        );
+                    })()}
+
                     {/* Loading */}
                     {isLoading ? (
                         <div className="space-y-3">
@@ -558,7 +724,7 @@ const AdminContentBlocks = () => {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0 }}
                                         >
-                                            <Card className="overflow-hidden">
+                                            <Card className={cn("overflow-hidden", visibilityData?.map[`${page?.id || 'other'}:${section}`] === false && 'ring-1 ring-orange-300/50 bg-orange-50/5')}>
                                                 {/* Section Header */}
                                                 <div
                                                     className="flex items-center justify-between cursor-pointer hover:bg-muted/30 transition-colors px-4 py-3"
@@ -571,7 +737,14 @@ const AdminContentBlocks = () => {
                                                                 : <ChevronRight className="h-3.5 w-3.5" />}
                                                         </div>
                                                         <div>
-                                                            <h3 className="text-sm font-semibold">{section}</h3>
+                                                            <div className="flex items-center gap-2">
+                                                                <h3 className="text-sm font-semibold">{section}</h3>
+                                                                {visibilityData?.map[`${page?.id || 'other'}:${section}`] === false && (
+                                                                    <Badge variant="outline" className="text-[10px] text-orange-600 border-orange-300 bg-orange-50">
+                                                                        <EyeOff className="h-2.5 w-2.5 mr-1" /> Hidden
+                                                                    </Badge>
+                                                                )}
+                                                            </div>
                                                             <p className="text-xs text-muted-foreground">
                                                                 {items.length} {items.length === 1 ? 'block' : 'blocks'}
                                                                 {page && ` · ${page.label}`}
@@ -579,6 +752,30 @@ const AdminContentBlocks = () => {
                                                         </div>
                                                     </div>
                                                     <div className="flex items-center gap-2">
+                                                        {/* Section Visibility Toggle */}
+                                                        <Tooltip>
+                                                            <TooltipTrigger asChild>
+                                                                <div onClick={e => e.stopPropagation()} className="flex items-center">
+                                                                    <Switch
+                                                                        checked={visibilityData?.map[`${page?.id || 'other'}:${section}`] !== false}
+                                                                        onCheckedChange={(checked) => {
+                                                                            toggleVisibility.mutate({
+                                                                                pageId: page?.id || 'other',
+                                                                                sectionKey: section,
+                                                                                visible: checked,
+                                                                            });
+                                                                        }}
+                                                                        disabled={toggleVisibility.isPending}
+                                                                        className="data-[state=unchecked]:bg-orange-300/40"
+                                                                    />
+                                                                </div>
+                                                            </TooltipTrigger>
+                                                            <TooltipContent side="top" className="text-xs">
+                                                                {visibilityData?.map[`${page?.id || 'other'}:${section}`] !== false
+                                                                    ? 'Section is visible on site — click to hide'
+                                                                    : 'Section is hidden from site — click to show'}
+                                                            </TooltipContent>
+                                                        </Tooltip>
                                                         <Badge variant="secondary" className="font-mono text-xs">{items.length}</Badge>
                                                         <Button size="sm" variant="outline" className="h-7 text-xs"
                                                             onClick={e => { e.stopPropagation(); openCreateDialog(section); }}>

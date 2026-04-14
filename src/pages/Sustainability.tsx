@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import heroSustainability from '@/assets/hero-sustainability.jpg';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
+import { usePageSectionVisibility } from '@/hooks/useSectionVisibility';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Leaf, Droplets, Wind, Recycle, Award, TreePine, Factory, Globe, CheckCircle, Shield, Target, Sparkles,
@@ -36,6 +37,7 @@ const FloatingLeaf = ({ delay = 0, x = 0 }: { delay?: number; x?: number }) => (
 
 const Sustainability = () => {
   const { t, language } = useLanguage();
+  const { isVisible } = usePageSectionVisibility('sustainability');
   const { data: practicesData } = useContentBlocks('sustainability_practices');
   const { data: carbonData } = useContentBlocks('carbon_stats');
   const { data: certsData } = useContentBlocks('certifications');
@@ -104,7 +106,7 @@ const Sustainability = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
-      {/* Hero Section with Premium Styling */}
+      {isVisible('hero') && (
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
         {/* Background Image */}
         <div
@@ -170,8 +172,9 @@ const Sustainability = () => {
         </div>
 
       </section>
+      )}
 
-      {/* Jute Benefits Section with Glass Cards */}
+      {isVisible('practices') && (
       <section className="py-16 md:py-24 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
@@ -233,8 +236,9 @@ const Sustainability = () => {
           </div>
         </div>
       </section>
+      )}
 
-      {/* Carbon Footprint Section with Gradient */}
+      {isVisible('carbon') && (
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-green-600 to-emerald-700" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-30" />
@@ -315,8 +319,9 @@ const Sustainability = () => {
           </motion.div>
         </div>
       </section>
+      )}
 
-      {/* Certifications Section with Premium Cards */}
+      {isVisible('certifications') && (
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
@@ -373,8 +378,9 @@ const Sustainability = () => {
           </div>
         </div>
       </section>
+      )}
 
-      {/* UN SDG Goals Section */}
+      {isVisible('sdg') && (
       <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
         <div className="container relative z-10">
           <motion.div
@@ -424,8 +430,9 @@ const Sustainability = () => {
           </div>
         </div>
       </section>
+      )}
 
-      {/* Supply Chain Section */}
+      {isVisible('supply_chain') && (
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
 
@@ -494,8 +501,9 @@ const Sustainability = () => {
           </div>
         </div>
       </section>
+      )}
 
-      {/* CTA Section */}
+      {isVisible('cta') && (
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="container relative z-10">
           <motion.div
@@ -551,6 +559,7 @@ const Sustainability = () => {
           </motion.div>
         </div>
       </section>
+      )}
     </div>
   );
 };

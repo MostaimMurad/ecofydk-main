@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
+import { usePageSectionVisibility } from '@/hooks/useSectionVisibility';
 
 const iconMap: Record<string, React.ReactNode> = {
     Wind: <Wind className="h-5 w-5" />,
@@ -51,6 +52,7 @@ interface ComparisonData {
 const WhyJute = () => {
     const { language } = useLanguage();
     const [activeComparison, setActiveComparison] = useState<number>(0);
+    const { isVisible } = usePageSectionVisibility('why-jute');
 
     const { data: comparisonBlocks } = useContentBlocks('whyjute_comparison');
     const { data: lifecycleBlocks } = useContentBlocks('whyjute_lifecycle');
@@ -110,6 +112,7 @@ const WhyJute = () => {
             </div>
 
             {/* Hero Section */}
+            {isVisible('hero') && (
             <section className="relative overflow-hidden py-20 md:py-28">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-emerald-500/5" />
                 <div className="container relative z-10">
@@ -143,8 +146,9 @@ const WhyJute = () => {
                     </motion.div>
                 </div>
             </section>
+            )}
 
-            {/* Interactive Comparison Section */}
+            {isVisible('comparison') && (
             <section className="py-16 md:py-24 bg-muted/30">
                 <div className="container">
                     <motion.div
@@ -300,8 +304,9 @@ const WhyJute = () => {
                     </div>
                 </div>
             </section>
+            )}
 
-            {/* Lifecycle Section */}
+            {isVisible('lifecycle') && (
             <section className="py-16 md:py-24">
                 <div className="container">
                     <motion.div
@@ -358,8 +363,9 @@ const WhyJute = () => {
                     </div>
                 </div>
             </section>
+            )}
 
-            {/* CO₂ Stats Section */}
+            {isVisible('stats') && (
             <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-transparent to-emerald-500/5">
                 <div className="container">
                     <motion.div
@@ -406,8 +412,9 @@ const WhyJute = () => {
                     </div>
                 </div>
             </section>
+            )}
 
-            {/* Did You Know Facts */}
+            {isVisible('facts') && (
             <section className="py-16 md:py-24">
                 <div className="container">
                     <motion.div
@@ -443,8 +450,9 @@ const WhyJute = () => {
                     </div>
                 </div>
             </section>
+            )}
 
-            {/* CTA Section */}
+            {isVisible('cta') && (
             <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-emerald-500/5 to-teal-500/10">
                 <div className="container">
                     <motion.div
@@ -478,6 +486,7 @@ const WhyJute = () => {
                     </motion.div>
                 </div>
             </section>
+            )}
         </>
     );
 };
