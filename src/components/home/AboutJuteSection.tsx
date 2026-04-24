@@ -3,14 +3,13 @@ import { Leaf, Sparkles, ArrowRight, MessageSquare, Palette, Package, Truck, Dro
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { useContentBlocks } from '@/hooks/useContentBlocks';
 
 const processIconMap: Record<string, React.ReactElement> = {
-  MessageSquare: <MessageSquare className="h-6 w-6" />,
-  Palette: <Palette className="h-6 w-6" />,
-  Package: <Package className="h-6 w-6" />,
-  Truck: <Truck className="h-6 w-6" />,
+  MessageSquare: <MessageSquare className="h-5 w-5" />,
+  Palette: <Palette className="h-5 w-5" />,
+  Package: <Package className="h-5 w-5" />,
+  Truck: <Truck className="h-5 w-5" />,
 };
 
 const defaultSteps = [
@@ -26,13 +25,13 @@ const AboutJuteSection = () => {
 
   const steps = (howItWorksBlocks && howItWorksBlocks.length > 0)
     ? howItWorksBlocks.map(block => ({
-      icon: processIconMap[block.icon || 'MessageSquare'] || <MessageSquare className="h-6 w-6" />,
+      icon: processIconMap[block.icon || 'MessageSquare'] || <MessageSquare className="h-5 w-5" />,
       title: language === 'da' ? (block.title_da || block.title_en || '') : (block.title_en || ''),
       desc: language === 'da' ? (block.description_da || block.description_en || '') : (block.description_en || ''),
       color: block.color || 'from-blue-500 to-cyan-600',
     }))
     : defaultSteps.map(d => ({
-      icon: processIconMap[d.icon] || <MessageSquare className="h-6 w-6" />,
+      icon: processIconMap[d.icon] || <MessageSquare className="h-5 w-5" />,
       title: language === 'da' ? d.title_da : d.title_en,
       desc: language === 'da' ? d.desc_da : d.desc_en,
       color: d.color,
@@ -100,7 +99,7 @@ const AboutJuteSection = () => {
 
         {/* Why Jute Features Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -126,9 +125,50 @@ const AboutJuteSection = () => {
           ))}
         </motion.div>
 
-        {/* CTA to full Why Jute page */}
+        {/* How It Works — inline sub-content (NOT a separate section) */}
         <motion.div
-          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          {/* Small sub-heading, not a full section header */}
+          <h3 className="text-center text-lg font-semibold text-muted-foreground uppercase tracking-widest mb-10">
+            {t('home.howitworks.title')}
+          </h3>
+
+          {/* Steps as a compact inline row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col items-center text-center gap-3"
+              >
+                <div className="relative">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center text-white shadow-md`}>
+                    {step.icon}
+                  </div>
+                  <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-background border border-primary/40 text-[10px] font-bold text-primary flex items-center justify-center">
+                    {index + 1}
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm mb-1">{step.title}</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Single CTA for the entire About Jute section */}
+        <motion.div
+          className="text-center"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -139,85 +179,6 @@ const AboutJuteSection = () => {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
-        </motion.div>
-
-        {/* How It Works Sub-Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <div className="rounded-3xl bg-white/60 dark:bg-card/40 backdrop-blur-xl border border-border/50 p-8 md:p-12 shadow-lg">
-            {/* Sub-section Header */}
-            <div className="text-center mb-12">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 mb-4"
-              >
-                <Sparkles className="h-4 w-4 text-primary" />
-                <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-                  {t('home.howitworks.badge')}
-                </span>
-              </motion.div>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
-                {t('home.howitworks.title')}
-              </h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                {t('home.howitworks.subtitle')}
-              </p>
-            </div>
-
-            {/* Process Steps */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative">
-              {/* Connection line */}
-              <div className="hidden md:block absolute top-12 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-blue-500/20 via-primary/30 to-emerald-500/20" />
-
-              {steps.map((step, index) => (
-                <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.15 }}
-                  className="relative flex flex-col items-center text-center"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className={`relative w-20 h-20 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center text-white shadow-xl mb-5`}
-                  >
-                    {step.icon}
-                    <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-background border-2 border-primary flex items-center justify-center text-xs font-bold text-primary shadow-md">
-                      {index + 1}
-                    </div>
-                  </motion.div>
-                  <h4 className="font-bold text-base mb-2">{step.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">{step.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mt-10"
-            >
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 shadow-lg shadow-primary/25 px-8"
-              >
-                <Link to="/custom-solutions">
-                  {t('home.howitworks.cta')}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </motion.div>
-          </div>
         </motion.div>
       </div>
     </section>
