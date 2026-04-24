@@ -71,7 +71,7 @@ const FeaturedProducts = () => {
             </span>
           </motion.div>
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-foreground/70">
-            {t('products.title')}
+            {t('home.products.title')}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('home.products.subtitle')}

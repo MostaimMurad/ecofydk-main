@@ -1,15 +1,12 @@
 import { HeroSection, HeroVariant } from '@/components/home/hero';
-import FeaturedProducts from '@/components/home/FeaturedProducts';
-import TrustedPartners from '@/components/home/TrustedPartners';
 import AboutSection from '@/components/home/AboutSection';
-import ImpactCounter from '@/components/home/ImpactCounter';
-import HowItWorks from '@/components/home/HowItWorks';
-import SustainabilityHighlights from '@/components/home/SustainabilityHighlights';
-import FounderVideo from '@/components/home/FounderVideo';
+import AboutJuteSection from '@/components/home/AboutJuteSection';
+import FeaturedProducts from '@/components/home/FeaturedProducts';
+import OurStorySection from '@/components/home/OurStorySection';
+import InnovationSection from '@/components/home/InnovationSection';
+import CertificationSection from '@/components/home/CertificationSection';
+import GallerySection from '@/components/home/GallerySection';
 import RecentPosts from '@/components/home/RecentPosts';
-import Testimonials from '@/components/home/Testimonials';
-import FAQ from '@/components/home/FAQ';
-import Newsletter from '@/components/home/Newsletter';
 import { useSiteSettings } from '@/hooks/useSiteSettings';
 import { usePageSectionVisibility } from '@/hooks/useSectionVisibility';
 
@@ -20,22 +17,36 @@ const Index = () => {
 
   return (
     <>
+      {/* 1. Hero */}
       {isLoading ? (
         <div className="relative min-h-screen bg-gradient-to-br from-background to-muted" />
       ) : (
         isVisible('hero') && <HeroSection variant={heroVariant} />
       )}
-      {isVisible('trusted_partners') && <TrustedPartners />}
-      {isVisible('featured_products') && <FeaturedProducts />}
-      {isVisible('impact_counter') && <ImpactCounter />}
+
+      {/* 2. About Us — personal details */}
       {isVisible('about') && <AboutSection />}
-      {isVisible('how_it_works') && <HowItWorks />}
-      {isVisible('sustainability_highlights') && <SustainabilityHighlights />}
+
+      {/* 3. About Jute — with How It Works as sub-content */}
+      {isVisible('about_jute') && <AboutJuteSection />}
+
+      {/* 4. Product Highlight (renamed from Our Collection) */}
+      {isVisible('featured_products') && <FeaturedProducts />}
+
+      {/* 5. Our Story — details about work process */}
+      {isVisible('our_story') && <OurStorySection />}
+
+      {/* 6. Innovation */}
+      {isVisible('innovation') && <InnovationSection />}
+
+      {/* 7. Certification / Membership */}
+      {isVisible('certification') && <CertificationSection />}
+
+      {/* 8. Gallery */}
+      {isVisible('gallery') && <GallerySection />}
+
+      {/* 9. Blog */}
       {isVisible('recent_posts') && <RecentPosts />}
-      {isVisible('testimonials') && <Testimonials />}
-      {isVisible('founder_video') && <FounderVideo />}
-      {isVisible('faq') && <FAQ />}
-      {isVisible('newsletter') && <Newsletter />}
     </>
   );
 };
