@@ -54,22 +54,22 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Primary nav links (always visible)
+  // Primary nav links (always visible) — new sequence per user request
   const primaryLinks = [
     { href: '/', label: t('nav.home') },
-    { href: '/products', label: t('nav.products') },
-    { href: '/our-story', label: t('nav.our-story') },
+    { href: '/our-story', label: t('nav.about-us') },
+    { href: '/why-jute', label: t('nav.about-jute') },
+    { href: '/innovation', label: t('nav.innovation') },
     { href: '/gallery', label: t('nav.gallery') },
-    { href: '/partnerships', label: t('nav.partnerships') },
-    { href: '/contact', label: t('nav.contact') },
+    { href: '/journal', label: t('nav.blog') },
   ];
 
   // Secondary nav links (inside "More" dropdown)
   const moreLinks = [
-    { href: '/why-jute', label: language === 'da' ? 'Hvorfor Jute?' : 'Why Jute?', icon: BookOpen, desc: language === 'da' ? 'Lær om jute fiber' : 'Learn about jute fiber' },
+    { href: '/products', label: t('nav.products'), icon: BookOpen, desc: language === 'da' ? 'Se vores produkter' : 'Browse our products' },
+    { href: '/partnerships', label: t('nav.partnerships'), icon: Globe, desc: language === 'da' ? 'B2B partnerskaber' : 'B2B partnerships' },
     { href: '/sustainability', label: t('nav.sustainability'), icon: TreePine, desc: language === 'da' ? 'Vores bæredygtige praksis' : 'Our sustainable practices' },
-    { href: '/innovation', label: t('nav.innovation'), icon: Lightbulb, desc: language === 'da' ? 'Banebrydende løsninger' : 'Cutting-edge solutions' },
-    { href: '/journal', label: t('nav.journal'), icon: Newspaper, desc: language === 'da' ? 'Nyheder og indsigter' : 'News & insights' },
+    { href: '/contact', label: t('nav.contact'), icon: Newspaper, desc: language === 'da' ? 'Kontakt os' : 'Get in touch' },
   ];
 
   // All links combined for mobile
